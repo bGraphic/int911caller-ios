@@ -11,9 +11,19 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize emergencyNumbers = _emergencyNumbers;
+@synthesize currentISOCountryCode = _currentISOCountryCode;
+
+CLLocationManager *locationManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+        
+    self.emergencyNumbers = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
+    
+    NSLog(@"Number list: %@", self.emergencyNumbers);
+    
+        
     // Override point for customization after application launch.
     return YES;
 }

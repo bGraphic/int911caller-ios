@@ -16,6 +16,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize countryListButton = _countryListButton;
 
 #pragma mark - Managing the detail item
 
@@ -34,8 +35,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailDescriptionLabel.text = [[self.detailItem objectForKey:@"numbers"] description];
+        self.title = [self.detailItem objectForKey:@"country"];
     }
+    
 }
 
 - (void)viewDidLoad
@@ -47,6 +50,7 @@
 
 - (void)viewDidUnload
 {
+    [self setCountryListButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;

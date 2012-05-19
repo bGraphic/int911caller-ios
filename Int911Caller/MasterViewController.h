@@ -10,4 +10,6 @@
 
 @interface MasterViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *emergencyNumbers;
+
 @end
