@@ -14,7 +14,7 @@
 		130EF30C156803EF009E9711 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30B156803EF009E9711 /* main.m */; };
 		130EF310156803EF009E9711 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30F156803EF009E9711 /* AppDelegate.m */; };
 		130EF313156803EF009E9711 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130EF311156803EF009E9711 /* MainStoryboard.storyboard */; };
-		130EF316156803EF009E9711 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF315156803EF009E9711 /* MasterViewController.m */; };
+		130EF316156803EF009E9711 /* CountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF315156803EF009E9711 /* CountryListViewController.m */; };
 		130EF319156803EF009E9711 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF318156803EF009E9711 /* DetailViewController.m */; };
 		130EF3271568093E009E9711 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Numbers.plist */; };
 		130EF32A156824ED009E9711 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
@@ -33,8 +33,8 @@
 		130EF30E156803EF009E9711 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		130EF30F156803EF009E9711 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		130EF312156803EF009E9711 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		130EF314156803EF009E9711 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		130EF315156803EF009E9711 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		130EF314156803EF009E9711 /* CountryListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryListViewController.h; sourceTree = "<group>"; };
+		130EF315156803EF009E9711 /* CountryListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryListViewController.m; sourceTree = "<group>"; };
 		130EF317156803EF009E9711 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		130EF318156803EF009E9711 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		130EF3261568093E009E9711 /* Numbers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Numbers.plist; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 				130EF30E156803EF009E9711 /* AppDelegate.h */,
 				130EF30F156803EF009E9711 /* AppDelegate.m */,
 				130EF311156803EF009E9711 /* MainStoryboard.storyboard */,
-				130EF314156803EF009E9711 /* MasterViewController.h */,
-				130EF315156803EF009E9711 /* MasterViewController.m */,
+				130EF314156803EF009E9711 /* CountryListViewController.h */,
+				130EF315156803EF009E9711 /* CountryListViewController.m */,
 				130EF317156803EF009E9711 /* DetailViewController.h */,
 				130EF318156803EF009E9711 /* DetailViewController.m */,
 				130EF306156803EF009E9711 /* Supporting Files */,
@@ -180,7 +180,7 @@
 			files = (
 				130EF30C156803EF009E9711 /* main.m in Sources */,
 				130EF310156803EF009E9711 /* AppDelegate.m in Sources */,
-				130EF316156803EF009E9711 /* MasterViewController.m in Sources */,
+				130EF316156803EF009E9711 /* CountryListViewController.m in Sources */,
 				130EF319156803EF009E9711 /* DetailViewController.m in Sources */,
 				130EF32A156824ED009E9711 /* LocationViewController.m in Sources */,
 			);

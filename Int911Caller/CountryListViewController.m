@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "CountryListViewController.h"
 
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 
 
-@implementation MasterViewController
+@implementation CountryListViewController
 
 @dynamic emergencyNumbers;
 
