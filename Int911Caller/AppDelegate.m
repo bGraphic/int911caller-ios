@@ -23,7 +23,6 @@ CLLocationManager *locationManager;
     
     NSLog(@"Number list: %@", self.emergencyNumbers);
     
-        
     // Override point for customization after application launch.
     return YES;
 }

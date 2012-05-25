@@ -21,13 +21,12 @@ CLLocationManager *locationManager;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.title = @"911 Caller";
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
-    locationManager.distanceFilter = 1000.0f; 
-    [locationManager startUpdatingLocation];
-    
-    [activityIndicator startAnimating];
+    locationManager.distanceFilter = 1000.0f;
 
 }
 
@@ -35,6 +34,12 @@ CLLocationManager *locationManager;
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -47,7 +52,7 @@ CLLocationManager *locationManager;
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         
-        
+        //TODO: must get correct country based on current country
         [[segue destinationViewController] setDetailItem:[appDelegate.emergencyNumbers objectAtIndex:0]];
 
     }
@@ -58,6 +63,8 @@ CLLocationManager *locationManager;
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"Location Error: %@", [error description]);
+    
+    [locationManager stopUpdatingLocation];
     NSString *errorMessage;
     
     switch ([error code]) {
@@ -99,6 +106,8 @@ CLLocationManager *locationManager;
         } else {
             
             NSLog(@"Location Error: %@", [error description]);
+            
+            [self performSegueWithIdentifier:@"listCountries" sender:self];   
             
         }
         
