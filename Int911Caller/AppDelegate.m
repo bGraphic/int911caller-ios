@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @implementation AppDelegate
 
@@ -16,12 +17,36 @@
 
 CLLocationManager *locationManager;
 
+- (BOOL) locationManagerIsNotAuthorized {
+    return  [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || 
+    [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted;
+}
+
+- (BOOL) notConnectedToNetwork
+{
+	Reachability *reachability = [Reachability reachabilityForInternetConnection];  
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus]; 
+    return (networkStatus == NotReachable);
+} 
+
+- (void) loadInitialView {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
+    
+    if([self locationManagerIsNotAuthorized] ||[self notConnectedToNetwork]) {
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
+    } else {
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
         
     self.emergencyNumbers = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
     
     NSLog(@"Number list: %@", self.emergencyNumbers);
+    
+    [self loadInitialView];
     
     // Override point for customization after application launch.
     return YES;
@@ -42,6 +67,8 @@ CLLocationManager *locationManager;
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    [self loadInitialView];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -53,5 +80,6 @@ CLLocationManager *locationManager;
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

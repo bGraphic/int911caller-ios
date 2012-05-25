@@ -19,6 +19,8 @@
 		130EF3271568093E009E9711 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Numbers.plist */; };
 		130EF32A156824ED009E9711 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
 		130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
+		138BA096156F7BED00B10296 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 138BA095156F7BED00B10296 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		130EF328156824ED009E9711 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		130EF329156824ED009E9711 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		130EF32E15683462009E9711 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		138BA094156F7BEC00B10296 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		138BA095156F7BED00B10296 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */,
 				130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */,
 				130EF300156803EF009E9711 /* UIKit.framework in Frameworks */,
 				130EF302156803EF009E9711 /* Foundation.framework in Frameworks */,
@@ -78,6 +84,7 @@
 		130EF2FE156803EF009E9711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				138BA097156F7C4500B10296 /* SystemConfiguration.framework */,
 				130EF32E15683462009E9711 /* CoreLocation.framework */,
 				130EF2FF156803EF009E9711 /* UIKit.framework */,
 				130EF301156803EF009E9711 /* Foundation.framework */,
@@ -89,6 +96,8 @@
 		130EF305156803EF009E9711 /* Int911Caller */ = {
 			isa = PBXGroup;
 			children = (
+				138BA094156F7BEC00B10296 /* Reachability.h */,
+				138BA095156F7BED00B10296 /* Reachability.m */,
 				130EF30E156803EF009E9711 /* AppDelegate.h */,
 				130EF30F156803EF009E9711 /* AppDelegate.m */,
 				130EF311156803EF009E9711 /* MainStoryboard.storyboard */,
@@ -183,6 +192,7 @@
 				130EF316156803EF009E9711 /* CountryListViewController.m in Sources */,
 				130EF319156803EF009E9711 /* DetailViewController.m in Sources */,
 				130EF32A156824ED009E9711 /* LocationViewController.m in Sources */,
+				138BA096156F7BED00B10296 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
