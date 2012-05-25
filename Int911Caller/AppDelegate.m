@@ -15,7 +15,15 @@
 @synthesize emergencyNumbers = _emergencyNumbers;
 @synthesize currentISOCountryCode = _currentISOCountryCode;
 
+#ifdef DEBUG
+// 18000 seconds = 30 minutes
+const double UPDATE_INTERVAL = 5;
+#else
+const double UPDATE_INTERVAL = 18000;
+#endif
+
 CLLocationManager *locationManager;
+NSDate *didEnterBackgroundDate;
 
 - (BOOL) locationManagerIsNotAuthorized {
     return  [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || 
@@ -28,6 +36,11 @@ CLLocationManager *locationManager;
     NetworkStatus networkStatus = [reachability currentReachabilityStatus]; 
     return (networkStatus == NotReachable);
 } 
+
+- (BOOL) isTimeToReload
+{
+    return didEnterBackgroundDate == nil || [didEnterBackgroundDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
+}
 
 - (void) loadInitialView {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
@@ -62,13 +75,17 @@ CLLocationManager *locationManager;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    didEnterBackgroundDate = [NSDate date];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
-    [self loadInitialView];
+    if([self isTimeToReload]) {
+        [self loadInitialView];
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
