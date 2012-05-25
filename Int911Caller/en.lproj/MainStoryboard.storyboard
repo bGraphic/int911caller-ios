@@ -85,7 +85,7 @@
                     <navigationItem key="navigationItem" id="WOa-ta-40r"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jTV-Ms-Zyd" id="nKi-GL-GLN"/>
-                        <segue destination="3" kind="modal" identifier="listCountries" id="epv-sq-Ku7"/>
+                        <segue destination="3" kind="modal" identifier="listCountries" modalTransitionStyle="flipHorizontal" id="epv-sq-Ku7"/>
                         <segue destination="21" kind="push" identifier="showDetail" id="wGc-n0-e8W"/>
                     </connections>
                 </viewController>
