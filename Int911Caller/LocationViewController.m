@@ -16,6 +16,8 @@
 @synthesize activityIndicator = _activityIndicator;
 @synthesize locationManager = _locationManager;
 
+NSString *currentISOCountryCode;
+
 //- (CLLocationManager *) locationManager {
 //    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //
@@ -67,8 +69,14 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         
-        //TODO: must get correct country based on current country
-        [[segue destinationViewController] setDetailItem:[appDelegate.emergencyNumbers objectAtIndex:0]];
+        for (int i = 0; i <= (sizeof appDelegate.emergencyNumbers); i++) {
+            NSDictionary *countryListing = (NSDictionary *) [appDelegate.emergencyNumbers objectAtIndex:i];  
+            
+            if([[countryListing objectForKey:@"country"] isEqualToString:currentISOCountryCode]) {
+                [[segue destinationViewController] setDetailItem:countryListing];
+                break;
+            }
+        }
 
     }
 }
@@ -112,7 +120,7 @@
             
             CLPlacemark *placemark = [placemarks objectAtIndex:0];
             
-            NSString *currentISOCountryCode = [placemark ISOcountryCode];
+            currentISOCountryCode = [placemark ISOcountryCode];
             
             NSLog(@"iPhone is in country: %@", currentISOCountryCode);
             
