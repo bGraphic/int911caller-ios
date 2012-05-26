@@ -49,8 +49,8 @@ NSDate *didEnterBackgroundDate;
         NSLog(@"Load List Of Countries");
         self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
     } else {
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
         NSLog(@"Load Locate User");
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
     }
 }
 
@@ -58,10 +58,6 @@ NSDate *didEnterBackgroundDate;
 {
         
     self.emergencyNumbers = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
-    
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
-    self.locationManager.distanceFilter = 1000.0f;
     
     NSLog(@"Number list: %@", self.emergencyNumbers);
     

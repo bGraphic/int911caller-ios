@@ -47,13 +47,11 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"view did appear"); 
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"view did disappear");
     self.locationManager.delegate = nil;
     [self.locationManager stopUpdatingLocation];
 
