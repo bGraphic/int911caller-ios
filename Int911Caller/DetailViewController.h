@@ -16,5 +16,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *countryListButton;
 
+@property (strong, nonatomic) IBOutlet UIButton *callButtonOne;
+@property (strong, nonatomic) IBOutlet UIButton *calButtonTwo;
+@property (strong, nonatomic) IBOutlet UIButton *callButtonThree;
 
 @end

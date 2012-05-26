@@ -17,6 +17,11 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize countryListButton = _countryListButton;
+@synthesize callButtonOne = _callButtonOne;
+@synthesize calButtonTwo = _calButtonTwo;
+@synthesize callButtonThree = _callButtonThree;
+
+NSArray *buttons;
 
 #pragma mark - Managing the detail item
 
@@ -35,7 +40,21 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem objectForKey:@"numbers"] description];
+        NSDictionary *numbers = [self.detailItem objectForKey:@"numbers"];
+        
+        int i = 0;
+        
+        for (NSString *numberKey in numbers) {
+            NSLog(@"%@", numberKey);
+            UIButton *button = [buttons objectAtIndex:i];
+            
+            button.hidden = false;
+            button.titleLabel.text = [numbers objectForKey:numberKey];
+            
+            i++;
+        }
+        
+//        self.detailDescriptionLabel.text = [[self.detailItem objectForKey:@"numbers"] description];
         self.title = [self.detailItem objectForKey:@"country"];
     }
     
@@ -45,12 +64,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    buttons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, nil];
+    
+    for (UIButton *button in buttons) {
+        button.hidden = true;
+    }
+    
     [self configureView];
 }
 
 - (void)viewDidUnload
 {
     [self setCountryListButton:nil];
+    [self setCallButtonOne:nil];
+    [self setCalButtonTwo:nil];
+    [self setCallButtonThree:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
