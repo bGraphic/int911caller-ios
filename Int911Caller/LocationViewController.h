@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 @end

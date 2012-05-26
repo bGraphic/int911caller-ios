@@ -16,13 +16,13 @@
 @synthesize currentISOCountryCode = _currentISOCountryCode;
 
 #ifdef DEBUG
-// 18000 seconds = 30 minutes
+// 1800 seconds = 30 minutes
 const double UPDATE_INTERVAL = 5;
 #else
-const double UPDATE_INTERVAL = 18000;
+const double UPDATE_INTERVAL = 1800;
 #endif
 
-CLLocationManager *locationManager;
+
 NSDate *didEnterBackgroundDate;
 
 - (BOOL) locationManagerIsNotAuthorized {
@@ -46,9 +46,11 @@ NSDate *didEnterBackgroundDate;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
     
     if([self locationManagerIsNotAuthorized] ||[self notConnectedToNetwork]) {
+        NSLog(@"Load List Of Countries");
         self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
     } else {
         self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
+        NSLog(@"Load Locate User");
     }
 }
 
@@ -56,6 +58,10 @@ NSDate *didEnterBackgroundDate;
 {
         
     self.emergencyNumbers = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    self.locationManager.distanceFilter = 1000.0f;
     
     NSLog(@"Number list: %@", self.emergencyNumbers);
     

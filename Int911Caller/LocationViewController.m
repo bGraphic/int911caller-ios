@@ -8,38 +8,55 @@
 
 #import "LocationViewController.h"
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 
 @implementation LocationViewController
 
-@synthesize activityIndicator;
-CLLocationManager *locationManager;
+@synthesize activityIndicator = _activityIndicator;
+@synthesize locationManager = _locationManager;
 
+//- (CLLocationManager *) locationManager {
+//    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//
+//    return delegate.locationManager;
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.title = @"911 Caller";
-    
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
-    locationManager.distanceFilter = 1000.0f;
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    self.locationManager.distanceFilter = 1000.0f;
 
+    [self.activityIndicator startAnimating];
+    
+    self.title = @"911 Caller";
 }
 
 - (void)viewDidUnload
 {
+    NSLog(@"view did unload"); 
+    
+    self.locationManager.delegate = nil;
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
-    [locationManager startUpdatingLocation];
-    [activityIndicator startAnimating];
+    NSLog(@"view did appear"); 
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"view did disappear");
+    self.locationManager.delegate = nil;
+    [self.locationManager stopUpdatingLocation];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -64,7 +81,7 @@ CLLocationManager *locationManager;
 {
     NSLog(@"Location Error: %@", [error description]);
     
-    [locationManager stopUpdatingLocation];
+    [self.locationManager stopUpdatingLocation];
     NSString *errorMessage;
     
     switch ([error code]) {
@@ -87,7 +104,7 @@ CLLocationManager *locationManager;
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    [locationManager stopUpdatingLocation];
+    [self.locationManager stopUpdatingLocation];
     
     CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
     
