@@ -21,6 +21,10 @@
 		130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
 		138BA096156F7BED00B10296 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 138BA095156F7BED00B10296 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
+		13C81CD51572BFD900D16A7A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CD41572BFD900D16A7A /* background.png */; };
+		13C81CD71572BFE100D16A7A /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CD61572BFE100D16A7A /* circle.png */; };
+		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
+		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		138BA094156F7BEC00B10296 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		138BA095156F7BED00B10296 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		13C81CD41572BFD900D16A7A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		13C81CD61572BFE100D16A7A /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		13C81CDC1572C01B00D16A7A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,8 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
+				13C81CDE1572C02500D16A7A /* Icon.png */,
+				13C81CDC1572C01B00D16A7A /* Icon@2x.png */,
 				130EF305156803EF009E9711 /* Int911Caller */,
 				130EF2FE156803EF009E9711 /* Frameworks */,
 				130EF2FC156803EF009E9711 /* Products */,
@@ -96,6 +106,7 @@
 		130EF305156803EF009E9711 /* Int911Caller */ = {
 			isa = PBXGroup;
 			children = (
+				13C81CCE1572BFA400D16A7A /* gfx */,
 				138BA094156F7BEC00B10296 /* Reachability.h */,
 				138BA095156F7BED00B10296 /* Reachability.m */,
 				130EF30E156803EF009E9711 /* AppDelegate.h */,
@@ -122,6 +133,15 @@
 				130EF3261568093E009E9711 /* Numbers.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13C81CCE1572BFA400D16A7A /* gfx */ = {
+			isa = PBXGroup;
+			children = (
+				13C81CD61572BFE100D16A7A /* circle.png */,
+				13C81CD41572BFD900D16A7A /* background.png */,
+			);
+			name = gfx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +197,10 @@
 				130EF30A156803EF009E9711 /* InfoPlist.strings in Resources */,
 				130EF313156803EF009E9711 /* MainStoryboard.storyboard in Resources */,
 				130EF3271568093E009E9711 /* Numbers.plist in Resources */,
+				13C81CD51572BFD900D16A7A /* background.png in Resources */,
+				13C81CD71572BFE100D16A7A /* circle.png in Resources */,
+				13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */,
+				13C81CDF1572C02500D16A7A /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

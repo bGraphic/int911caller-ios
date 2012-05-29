@@ -35,6 +35,12 @@ NSArray *buttons;
     }
 }
 
+- (void)setButtonTitle:(NSString *)number button:(UIButton *)button
+{
+    [button setTitle:number forState:UIControlStateNormal];
+    [button setTitle:number forState:UIControlStateHighlighted];
+}
+
 - (void)configureView
 {
     // Update the user interface for the detail item.
@@ -45,11 +51,11 @@ NSArray *buttons;
         int i = 0;
         
         for (NSString *numberKey in numbers) {
-            NSLog(@"%@", numberKey);
             UIButton *button = [buttons objectAtIndex:i];
+            NSString *number = [numbers objectForKey:numberKey];
             
             button.hidden = false;
-            button.titleLabel.text = [numbers objectForKey:numberKey];
+            [self setButtonTitle:number button:button];
             
             i++;
         }
