@@ -8,7 +8,6 @@
 
 #import "DetailViewController.h"    
 
-
 @interface DetailViewController ()
 - (void)configureView;
 @end
@@ -40,6 +39,21 @@ NSArray *buttons;
 {
     [button setTitle:number forState:UIControlStateNormal];
     [button setTitle:number forState:UIControlStateHighlighted];
+}
+
+- (IBAction)callEmergencyNumberAction:(id)sender {
+    UIButton *selectedButton = (UIButton *)sender;
+    int i = 0;
+    for(UIButton *button in buttons) {
+        if(selectedButton == button) {
+            NSString *number = [[self.detailItem.embergencyNumbers allValues] objectAtIndex:i];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:number message:@"No calling since this is testing" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            
+            [alert show];
+        }
+        i++;
+    }
 }
 
 - (void)configureView

@@ -21,4 +21,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *calButtonTwo;
 @property (strong, nonatomic) IBOutlet UIButton *callButtonThree;
 
+- (IBAction)callEmergencyNumberAction:(id)sender;
+
 @end
