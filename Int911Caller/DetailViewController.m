@@ -63,7 +63,7 @@ NSArray *callButtons;
     for (NSString *numberKey in numbers) {
         
         NSString *number = [numbers objectForKey:numberKey];
-        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@: %@", numberKey, number];
+        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@ - %@", number, numberKey];
 
         UIButton *button = [callButtons objectAtIndex:i];
         [self setButtonTitle:buttonTitle button:button];

@@ -19,10 +19,11 @@
 		130EF3271568093E009E9711 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Numbers.plist */; };
 		130EF32A156824ED009E9711 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
 		130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
+		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
+		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
+		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
 		138BA096156F7BED00B10296 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 138BA095156F7BED00B10296 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
-		13C81CD51572BFD900D16A7A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CD41572BFD900D16A7A /* background.png */; };
-		13C81CD71572BFE100D16A7A /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CD61572BFE100D16A7A /* circle.png */; };
 		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
@@ -48,11 +49,12 @@
 		130EF328156824ED009E9711 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		130EF329156824ED009E9711 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		130EF32E15683462009E9711 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
+		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
+		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
 		138BA094156F7BEC00B10296 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		138BA095156F7BED00B10296 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		13C81CD41572BFD900D16A7A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		13C81CD61572BFE100D16A7A /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		13C81CDC1572C01B00D16A7A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
@@ -143,8 +145,9 @@
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
 			isa = PBXGroup;
 			children = (
-				13C81CD61572BFE100D16A7A /* circle.png */,
-				13C81CD41572BFD900D16A7A /* background.png */,
+				137E20591574E6910068E4E8 /* GUI-911_background.png */,
+				137E205A1574E6910068E4E8 /* GUI-911_button.png */,
+				137E20541574E57B0068E4E8 /* GUI-911_circle.png */,
 			);
 			name = gfx;
 			sourceTree = "<group>";
@@ -202,10 +205,11 @@
 				130EF30A156803EF009E9711 /* InfoPlist.strings in Resources */,
 				130EF313156803EF009E9711 /* MainStoryboard.storyboard in Resources */,
 				130EF3271568093E009E9711 /* Numbers.plist in Resources */,
-				13C81CD51572BFD900D16A7A /* background.png in Resources */,
-				13C81CD71572BFE100D16A7A /* circle.png in Resources */,
 				13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */,
 				13C81CDF1572C02500D16A7A /* Icon.png in Resources */,
+				137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */,
+				137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */,
+				137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
