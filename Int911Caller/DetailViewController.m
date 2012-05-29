@@ -6,7 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "DetailViewController.h"    
+
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -25,7 +26,7 @@ NSArray *buttons;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(CountryListing *)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
@@ -44,9 +45,10 @@ NSArray *buttons;
 - (void)configureView
 {
     // Update the user interface for the detail item.
+    
 
     if (self.detailItem) {
-        NSDictionary *numbers = [self.detailItem objectForKey:@"numbers"];
+        NSDictionary *numbers = self.detailItem.embergencyNumbers;
         
         int i = 0;
         
@@ -59,9 +61,9 @@ NSArray *buttons;
             
             i++;
         }
+
         
-//        self.detailDescriptionLabel.text = [[self.detailItem objectForKey:@"numbers"] description];
-        self.title = [self.detailItem objectForKey:@"country"];
+        self.title = [self.detailItem localizedCountryName];
     }
     
 }

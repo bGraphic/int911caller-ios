@@ -18,12 +18,6 @@
 
 NSString *currentISOCountryCode;
 
-//- (CLLocationManager *) locationManager {
-//    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//
-//    return delegate.locationManager;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -68,16 +62,9 @@ NSString *currentISOCountryCode;
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
+        CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
-        for (int i = 0; i <= (sizeof appDelegate.emergencyNumbers); i++) {
-            NSDictionary *countryListing = (NSDictionary *) [appDelegate.emergencyNumbers objectAtIndex:i];  
-            
-            if([[countryListing objectForKey:@"country"] isEqualToString:currentISOCountryCode]) {
-                [[segue destinationViewController] setDetailItem:countryListing];
-                break;
-            }
-        }
-
+        [[segue destinationViewController] setDetailItem:countryListing];
     }
 }
 

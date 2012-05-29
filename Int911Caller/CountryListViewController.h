@@ -10,6 +10,6 @@
 
 @interface CountryListViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *emergencyNumbers;
+@property (strong, nonatomic) NSMutableArray *emergencyNumbers;
 
 @end

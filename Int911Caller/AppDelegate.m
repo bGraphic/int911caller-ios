@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Reachability.h"
+#import "CountryListing.h"
 
 @implementation AppDelegate
 
@@ -42,6 +43,27 @@ NSDate *didEnterBackgroundDate;
     return didEnterBackgroundDate == nil || [didEnterBackgroundDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
 }
 
+- (void) loadEmergencyNumbers {
+    NSDictionary *emergencyNumbersFromFile = [[NSMutableDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
+    
+    self.emergencyNumbers = [[NSMutableDictionary alloc] init];
+    
+    for(NSString *countryKey in emergencyNumbersFromFile) {
+        NSDictionary *countryNumbers;
+        id countryNumbersFromFile = [emergencyNumbersFromFile objectForKey:countryKey];
+        
+        if([countryNumbersFromFile isKindOfClass:[NSString class]]) {
+            countryNumbers = [[NSDictionary alloc] initWithObjectsAndKeys:countryNumbersFromFile, @"general", nil];
+        } else {
+            countryNumbers = [emergencyNumbersFromFile objectForKey:countryKey];
+        }
+        
+        CountryListing *countryListing = [[CountryListing alloc] initWithKey:countryKey andNumbers:countryNumbers];
+        
+        [self.emergencyNumbers setObject:countryListing forKey:countryKey];
+    }
+}
+
 - (void) loadInitialView {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
     
@@ -56,10 +78,7 @@ NSDate *didEnterBackgroundDate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-        
-    self.emergencyNumbers = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
-    
-    NSLog(@"Number list: %@", self.emergencyNumbers);
+    [self loadEmergencyNumbers];
     
     [self loadInitialView];
     

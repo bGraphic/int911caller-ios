@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) NSArray *emergencyNumbers;
+@property (strong, nonatomic) NSMutableDictionary *emergencyNumbers;
 
 @property (strong, nonatomic) NSString *currentISOCountryCode;
 

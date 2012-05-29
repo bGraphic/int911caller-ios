@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "CountryListing.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary *detailItem;
+@property (strong, nonatomic) CountryListing *detailItem;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *countryListButton;

@@ -10,21 +10,14 @@
 
 #import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "CountryListing.h"
 
 
 @implementation CountryListViewController
 
-@dynamic emergencyNumbers;
+@synthesize emergencyNumbers;
 
 CLLocationManager *locationManager;
-
-- (NSArray *)emergencyNumbers 
-{
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    return appDelegate.emergencyNumbers;
-}
-
 
 - (void)viewDidLoad
 {
@@ -32,6 +25,12 @@ CLLocationManager *locationManager;
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.title = @"911 Caller";
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSArray *numbers = [[delegate emergencyNumbers] allValues];
+    
+    self.emergencyNumbers = [[NSMutableArray alloc] initWithArray:numbers];
+    [self.emergencyNumbers sortUsingSelector:@selector(compare:)];
     
 }
 
@@ -62,8 +61,8 @@ CLLocationManager *locationManager;
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDictionary *countryWithNumbers = [self.emergencyNumbers objectAtIndex:indexPath.row];
-    cell.textLabel.text = [countryWithNumbers objectForKey:@"country"];
+    CountryListing *countryListing = [self.emergencyNumbers objectAtIndex:indexPath.row];
+    cell.textLabel.text = [countryListing localizedCountryName];
 
     return cell;
 }
@@ -78,9 +77,9 @@ CLLocationManager *locationManager;
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDictionary *countryWithNumbers = [self.emergencyNumbers objectAtIndex:indexPath.row];
+        CountryListing *countryListing = [self.emergencyNumbers objectAtIndex:indexPath.row];
         
-        [[segue destinationViewController] setDetailItem:countryWithNumbers];
+        [[segue destinationViewController] setDetailItem:countryListing];
     }
 }
 
