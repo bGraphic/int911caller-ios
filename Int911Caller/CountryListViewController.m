@@ -26,6 +26,16 @@ CLLocationManager *locationManager;
     
     self.title = @"911 Caller";
     
+    UIImage *backgroundImage = [UIImage imageNamed:@"GUI-911_background.png"];
+    UIColor *backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
+                    
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+    backgroundView.backgroundColor = backgroundColor;
+    
+    [self.tableView setBackgroundView:backgroundView];
+    
+//    [self.tableView setBackgroundColor:backgroundColor];
+    
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSArray *numbers = [[delegate emergencyNumbers] allValues];
     
