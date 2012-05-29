@@ -17,9 +17,16 @@
 @synthesize currentISOCountryCode = _currentISOCountryCode;
 
 #ifdef DEBUG
-// 1800 seconds = 30 minutes
 const double UPDATE_INTERVAL = 5;
-#else
+#endif
+
+#ifdef ADHOC
+// 600 seconds = 5 minutes
+const double UPDATE_INTERVAL = 600;
+#endif
+
+#ifdef RELEASE
+// 1800 seconds = 30 minutes
 const double UPDATE_INTERVAL = 1800;
 #endif
 
