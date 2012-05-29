@@ -12,7 +12,7 @@
 
 @synthesize countryKey = _countryKey;
 @synthesize embergencyNumbers = _embergencyNumber;
-
+@synthesize localizedCountryName = _localizedCountryName;
 
 - (CountryListing *) initWithKey:(NSString *) key andNumbers:(NSDictionary *) numbers {
     self = [super init];

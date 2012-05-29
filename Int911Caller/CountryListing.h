@@ -10,10 +10,10 @@
 
 @interface CountryListing : NSObject
 
-@property NSString *countryKey;
-@property NSDictionary *embergencyNumbers;
+@property (strong, nonatomic) NSString *countryKey;
+@property (strong, nonatomic) NSDictionary *embergencyNumbers;
+@property (strong, nonatomic) NSString *localizedCountryName;
 
 - (CountryListing *) initWithKey:(NSString *) key andNumbers:(NSDictionary *) numbers;
-- (NSString *)localizedCountryName;
 
 @end
