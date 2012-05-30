@@ -169,14 +169,37 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="MNu-6e-RAA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mzL-m5-t97">
+                                <rect key="frame" x="66" y="328" width="188" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="See list of countries">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3" kind="modal" modalTransitionStyle="flipHorizontal" id="LTm-Ff-3Cg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Detail" id="26">
+                        <barButtonItem key="rightBarButtonItem" title="Locate me" id="NbF-rc-QaA">
+                            <connections>
+                                <segue destination="seT-h5-Zoi" kind="modal" modalTransitionStyle="flipHorizontal" id="Hfl-Y9-qzi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calButtonTwo" destination="T4j-Ho-OeF" id="DKi-YR-q4U"/>
                         <outlet property="callButtonOne" destination="wox-Sf-s8d" id="x2Q-az-RqU"/>
                         <outlet property="callButtonThree" destination="BHl-rc-piF" id="eHl-es-Udb"/>
+                        <outlet property="countryListButton" destination="mzL-m5-t97" id="pbE-SH-bMo"/>
+                        <outlet property="locateButton" destination="NbF-rc-QaA" id="ylu-k5-fyw"/>
                     </connections>
                 </viewController>
             </objects>
@@ -198,7 +221,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-822" y="752"/>
+            <point key="canvasLocation" x="-907" y="953"/>
         </scene>
     </scenes>
     <resources>
@@ -217,6 +240,8 @@
                 <relationship kind="outlet" name="calButtonTwo" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButtonOne" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButtonThree" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="countryListButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="locateButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="LocationViewController" superclassName="UIViewController">
@@ -232,6 +257,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vhF-dS-fXl"/>
+        <segue reference="wGc-n0-e8W"/>
+        <segue reference="LTm-Ff-3Cg"/>
     </inferredMetricsTieBreakers>
 </document>

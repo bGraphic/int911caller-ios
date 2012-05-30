@@ -17,4 +17,7 @@
 
 @property (strong, nonatomic) NSString *currentISOCountryCode;
 
+-(void) loadCountryList;
+-(void) loadLocateMe;
+
 @end

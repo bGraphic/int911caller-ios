@@ -71,15 +71,25 @@ NSDate *didEnterBackgroundDate;
     }
 }
 
-- (void) loadInitialView {
+- (void)loadCountryList {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
+    NSLog(@"Load List Of Countries");
+    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
+}
+
+- (void)loadLocateMe {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
+    NSLog(@"Load Locate User");
+    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
+}
+
+- (void) loadInitialView {
+
     
     if([self locationManagerIsNotAuthorized] ||[self notConnectedToNetwork]) {
-        NSLog(@"Load List Of Countries");
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
+        [self loadCountryList];
     } else {
-        NSLog(@"Load Locate User");
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
+        [self loadLocateMe];
     }
 }
 

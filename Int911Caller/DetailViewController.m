@@ -10,7 +10,8 @@
 
 @interface DetailViewController ()
 - (void)configureView;
-- (void)configureButtons;
+- (void)configureCallButtons;
+- (void)configureExtraButtons;
 @end
 
 @implementation DetailViewController
@@ -19,6 +20,10 @@
 @synthesize callButtonOne = _callButtonOne;
 @synthesize calButtonTwo = _calButtonTwo;
 @synthesize callButtonThree = _callButtonThree;
+@synthesize countryListButton = _countryListButton;
+@synthesize locateButton = _locateButton;
+@synthesize showCountryListButton = _showCountryListButton;
+@synthesize showLocateMeButton = _showLocateMeButton;
 
 NSArray *callButtons;
 
@@ -36,11 +41,8 @@ NSArray *callButtons;
 
 - (void)configureView
 {
-    
     if (self.detailItem) {
-        [self configureButtons];
-
-        
+        [self configureCallButtons];
         self.title = [self.detailItem localizedCountryName];
     }
     
@@ -55,7 +57,7 @@ NSArray *callButtons;
     [button setTitle:number forState:UIControlStateHighlighted];
 }
 
-- (void)configureButtons
+- (void)configureCallButtons
 {
     NSDictionary *numbers = self.detailItem.embergencyNumbers;
     
@@ -73,11 +75,41 @@ NSArray *callButtons;
     }
 }
 
+
+#pragma mark extra buttons
+
+- (void)setShowCountryListButton:(BOOL)showCountryListButton {
+    if (_showCountryListButton != showCountryListButton) {
+        _showCountryListButton = showCountryListButton;
+        
+        [self configureExtraButtons];
+    }
+}
+
+- (void)setShowLocateMeButton:(BOOL)showLocateMeButton {
+    if (_showLocateMeButton != showLocateMeButton) {
+        _showLocateMeButton = showLocateMeButton;
+        
+        [self configureExtraButtons];
+    }
+}
+
+- (void)configureExtraButtons {
+    self.countryListButton.hidden = !self.showCountryListButton;
+    
+    if(!self.showLocateMeButton) {
+        self.navigationItem.rightBarButtonItem = nil;
+    } else {
+        self.navigationItem.rightBarButtonItem = self.locateButton;
+
+    }
+}
+
 #pragma mark call action
 
 - (void)showAlertFor:(NSString *)number {
     NSString *title = [[NSString alloc] initWithFormat:@"Calling %@", number];
-    NSString *message = @"The app will not actually call the emergency number during testing";
+    NSString *message = @"The app will not call the emergency number during testing";
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
@@ -129,10 +161,13 @@ NSArray *callButtons;
     }
     
     [self configureView];
+    [self configureExtraButtons];
 }
 
 - (void)viewDidUnload
 {
+    [self setCountryListButton:nil];
+    [self setLocateButton:nil];
     [super viewDidUnload];
     
     [self setCallButtonOne:nil];

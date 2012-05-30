@@ -89,7 +89,9 @@ CLLocationManager *locationManager;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CountryListing *countryListing = [self.emergencyNumbers objectAtIndex:indexPath.row];
         
-        [[segue destinationViewController] setDetailItem:countryListing];
+        DetailViewController *view = [segue destinationViewController];
+        [view setShowLocateMeButton:TRUE];
+        [view setDetailItem:countryListing];
     }
 }
 

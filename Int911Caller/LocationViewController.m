@@ -64,7 +64,10 @@ NSString *currentISOCountryCode;
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
-        [[segue destinationViewController] setDetailItem:countryListing];
+        DetailViewController *view = [segue destinationViewController];
+        [view setShowCountryListButton:TRUE];
+        [view setDetailItem:countryListing];
+
     }
 }
 
