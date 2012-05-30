@@ -140,21 +140,17 @@ CLLocationManager *locationManager;
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-	/*
-	 Update the filtered array based on the search text and scope.
-	 */
 	
-	[self.searchResults removeAllObjects]; // First clear the filtered array.
-	
-	/*
-	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
-	 */
-	for (CountryListing *countryListing in self.emergencyNumbers)
-	{
+	[self.searchResults removeAllObjects];	
 
-        NSComparisonResult result = [countryListing.localizedCountryName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
-        if (result == NSOrderedSame)
-        {
+    
+	for (CountryListing *countryListing in self.emergencyNumbers){
+
+        NSComparisonResult result = [countryListing.localizedCountryName 
+                                     compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) 
+                                     range:NSMakeRange(0, [searchText length])];
+        
+        if (result == NSOrderedSame){
             [self.searchResults addObject:countryListing];
         }
 
@@ -170,22 +166,12 @@ CLLocationManager *locationManager;
     [self filterContentForSearchText:searchString scope:
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    [controller.searchResultsTableView setBackgroundView:[self.tableView backgroundView]];
+    [controller.searchResultsTableView setSeparatorColor:[self.tableView separatorColor]];
+    [controller.searchResultsTableView setSeparatorStyle:[self.tableView separatorStyle]];
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
-
-
-
-
 
 @end
