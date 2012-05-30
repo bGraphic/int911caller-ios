@@ -13,6 +13,7 @@
                 <navigationController storyboardIdentifier="listOfCountries" title="listOfCountries" id="3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WcX-b3-RDg"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,9 +33,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.76470595600000002" green="0.85098046059999999" blue="0.88235300780000003" alpha="0.5" colorSpace="deviceRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Name of country" id="ujH-02-U4e">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                            <connections>
+                                <outlet property="delegate" destination="12" id="iqy-uF-fKO"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="49"/>
@@ -52,9 +61,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="21" kind="push" identifier="showDetail" id="vhF-dS-fXl"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -64,7 +70,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ujH-02-U4e" id="Aow-pD-kwg"/>
+                        <outlet property="searchDisplayController" destination="3Mk-Fb-xqd" id="HM6-05-RsP"/>
+                        <segue destination="21" kind="push" identifier="showDetail" id="CH2-yq-36R"/>
+                    </connections>
                 </tableViewController>
+                <searchDisplayController id="3Mk-Fb-xqd">
+                    <connections>
+                        <outlet property="delegate" destination="12" id="PXB-tI-Tyx"/>
+                        <outlet property="searchBar" destination="ujH-02-U4e" id="0is-7V-v7m"/>
+                        <outlet property="searchContentsController" destination="12" id="Ixe-Oo-SkR"/>
+                        <outlet property="searchResultsDataSource" destination="12" id="bx4-uA-gZm"/>
+                        <outlet property="searchResultsDelegate" destination="12" id="Mzf-mZ-e0D"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="724" y="236"/>
         </scene>
@@ -232,6 +252,10 @@
     <classes>
         <class className="CountryListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
+            </relationships>
         </class>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
@@ -257,7 +281,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wGc-n0-e8W"/>
-        <segue reference="LTm-Ff-3Cg"/>
+        <segue reference="epv-sq-Ku7"/>
+        <segue reference="CH2-yq-36R"/>
     </inferredMetricsTieBreakers>
 </document>
