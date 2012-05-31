@@ -12,7 +12,7 @@
 #import "Reachability.h"
 
 #ifdef DEBUG
-const double UPDATE_INTERVAL = 1;
+const double UPDATE_INTERVAL = 5;
 #endif
 
 #ifdef ADHOC
@@ -31,40 +31,19 @@ const double UPDATE_INTERVAL = 1800;
 @synthesize locationManager = _locationManager;
 
 NSString *currentISOCountryCode;
-NSDate *didEnterBackgroundDate;
-
-- (BOOL) locationManagerIsNotAuthorized {
-    return  [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || 
-    [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted;
-}
-
-- (BOOL) notConnectedToNetwork
-{
-	Reachability *reachability = [Reachability reachabilityForInternetConnection];  
-    NetworkStatus networkStatus = [reachability currentReachabilityStatus]; 
-    return (networkStatus == NotReachable);
-} 
+NSDate *currentISOCountryCodeDate;
 
 - (BOOL) isTimeToReload
 {
-    return didEnterBackgroundDate == nil || [didEnterBackgroundDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
+    return currentISOCountryCodeDate == nil || [currentISOCountryCodeDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
 }
 
-- (void) didEnterBackground:(NSNotification*)notification
-{
-    didEnterBackgroundDate = [NSDate date];
-}
-
-- (void) updateLocation {
-    self.locationManager.delegate = self;
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void) willEnterForeground:(NSNotification*)notification
-{
-    if([self isTimeToReload]){  
+- (void) willEnterForeground:(NSNotification*)notification {
+    
+    if([self isTimeToReload]){
+        NSLog(@"Is time to reload");
         [self.navigationController popToRootViewControllerAnimated:FALSE];
-        [self updateLocation];
+        [self.tabBarController setSelectedViewController:self.navigationController];
     }
 }
 
@@ -72,13 +51,6 @@ NSDate *didEnterBackgroundDate;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    NSLog(@"load");
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didEnterBackground:)
-                                                 name:UIApplicationDidEnterBackgroundNotification
-                                               object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(willEnterForeground:)
@@ -91,7 +63,8 @@ NSDate *didEnterBackgroundDate;
     self.locationManager.distanceFilter = 1000.0f;
 
     [self.activityIndicator startAnimating];
-    [self updateLocation];
+    
+    NSLog(@"load");
     
     self.title = @"911 Caller";
 }
@@ -105,6 +78,9 @@ NSDate *didEnterBackgroundDate;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"did appear");
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
@@ -170,6 +146,7 @@ NSDate *didEnterBackgroundDate;
             CLPlacemark *placemark = [placemarks objectAtIndex:0];
             
             currentISOCountryCode = [placemark ISOcountryCode];
+            currentISOCountryCodeDate = [NSDate date];
             
             NSLog(@"iPhone is in country: %@", currentISOCountryCode);
             
