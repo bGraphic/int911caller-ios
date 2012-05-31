@@ -86,7 +86,8 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "AdHoc"
+      customArchiveName = "911Caller"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

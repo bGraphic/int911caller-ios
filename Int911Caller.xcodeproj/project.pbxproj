@@ -39,7 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		130EF2FB156803EF009E9711 /* Int911Caller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Int911Caller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		130EF2FB156803EF009E9711 /* EmergencyCaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyCaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		130EF2FF156803EF009E9711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		130EF301156803EF009E9711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		130EF303156803EF009E9711 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,7 +113,7 @@
 		130EF2FC156803EF009E9711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				130EF2FB156803EF009E9711 /* Int911Caller.app */,
+				130EF2FB156803EF009E9711 /* EmergencyCaller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			);
 			name = Int911Caller;
 			productName = Int911Caller;
-			productReference = 130EF2FB156803EF009E9711 /* Int911Caller.app */;
+			productReference = 130EF2FB156803EF009E9711 /* EmergencyCaller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -350,11 +350,12 @@
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmergencyCaller;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -366,11 +367,12 @@
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmergencyCaller;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -398,15 +400,18 @@
 		13C81CF31574D57900D16A7A /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmergencyCaller;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
