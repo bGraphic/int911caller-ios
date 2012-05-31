@@ -11,7 +11,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="listOfCountries" title="listOfCountries" id="3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kzf-MO-iDq"/>
+                    <tabBarItem key="tabBarItem" title="Directory" image="104-index-cards.png" id="kzf-MO-iDq"/>
                     <navigationItem key="navigationItem" id="WcX-b3-RDg"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
@@ -136,7 +136,7 @@
                     <navigationItem key="navigationItem" id="WOa-ta-40r"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jTV-Ms-Zyd" id="nKi-GL-GLN"/>
-                        <segue destination="21" kind="custom" identifier="showDetail" customClass="DisolveSegue" id="wGc-n0-e8W"/>
+                        <segue destination="21" kind="push" identifier="showDetail" customClass="DisolveSegue" id="wGc-n0-e8W"/>
                     </connections>
                 </viewController>
             </objects>
@@ -224,12 +224,12 @@
             </objects>
             <point key="canvasLocation" x="1324" y="365"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Local Numbers-->
         <scene sceneID="NTO-i1-uXJ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knb-cU-Qsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="LnN-k3-jSN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sbm-yH-b9e"/>
+                    <tabBarItem key="tabBarItem" title="Local Numbers" image="74-location.png" id="Sbm-yH-b9e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="t5X-uK-3Vt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -245,37 +245,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="104-index-cards.png" width="26" height="17"/>
+        <image name="74-location.png" width="20" height="20"/>
         <image name="GUI-911_background.png" width="640" height="980"/>
         <image name="GUI-911_button.png" width="469" height="125"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>
     </resources>
-    <classes>
-        <class className="CallButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
-        </class>
-        <class className="CountryListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callEmergencyNumberAction:"/>
-                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

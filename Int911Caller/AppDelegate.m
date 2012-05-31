@@ -34,6 +34,12 @@
         
         [self.emergencyNumbers setObject:countryListing forKey:countryKey];
     }
+    
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+
+    [[tabBarController.viewControllers objectAtIndex:0] setTitle:@"Local"];
+    [[tabBarController.viewControllers objectAtIndex:1] setTitle:@"Directory"];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

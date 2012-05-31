@@ -27,8 +27,6 @@ CLLocationManager *locationManager;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"911 Caller";
-    
     UIImage *backgroundImage = [UIImage imageNamed:@"GUI-911_background.png"];
     UIColor *backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
                     
@@ -45,6 +43,12 @@ CLLocationManager *locationManager;
     
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.emergencyNumbers count]];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationItem.title = @"Directory of Numbers";
+
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidUnload
@@ -130,7 +134,8 @@ CLLocationManager *locationManager;
         }
         
         DetailViewController *view = [segue destinationViewController];
-        [view setDetailItem:countryListing];
+        view.detailItem = countryListing;
+        self.navigationItem.title = @"Directory";
     }
 }
 

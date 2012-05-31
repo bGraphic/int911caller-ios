@@ -63,10 +63,6 @@ NSDate *currentISOCountryCodeDate;
     self.locationManager.distanceFilter = 1000.0f;
 
     [self.activityIndicator startAnimating];
-    
-    NSLog(@"load");
-    
-    self.title = @"911 Caller";
 }
 
 - (void)viewDidUnload
@@ -78,7 +74,9 @@ NSDate *currentISOCountryCodeDate;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"did appear");
+    self.title = @"Local";
+    self.navigationItem.title = @"Looking up local number(s)";
+    
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
 }
@@ -100,9 +98,11 @@ NSDate *currentISOCountryCodeDate;
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
+        self.title = countryListing.localizedCountryName;
+        
         DetailViewController *view = [segue destinationViewController];
-        [view setDetailItem:countryListing];
-
+        view.detailItem = countryListing;
+        view.navigationItem.hidesBackButton = true;
     }
 }
 
