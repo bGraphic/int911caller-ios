@@ -95,15 +95,15 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVw-hD-bjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="xV3-xZ-yW9" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Naa-w8-R7c">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="x3f-KE-WU6"/>
                         <segue destination="LnN-k3-jSN" kind="relationship" relationship="viewControllers" id="EMv-yX-ZM7"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="x3f-KE-WU6"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -136,7 +136,7 @@
                     <navigationItem key="navigationItem" id="WOa-ta-40r"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jTV-Ms-Zyd" id="nKi-GL-GLN"/>
-                        <segue destination="21" kind="push" identifier="showDetail" id="wGc-n0-e8W"/>
+                        <segue destination="21" kind="custom" identifier="showDetail" customClass="DisolveSegue" id="wGc-n0-e8W"/>
                     </connections>
                 </viewController>
             </objects>
@@ -213,6 +213,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calButtonTwo" destination="T4j-Ho-OeF" id="DKi-YR-q4U"/>
                         <outlet property="callButtonOne" destination="wox-Sf-s8d" id="x2Q-az-RqU"/>

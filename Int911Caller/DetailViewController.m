@@ -35,6 +35,10 @@
 
 - (void)configureView
 {
+    for (UIButton *button in self.callButtons) {
+        button.hidden = true;
+    }
+    
     if (self.detailItem) {
         [self configureCallButtons];
         self.title = [self.detailItem localizedCountryName];
@@ -112,10 +116,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, nil];
-    
-    for (UIButton *button in self.callButtons) {
-        button.hidden = true;
-    }
     
     [self configureView];
 }

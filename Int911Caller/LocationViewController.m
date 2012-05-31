@@ -12,7 +12,7 @@
 #import "Reachability.h"
 
 #ifdef DEBUG
-const double UPDATE_INTERVAL = 5;
+const double UPDATE_INTERVAL = 1;
 #endif
 
 #ifdef ADHOC
@@ -91,7 +91,6 @@ NSDate *didEnterBackgroundDate;
 
 - (void)viewDidUnload
 {
-    
     self.locationManager.delegate = nil;
     
     [super viewDidUnload];
@@ -101,6 +100,8 @@ NSDate *didEnterBackgroundDate;
 - (void)viewDidAppear:(BOOL)animated {
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
+    
+    NSLog(@"appear");
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
