@@ -9,7 +9,6 @@
 #import "LocationViewController.h"
 #import "DetailViewController.h"
 #import "AppDelegate.h"
-#import "Reachability.h"
 
 #ifdef DEBUG
 const double UPDATE_INTERVAL = 5;
@@ -94,6 +93,9 @@ NSDate *currentISOCountryCodeDate;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    UIViewController *view = [segue destinationViewController];
+    view.navigationItem.hidesBackButton = true;
+    
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
@@ -102,7 +104,6 @@ NSDate *currentISOCountryCodeDate;
         
         DetailViewController *view = [segue destinationViewController];
         view.detailItem = countryListing;
-        view.navigationItem.hidesBackButton = true;
     }
 }
 
@@ -127,7 +128,8 @@ NSDate *currentISOCountryCodeDate;
             break;
     }
     
-    [self performSegueWithIdentifier:@"listCountries" sender:self];    
+    [self performSegueWithIdentifier:@"showError" sender:self];
+    
     
 }
 
@@ -156,7 +158,7 @@ NSDate *currentISOCountryCodeDate;
             
             NSLog(@"Location Error: %@", [error description]);
             
-            [self performSegueWithIdentifier:@"listCountries" sender:self];   
+            [self performSegueWithIdentifier:@"showError" sender:self];   
             
         }
         
