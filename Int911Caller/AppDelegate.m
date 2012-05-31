@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CountryListing.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
@@ -45,7 +46,11 @@
 {
     [self loadEmergencyNumbers];
     
-//    [self loadInitialView];
+    [TestFlight takeOff:@"7e3a600d0b4a83b8560240773138f792_NDY0NzUyMDExLTEyLTA5IDE0OjM3OjUwLjgxNjY5Ng"];
+    
+    #ifdef ADHOC
+        [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    #endif
     
     // Override point for customization after application launch.
     return YES;

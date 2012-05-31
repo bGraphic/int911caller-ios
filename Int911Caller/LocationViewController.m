@@ -9,6 +9,7 @@
 #import "LocationViewController.h"
 #import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "TestFlight.h"
 
 #ifdef DEBUG
 const double UPDATE_INTERVAL = 5;
@@ -111,8 +112,6 @@ NSDate *currentISOCountryCodeDate;
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    NSLog(@"Location Error: %@", [error description]);
-    
     [self.locationManager stopUpdatingLocation];
     NSString *errorMessage;
     
@@ -127,6 +126,9 @@ NSDate *currentISOCountryCodeDate;
             errorMessage = NSLocalizedString(@"location_standard",  nil);
             break;
     }
+    
+    NSLog(@"Location Error: %@", [error description]);
+    [TestFlight passCheckpoint:@"LOCATION ERROR"];
     
     [self performSegueWithIdentifier:@"showError" sender:self];
     
@@ -156,7 +158,8 @@ NSDate *currentISOCountryCodeDate;
             
         } else {
             
-            NSLog(@"Location Error: %@", [error description]);
+            NSLog(@"Geocode error: %@", [error description]);
+            [TestFlight passCheckpoint:@"GEOCODE ERROR"];
             
             [self performSegueWithIdentifier:@"showError" sender:self];   
             

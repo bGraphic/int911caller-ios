@@ -6,7 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailViewController.h"    
+#import "DetailViewController.h"  
+#import "TestFlight.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -67,6 +68,7 @@
 
         CallButton *button = [self.callButtons objectAtIndex:i];
         button.emergencyNumber = number;
+        button.emergencyNumberKey = numberKey;
         [self setButtonTitle:buttonTitle button:button];
         button.hidden = false;
         
@@ -99,7 +101,9 @@
 - (IBAction)callEmergencyNumberAction:(id)sender {
     CallButton *selectedButton = (CallButton *)sender;
     
-    NSLog(@"Calling %@", selectedButton.emergencyNumber);
+    NSLog(@"Calling %@ (%@)", selectedButton.emergencyNumber, selectedButton.emergencyNumberKey);
+
+    [TestFlight passCheckpoint:@"CALLED"];
     
     #ifdef RELEASE
     [self placeCallTo:selectedButton.emergencyNumber];

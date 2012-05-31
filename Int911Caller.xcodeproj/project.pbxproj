@@ -29,6 +29,10 @@
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
 		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
+		13971C241578033B0005994A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C201578033B0005994A /* libTestFlight.a */; };
+		13971C251578033B0005994A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C211578033B0005994A /* README.txt */; };
+		13971C261578033B0005994A /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C221578033B0005994A /* release_notes.txt */; };
+		13971C28157803880005994A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
 		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
@@ -65,6 +69,11 @@
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
 		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		13971C201578033B0005994A /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		13971C211578033B0005994A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		13971C221578033B0005994A /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		13971C231578033B0005994A /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		13971C27157803880005994A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		13C81CDC1572C01B00D16A7A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
@@ -76,11 +85,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13971C28157803880005994A /* libz.dylib in Frameworks */,
 				138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */,
 				130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */,
 				130EF300156803EF009E9711 /* UIKit.framework in Frameworks */,
 				130EF302156803EF009E9711 /* Foundation.framework in Frameworks */,
 				130EF304156803EF009E9711 /* CoreGraphics.framework in Frameworks */,
+				13971C241578033B0005994A /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +101,7 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
+				13971C1F1578033B0005994A /* TestFlightSDK1.0 */,
 				13C81CDE1572C02500D16A7A /* Icon.png */,
 				13C81CDC1572C01B00D16A7A /* Icon@2x.png */,
 				130EF305156803EF009E9711 /* Int911Caller */,
@@ -109,6 +121,7 @@
 		130EF2FE156803EF009E9711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13971C27157803880005994A /* libz.dylib */,
 				138BA097156F7C4500B10296 /* SystemConfiguration.framework */,
 				130EF32E15683462009E9711 /* CoreLocation.framework */,
 				130EF2FF156803EF009E9711 /* UIKit.framework */,
@@ -150,6 +163,17 @@
 				130EF3261568093E009E9711 /* Numbers.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13971C1F1578033B0005994A /* TestFlightSDK1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				13971C201578033B0005994A /* libTestFlight.a */,
+				13971C211578033B0005994A /* README.txt */,
+				13971C221578033B0005994A /* release_notes.txt */,
+				13971C231578033B0005994A /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.0;
 			sourceTree = "<group>";
 		};
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
@@ -230,6 +254,8 @@
 				132CC1441577C4490059E90B /* 74-location@2x.png in Resources */,
 				132CC1471577C4A10059E90B /* 104-index-cards.png in Resources */,
 				132CC1481577C4A10059E90B /* 104-index-cards@2x.png in Resources */,
+				13971C251578033B0005994A /* README.txt in Resources */,
+				13971C261578033B0005994A /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +350,10 @@
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -336,6 +366,10 @@
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -368,6 +402,10 @@
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1.0\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
