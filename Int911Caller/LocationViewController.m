@@ -55,10 +55,16 @@ NSDate *didEnterBackgroundDate;
     didEnterBackgroundDate = [NSDate date];
 }
 
+- (void) updateLocation {
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
+}
+
 - (void) willEnterForeground:(NSNotification*)notification
 {
     if([self isTimeToReload]){  
         [self.navigationController popToRootViewControllerAnimated:FALSE];
+        [self updateLocation];
     }
 }
 
@@ -85,6 +91,7 @@ NSDate *didEnterBackgroundDate;
     self.locationManager.distanceFilter = 1000.0f;
 
     [self.activityIndicator startAnimating];
+    [self updateLocation];
     
     self.title = @"911 Caller";
 }
@@ -98,10 +105,6 @@ NSDate *didEnterBackgroundDate;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.locationManager.delegate = self;
-    [self.locationManager startUpdatingLocation];
-    
-    NSLog(@"appear");
 }
 
 - (void) viewDidDisappear:(BOOL)animated {

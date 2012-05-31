@@ -140,7 +140,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1070" y="752"/>
+            <point key="canvasLocation" x="544" y="727"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -222,7 +222,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1937" y="217"/>
+            <point key="canvasLocation" x="1324" y="365"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="NTO-i1-uXJ">
@@ -241,7 +241,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="544" y="752"/>
+            <point key="canvasLocation" x="-108" y="727"/>
         </scene>
     </scenes>
     <resources>
@@ -249,6 +249,33 @@
         <image name="GUI-911_button.png" width="469" height="125"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>
     </resources>
+    <classes>
+        <class className="CallButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
+        </class>
+        <class className="CountryListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="callEmergencyNumberAction:"/>
+                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
