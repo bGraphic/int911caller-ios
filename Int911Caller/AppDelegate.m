@@ -14,41 +14,6 @@
 
 @synthesize window = _window;
 @synthesize emergencyNumbers = _emergencyNumbers;
-@synthesize currentISOCountryCode = _currentISOCountryCode;
-
-#ifdef DEBUG
-const double UPDATE_INTERVAL = 5;
-#endif
-
-#ifdef ADHOC
-// 600 seconds = 5 minutes
-const double UPDATE_INTERVAL = 600;
-#endif
-
-#ifdef RELEASE
-// 1800 seconds = 30 minutes
-const double UPDATE_INTERVAL = 1800;
-#endif
-
-
-NSDate *didEnterBackgroundDate;
-
-- (BOOL) locationManagerIsNotAuthorized {
-    return  [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || 
-    [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted;
-}
-
-- (BOOL) notConnectedToNetwork
-{
-	Reachability *reachability = [Reachability reachabilityForInternetConnection];  
-    NetworkStatus networkStatus = [reachability currentReachabilityStatus]; 
-    return (networkStatus == NotReachable);
-} 
-
-- (BOOL) isTimeToReload
-{
-    return didEnterBackgroundDate == nil || [didEnterBackgroundDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
-}
 
 - (void) loadEmergencyNumbers {
     NSDictionary *emergencyNumbersFromFile = [[NSMutableDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: @"Numbers" ofType:@"plist"]];
@@ -71,33 +36,11 @@ NSDate *didEnterBackgroundDate;
     }
 }
 
-- (void)loadCountryList {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
-    NSLog(@"Load List Of Countries");
-    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"listOfCountries"];
-}
-
-- (void)loadLocateMe {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil]; 
-    NSLog(@"Load Locate User");
-    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"locateUser"];
-}
-
-- (void) loadInitialView {
-
-    
-    if([self locationManagerIsNotAuthorized] ||[self notConnectedToNetwork]) {
-        [self loadCountryList];
-    } else {
-        [self loadLocateMe];
-    }
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self loadEmergencyNumbers];
     
-    [self loadInitialView];
+//    [self loadInitialView];
     
     // Override point for customization after application launch.
     return YES;
@@ -113,17 +56,11 @@ NSDate *didEnterBackgroundDate;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    
-    didEnterBackgroundDate = [NSDate date];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    
-    if([self isTimeToReload]) {
-        [self loadInitialView];
-    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

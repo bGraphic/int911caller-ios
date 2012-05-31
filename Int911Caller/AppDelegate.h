@@ -15,9 +15,4 @@
 
 @property (strong, nonatomic) NSMutableDictionary *emergencyNumbers;
 
-@property (strong, nonatomic) NSString *currentISOCountryCode;
-
--(void) loadCountryList;
--(void) loadLocateMe;
-
 @end

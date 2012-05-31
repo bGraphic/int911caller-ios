@@ -9,7 +9,21 @@
 #import "LocationViewController.h"
 #import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
+#ifdef DEBUG
+const double UPDATE_INTERVAL = 5;
+#endif
+
+#ifdef ADHOC
+// 600 seconds = 5 minutes
+const double UPDATE_INTERVAL = 600;
+#endif
+
+#ifdef RELEASE
+// 1800 seconds = 30 minutes
+const double UPDATE_INTERVAL = 1800;
+#endif
 
 @implementation LocationViewController
 
@@ -17,11 +31,54 @@
 @synthesize locationManager = _locationManager;
 
 NSString *currentISOCountryCode;
+NSDate *didEnterBackgroundDate;
+
+- (BOOL) locationManagerIsNotAuthorized {
+    return  [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || 
+    [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted;
+}
+
+- (BOOL) notConnectedToNetwork
+{
+	Reachability *reachability = [Reachability reachabilityForInternetConnection];  
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus]; 
+    return (networkStatus == NotReachable);
+} 
+
+- (BOOL) isTimeToReload
+{
+    return didEnterBackgroundDate == nil || [didEnterBackgroundDate timeIntervalSinceNow] < -UPDATE_INTERVAL;
+}
+
+- (void) didEnterBackground:(NSNotification*)notification
+{
+    didEnterBackgroundDate = [NSDate date];
+}
+
+- (void) willEnterForeground:(NSNotification*)notification
+{
+    if([self isTimeToReload]){  
+        [self.navigationController popToRootViewControllerAnimated:FALSE];
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSLog(@"load");
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didEnterBackground:)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(willEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
@@ -34,7 +91,6 @@ NSString *currentISOCountryCode;
 
 - (void)viewDidUnload
 {
-    NSLog(@"view did unload"); 
     
     self.locationManager.delegate = nil;
     
@@ -65,7 +121,6 @@ NSString *currentISOCountryCode;
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
         DetailViewController *view = [segue destinationViewController];
-        [view setShowCountryListButton:TRUE];
         [view setDetailItem:countryListing];
 
     }

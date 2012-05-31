@@ -17,11 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *callButtonOne;
 @property (strong, nonatomic) IBOutlet UIButton *calButtonTwo;
 @property (strong, nonatomic) IBOutlet UIButton *callButtonThree;
-@property (strong, nonatomic) IBOutlet UIButton *countryListButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *locateButton;
-
-@property (nonatomic) BOOL showCountryListButton;
-@property (nonatomic) BOOL showLocateMeButton;
+@property (strong, nonatomic) NSArray *callButtons;
 
 - (IBAction)callEmergencyNumberAction:(id)sender;
 

@@ -130,7 +130,6 @@ CLLocationManager *locationManager;
         }
         
         DetailViewController *view = [segue destinationViewController];
-        [view setShowLocateMeButton:TRUE];
         [view setDetailItem:countryListing];
     }
 }

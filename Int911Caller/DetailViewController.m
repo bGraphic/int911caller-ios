@@ -10,8 +10,6 @@
 
 @interface DetailViewController ()
 - (void)configureView;
-- (void)configureCallButtons;
-- (void)configureExtraButtons;
 @end
 
 @implementation DetailViewController
@@ -20,12 +18,8 @@
 @synthesize callButtonOne = _callButtonOne;
 @synthesize calButtonTwo = _calButtonTwo;
 @synthesize callButtonThree = _callButtonThree;
-@synthesize countryListButton = _countryListButton;
-@synthesize locateButton = _locateButton;
-@synthesize showCountryListButton = _showCountryListButton;
-@synthesize showLocateMeButton = _showLocateMeButton;
+@synthesize callButtons = _callButtons;
 
-NSArray *callButtons;
 
 #pragma mark - Managing the detail item
 
@@ -67,41 +61,11 @@ NSArray *callButtons;
         NSString *number = [numbers objectForKey:numberKey];
         NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@ - %@", number, numberKey];
 
-        UIButton *button = [callButtons objectAtIndex:i];
+        UIButton *button = [self.callButtons objectAtIndex:i];
         [self setButtonTitle:buttonTitle button:button];
         button.hidden = false;
         
         i++;
-    }
-}
-
-
-#pragma mark extra buttons
-
-- (void)setShowCountryListButton:(BOOL)showCountryListButton {
-    if (_showCountryListButton != showCountryListButton) {
-        _showCountryListButton = showCountryListButton;
-        
-        [self configureExtraButtons];
-    }
-}
-
-- (void)setShowLocateMeButton:(BOOL)showLocateMeButton {
-    if (_showLocateMeButton != showLocateMeButton) {
-        _showLocateMeButton = showLocateMeButton;
-        
-        [self configureExtraButtons];
-    }
-}
-
-- (void)configureExtraButtons {
-    self.countryListButton.hidden = !self.showCountryListButton;
-    
-    if(!self.showLocateMeButton) {
-        self.navigationItem.rightBarButtonItem = nil;
-    } else {
-        self.navigationItem.rightBarButtonItem = self.locateButton;
-
     }
 }
 
@@ -130,21 +94,25 @@ NSArray *callButtons;
 - (IBAction)callEmergencyNumberAction:(id)sender {
     UIButton *selectedButton = (UIButton *)sender;
     
-    int i = 0;
-    for(UIButton *button in callButtons) {
-        
-        if(selectedButton == button) {
-            NSString *number = [[self.detailItem.embergencyNumbers allValues] objectAtIndex:i];
-            
-            #ifdef RELEASE
-            [self placeCallTo:number];
-            #else
-            [self showAlertFor:number];      
-            #endif
-            break;
-        }
-        i++;
-    }
+//    NSLog(@"Call emergency number");
+//    
+//    int i = 0;
+//    for(UIButton *button in viewController.callButtons) {
+//        
+//        if(selectedButton == button) {
+//            NSString *number = [[self.detailItem.embergencyNumbers allValues] objectAtIndex:i];
+//            
+//            NSLog(@"Calling %@", number);
+//            
+//            #ifdef RELEASE
+//            [self placeCallTo:number];
+//            #else
+//            [self showAlertFor:number];      
+//            #endif
+//            break;
+//        }
+//        i++;
+//    }
 }
 
 #pragma mark lifecycle
@@ -154,20 +122,17 @@ NSArray *callButtons;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, nil];
+    self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, nil];
     
-    for (UIButton *button in callButtons) {
+    for (UIButton *button in self.callButtons) {
         button.hidden = true;
     }
     
     [self configureView];
-    [self configureExtraButtons];
 }
 
 - (void)viewDidUnload
 {
-    [self setCountryListButton:nil];
-    [self setLocateButton:nil];
     [super viewDidUnload];
     
     [self setCallButtonOne:nil];
