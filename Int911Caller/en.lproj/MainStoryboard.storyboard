@@ -155,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="wox-Sf-s8d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
                                 <rect key="frame" x="43" y="63" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
@@ -173,7 +173,7 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="QTa-sC-WzU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="T4j-Ho-OeF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
                                 <rect key="frame" x="43" y="143" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
@@ -191,7 +191,7 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="uUu-Lt-BUP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="BHl-rc-piF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
                                 <rect key="frame" x="43" y="223" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
@@ -247,32 +247,6 @@
         <image name="GUI-911_button.png" width="469" height="125"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>
     </resources>
-    <classes>
-        <class className="CountryListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callEmergencyNumberAction:"/>
-                <relationship kind="outlet" name="calButtonTwo" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callButtonOne" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callButtonThree" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="countryListButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="locateButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -61,7 +61,8 @@
         NSString *number = [numbers objectForKey:numberKey];
         NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@ - %@", number, numberKey];
 
-        UIButton *button = [self.callButtons objectAtIndex:i];
+        CallButton *button = [self.callButtons objectAtIndex:i];
+        button.emergencyNumber = number;
         [self setButtonTitle:buttonTitle button:button];
         button.hidden = false;
         
@@ -92,27 +93,15 @@
 }
 
 - (IBAction)callEmergencyNumberAction:(id)sender {
-    UIButton *selectedButton = (UIButton *)sender;
+    CallButton *selectedButton = (CallButton *)sender;
     
-//    NSLog(@"Call emergency number");
-//    
-//    int i = 0;
-//    for(UIButton *button in viewController.callButtons) {
-//        
-//        if(selectedButton == button) {
-//            NSString *number = [[self.detailItem.embergencyNumbers allValues] objectAtIndex:i];
-//            
-//            NSLog(@"Calling %@", number);
-//            
-//            #ifdef RELEASE
-//            [self placeCallTo:number];
-//            #else
-//            [self showAlertFor:number];      
-//            #endif
-//            break;
-//        }
-//        i++;
-//    }
+    NSLog(@"Calling %@", selectedButton.emergencyNumber);
+    
+    #ifdef RELEASE
+    [self placeCallTo:selectedButton.emergencyNumber];
+    #else
+    [self showAlertFor:selectedButton.emergencyNumber];      
+    #endif
 }
 
 #pragma mark lifecycle

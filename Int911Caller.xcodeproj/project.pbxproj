@@ -19,6 +19,7 @@
 		130EF3271568093E009E9711 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Numbers.plist */; };
 		130EF32A156824ED009E9711 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
 		130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
+		132CC12715777C560059E90B /* CallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CC12615777C560059E90B /* CallButton.m */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
@@ -49,6 +50,8 @@
 		130EF328156824ED009E9711 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		130EF329156824ED009E9711 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		130EF32E15683462009E9711 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		132CC12515777C560059E90B /* CallButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallButton.h; sourceTree = "<group>"; };
+		132CC12615777C560059E90B /* CallButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallButton.m; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				130EF306156803EF009E9711 /* Supporting Files */,
 				130EF328156824ED009E9711 /* LocationViewController.h */,
 				130EF329156824ED009E9711 /* LocationViewController.m */,
+				132CC12515777C560059E90B /* CallButton.h */,
+				132CC12615777C560059E90B /* CallButton.m */,
 			);
 			path = Int911Caller;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				130EF32A156824ED009E9711 /* LocationViewController.m in Sources */,
 				138BA096156F7BED00B10296 /* Reachability.m in Sources */,
 				13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */,
+				132CC12715777C560059E90B /* CallButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

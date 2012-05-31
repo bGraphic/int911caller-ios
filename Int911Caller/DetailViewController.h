@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "CountryListing.h"
+#import "CallButton.h"
 
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) CountryListing *detailItem;
 
-@property (strong, nonatomic) IBOutlet UIButton *callButtonOne;
-@property (strong, nonatomic) IBOutlet UIButton *calButtonTwo;
-@property (strong, nonatomic) IBOutlet UIButton *callButtonThree;
+@property (strong, nonatomic) IBOutlet CallButton *callButtonOne;
+@property (strong, nonatomic) IBOutlet CallButton *calButtonTwo;
+@property (strong, nonatomic) IBOutlet CallButton *callButtonThree;
 @property (strong, nonatomic) NSArray *callButtons;
 
 - (IBAction)callEmergencyNumberAction:(id)sender;
