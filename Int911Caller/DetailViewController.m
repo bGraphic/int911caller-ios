@@ -20,6 +20,7 @@
 @synthesize calButtonTwo = _calButtonTwo;
 @synthesize callButtonThree = _callButtonThree;
 @synthesize callButtons = _callButtons;
+@synthesize singleNumberButton = _singleNumberButton;
 
 
 #pragma mark - Managing the detail item
@@ -40,6 +41,8 @@
         button.hidden = true;
     }
     
+    self.singleNumberButton.hidden = true;
+    
     if (self.detailItem) {
         [self configureCallButtons];
     }
@@ -58,6 +61,12 @@
 - (void)configureCallButtons
 {
     NSDictionary *numbers = self.detailItem.embergencyNumbers;
+    
+    if(numbers.count == 1) {
+        [self setButtonTitle:[numbers objectForKey:@"general"] button:self.singleNumberButton];
+        self.singleNumberButton.hidden = false;
+        return;
+    }
     
     int i = 0;
     for (NSString *numberKey in numbers) {
@@ -125,6 +134,7 @@
 
 - (void)viewDidUnload
 {
+    [self setSingleNumberButton:nil];
     [super viewDidUnload];
     
     [self setCallButtonOne:nil];

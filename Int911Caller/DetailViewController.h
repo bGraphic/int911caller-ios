@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet CallButton *calButtonTwo;
 @property (strong, nonatomic) IBOutlet CallButton *callButtonThree;
 @property (strong, nonatomic) NSArray *callButtons;
+@property (strong, nonatomic) IBOutlet CallButton *singleNumberButton;
 
 - (IBAction)callEmergencyNumberAction:(id)sender;
 

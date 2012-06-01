@@ -167,12 +167,12 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
-                                <rect key="frame" x="43" y="63" width="234" height="62"/>
+                                <rect key="frame" x="43" y="62.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="2"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="One" backgroundImage="GUI-911_button.png">
+                                <state key="normal" title="One" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -184,13 +184,31 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="QTa-sC-WzU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="wordWrap" id="7n5-JC-H3H" customClass="CallButton">
+                                <rect key="frame" x="97" y="75" width="126" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                <inset key="titleEdgeInsets" minX="-126" minY="130" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Single" image="GUI-911_button_big.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="65g-uY-UgD"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
-                                <rect key="frame" x="43" y="143" width="234" height="62"/>
+                                <rect key="frame" x="43" y="142.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Two" backgroundImage="GUI-911_button.png">
+                                <state key="normal" title="Two" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -203,12 +221,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
-                                <rect key="frame" x="43" y="223" width="234" height="62"/>
+                                <rect key="frame" x="43" y="222.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Three" backgroundImage="GUI-911_button.png">
+                                <state key="normal" title="Three" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -230,6 +248,7 @@
                         <outlet property="calButtonTwo" destination="T4j-Ho-OeF" id="DKi-YR-q4U"/>
                         <outlet property="callButtonOne" destination="wox-Sf-s8d" id="x2Q-az-RqU"/>
                         <outlet property="callButtonThree" destination="BHl-rc-piF" id="eHl-es-Udb"/>
+                        <outlet property="singleNumberButton" destination="7n5-JC-H3H" id="YmP-Nb-i3c"/>
                     </connections>
                 </viewController>
             </objects>
@@ -325,10 +344,48 @@
         <image name="74-location.png" width="20" height="20"/>
         <image name="GUI-911_arrow.png" width="121" height="121"/>
         <image name="GUI-911_background.png" width="640" height="980"/>
-        <image name="GUI-911_button.png" width="469" height="125"/>
+        <image name="GUI-911_button.png" width="63" height="63"/>
+        <image name="GUI-911_button_big.png" width="126" height="126"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>
         <image name="GUI-911_error.png" width="321" height="320"/>
     </resources>
+    <classes>
+        <class className="CallButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
+        </class>
+        <class className="CountryListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="callEmergencyNumberAction:"/>
+                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
+            </relationships>
+        </class>
+        <class className="ErrorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ErrorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locateAgain" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="searchDirectory" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

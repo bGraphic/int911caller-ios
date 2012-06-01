@@ -28,6 +28,9 @@
 		1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341247D1578F1D200373AC2 /* GUI-911_arrow.png */; };
 		134124881578FCD400373AC2 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
 		13412489157906E500373AC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1341248B157906E500373AC2 /* Localizable.strings */; };
+		1341248E15790E8900373AC2 /* GUI-911_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248D15790E8900373AC2 /* GUI-911_button@2x.png */; };
+		134124901579134100373AC2 /* GUI-911_button_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */; };
+		134124921579137B00373AC2 /* GUI-911_button_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 134124911579137B00373AC2 /* GUI-911_button_big.png */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
@@ -73,6 +76,9 @@
 		134124871578FCD400373AC2 /* ErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorViewController.m; sourceTree = "<group>"; };
 		1341248A157906E500373AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1341248C157906EC00373AC2 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1341248D15790E8900373AC2 /* GUI-911_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button@2x.png"; sourceTree = "<group>"; };
+		1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button_big@2x.png"; sourceTree = "<group>"; };
+		134124911579137B00373AC2 /* GUI-911_button_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button_big.png"; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
@@ -109,12 +115,12 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
-				13971C1F1578033B0005994A /* TestFlightSDK1.0 */,
+				130EF2FE156803EF009E9711 /* Frameworks */,
 				13C81CDE1572C02500D16A7A /* Icon.png */,
 				13C81CDC1572C01B00D16A7A /* Icon@2x.png */,
 				130EF305156803EF009E9711 /* Int911Caller */,
-				130EF2FE156803EF009E9711 /* Frameworks */,
 				130EF2FC156803EF009E9711 /* Products */,
+				13971C1F1578033B0005994A /* TestFlightSDK1.0 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,7 +196,10 @@
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				134124911579137B00373AC2 /* GUI-911_button_big.png */,
+				1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */,
 				1341247D1578F1D200373AC2 /* GUI-911_arrow.png */,
+				1341248D15790E8900373AC2 /* GUI-911_button@2x.png */,
 				132CC1451577C4A10059E90B /* 104-index-cards.png */,
 				132CC1461577C4A10059E90B /* 104-index-cards@2x.png */,
 				132CC1411577C4490059E90B /* 74-location.png */,
@@ -271,6 +280,9 @@
 				13971C261578033B0005994A /* release_notes.txt in Resources */,
 				1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */,
 				13412489157906E500373AC2 /* Localizable.strings in Resources */,
+				1341248E15790E8900373AC2 /* GUI-911_button@2x.png in Resources */,
+				134124901579134100373AC2 /* GUI-911_button_big@2x.png in Resources */,
+				134124921579137B00373AC2 /* GUI-911_button_big.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
