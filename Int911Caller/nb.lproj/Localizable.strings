@@ -9,6 +9,7 @@
 "location_service_off" = "Stedstjenester må være på for å kunne lokalisere deg.";
 "location_unavailable" = "Din lokasjon er utilgjengelig.";
 "location_standard" = "Din lokasjon kunne ikke bli funnet.";
+"country_missing" = "Det mangler informasjon om land: %@.";
 
 
 "geocode_standard" = "Tilgang til internett er nødvendig for å gjøre lokasjon om til land.";
@@ -16,7 +17,7 @@
 "locate_again" = "Prøv igjen";
 "search_directory" = "Søk i katalogen";
 
-"locating_message" = "Finner din lokasjon og slår opp korrekte nødnummer";
+"locating_message" = "Finner din lokasjon og slår opp korrekt nødnummer";
 
 "tab_bar_local" = "Lokale nummer";
 "tab_bar_directory" = "Katalog";

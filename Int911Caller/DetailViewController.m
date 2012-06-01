@@ -63,6 +63,8 @@
     NSDictionary *numbers = self.detailItem.embergencyNumbers;
     
     if(numbers.count == 1) {
+        self.singleNumberButton.emergencyNumber = [numbers objectForKey:@"general"];
+        self.singleNumberButton.emergencyNumberKey = @"general";
         [self setButtonTitle:[numbers objectForKey:@"general"] button:self.singleNumberButton];
         self.singleNumberButton.hidden = false;
         return;

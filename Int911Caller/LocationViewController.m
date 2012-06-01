@@ -36,6 +36,7 @@ NSString *errorMessage;
 
 NSString *currentISOCountryCode;
 NSDate *currentISOCountryCodeDate;
+CountryListing *currentCountryListing;
 
 - (BOOL) isTimeToReload
 {
@@ -106,13 +107,10 @@ NSDate *currentISOCountryCodeDate;
     
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         
-        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
-        CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
-        
-        self.navigationController.tabBarItem.title = countryListing.localizedCountryName;
+        self.navigationController.tabBarItem.title = currentCountryListing.localizedCountryName;
         
         DetailViewController *view = [segue destinationViewController];
-        view.detailItem = countryListing;
+        view.detailItem = currentCountryListing;
         view.title = NSLocalizedString(@"tab_title_local",  nil);
         
     } else if ([[segue identifier] isEqualToString:@"showError"]) {
@@ -167,8 +165,17 @@ NSDate *currentISOCountryCodeDate;
             
             NSLog(@"iPhone is in country: %@", currentISOCountryCode);
             
-            [self performSegueWithIdentifier:@"showDetail" sender:self];
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
+            currentCountryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
             
+            if(currentCountryListing != nil) {
+                [self performSegueWithIdentifier:@"showDetail" sender:self];
+            } else {
+                errorMessage = [NSString stringWithFormat:NSLocalizedString(@"country_missing", nil), currentISOCountryCode];
+                [TestFlight passCheckpoint:[NSString stringWithFormat:@"COUNTRY MISSING: %@", currentISOCountryCode]];
+                [self performSegueWithIdentifier:@"showError" sender:self];
+            }
+                
         } else {
             
             NSLog(@"Geocode error: %@", [error description]);
