@@ -46,7 +46,7 @@ CLLocationManager *locationManager;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    self.navigationItem.title = @"Directory of Numbers";
+    self.navigationItem.title = NSLocalizedString(@"tab_title_directory", nil);
 
     [super viewWillAppear:animated];
 }

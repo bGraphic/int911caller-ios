@@ -38,8 +38,8 @@
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 
-    [[tabBarController.viewControllers objectAtIndex:0] setTitle:@"Local"];
-    [[tabBarController.viewControllers objectAtIndex:1] setTitle:@"Directory"];
+    [[tabBarController.viewControllers objectAtIndex:0] setTitle:NSLocalizedString(@"tab_bar_local", nil)];
+    [[tabBarController.viewControllers objectAtIndex:1] setTitle:NSLocalizedString(@"tab_bar_directory", nil)];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

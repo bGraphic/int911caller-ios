@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Int911Caller
+
+  Created by Benedicte Raae on 01.06.12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+"location_service_off" = "Location Service privileges are needed to find your location.";
+"location_unavailable" = "Your location is unavailable.";
+"location_standard" = "Your location could not be found.";
+
+
+"geocode_standard" = "Internet access is needed to translate location into country.";
+
+"locate_again" = "Try again";
+"search_directory" = "Search directory";
+
+"locating_message" = "Locating your position and finding the correct numbers.";
+
+"tab_bar_local" = "Local number(s)";
+"tab_bar_directory" = "Directory";
+
+"tab_title_local" = "Local number(s)";
+"tab_title_directory" = "Directory";
+
+
+

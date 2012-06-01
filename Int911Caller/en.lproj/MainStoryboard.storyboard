@@ -3,7 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - listOfCountries-->
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" id="36"/>
                     <connections>
                         <outlet property="searchBar" destination="ujH-02-U4e" id="Aow-pD-kwg"/>
                         <outlet property="searchDisplayController" destination="3Mk-Fb-xqd" id="HM6-05-RsP"/>
@@ -122,12 +122,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="locating_message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tMl-62-kej">
+                                <rect key="frame" x="42.25" y="27.5" width="235.5" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="GUI-911_circle.png" id="ehh-07-bzd">
                                 <rect key="frame" x="80" y="104" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="jTV-Ms-Zyd">
-                                <rect key="frame" x="141" y="166" width="37" height="37"/>
+                                <rect key="frame" x="141" y="165.5" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
@@ -136,6 +145,7 @@
                     <navigationItem key="navigationItem" id="WOa-ta-40r"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jTV-Ms-Zyd" id="nKi-GL-GLN"/>
+                        <outlet property="message" destination="tMl-62-kej" id="Gjn-sw-FdT"/>
                         <segue destination="21" kind="push" identifier="showDetail" customClass="DisolveSegue" id="wGc-n0-e8W"/>
                         <segue destination="nCt-gP-6v5" kind="push" identifier="showError" id="v2d-Ff-Tz5"/>
                     </connections>
@@ -156,11 +166,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
                                 <rect key="frame" x="43" y="63" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="-9"/>
+                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="One" backgroundImage="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -174,11 +184,11 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="QTa-sC-WzU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
                                 <rect key="frame" x="43" y="143" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="-9"/>
+                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="Two" backgroundImage="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -192,11 +202,11 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="uUu-Lt-BUP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
                                 <rect key="frame" x="43" y="223" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="contentEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="-9"/>
+                                <inset key="contentEdgeInsets" minX="75" minY="0.0" maxX="0.0" maxY="2"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="Three" backgroundImage="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -213,7 +223,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" id="26"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -225,11 +235,11 @@
             </objects>
             <point key="canvasLocation" x="1324" y="365"/>
         </scene>
-        <!--View Controller-->
+        <!--Error View Controller-->
         <scene sceneID="juh-ZW-HyE">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJi-6a-zLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="nCt-gP-6v5" sceneMemberID="viewController">
+                <viewController id="nCt-gP-6v5" customClass="ErrorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84R-vD-seW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -242,10 +252,50 @@
                                 <rect key="frame" x="80" y="104" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="GUI-911_arrow.png" id="3Sb-7W-T4p">
+                                <rect key="frame" x="60" y="325" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="GUI-911_arrow.png" id="Ewa-xp-OtK">
+                                <rect key="frame" x="220" y="325" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="locate_again" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UFH-3C-ieY">
+                                <rect key="frame" x="42.5" y="287" width="75" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="search_country" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dKq-My-ZrH">
+                                <rect key="frame" x="203" y="287" width="75" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="error_message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" id="62N-ga-Ffe">
+                                <rect key="frame" x="42.5" y="27.5" width="235.5" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="A26-QM-8zt"/>
+                    <connections>
+                        <outlet property="locateAgain" destination="UFH-3C-ieY" id="Dpi-YZ-0Ym"/>
+                        <outlet property="message" destination="62N-ga-Ffe" id="9hF-GZ-Kf5"/>
+                        <outlet property="searchDirectory" destination="dKq-My-ZrH" id="E2y-gS-Kyw"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1324" y="1038"/>
@@ -273,6 +323,7 @@
     <resources>
         <image name="104-index-cards.png" width="26" height="17"/>
         <image name="74-location.png" width="20" height="20"/>
+        <image name="GUI-911_arrow.png" width="121" height="121"/>
         <image name="GUI-911_background.png" width="640" height="980"/>
         <image name="GUI-911_button.png" width="469" height="125"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>

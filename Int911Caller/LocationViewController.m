@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "TestFlight.h"
+#import "ErrorViewController.h"
 
 #ifdef DEBUG
 const double UPDATE_INTERVAL = 5;
@@ -29,6 +30,9 @@ const double UPDATE_INTERVAL = 1800;
 
 @synthesize activityIndicator = _activityIndicator;
 @synthesize locationManager = _locationManager;
+@synthesize message = _message;
+
+NSString *errorMessage;
 
 NSString *currentISOCountryCode;
 NSDate *currentISOCountryCodeDate;
@@ -41,7 +45,6 @@ NSDate *currentISOCountryCodeDate;
 - (void) willEnterForeground:(NSNotification*)notification {
     
     if([self isTimeToReload]){
-        NSLog(@"Is time to reload");
         [self.navigationController popToRootViewControllerAnimated:FALSE];
         [self.tabBarController setSelectedViewController:self.navigationController];
     }
@@ -69,13 +72,17 @@ NSDate *currentISOCountryCodeDate;
 {
     self.locationManager.delegate = nil;
     
+    [self setMessage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.title = @"Local";
-    self.navigationItem.title = @"Looking up local number(s)";
+    self.title = NSLocalizedString(@"tab_bar_local", nil);
+    self.navigationItem.title = NSLocalizedString(@"tab_title_local", nil);
+    self.message.text = NSLocalizedString(@"locating_message", nil);
+    
+    errorMessage = nil;
     
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
@@ -98,6 +105,7 @@ NSDate *currentISOCountryCodeDate;
     view.navigationItem.hidesBackButton = true;
     
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
@@ -105,6 +113,11 @@ NSDate *currentISOCountryCodeDate;
         
         DetailViewController *view = [segue destinationViewController];
         view.detailItem = countryListing;
+        
+    } else if ([[segue identifier] isEqualToString:@"showError"]) {
+        
+        ErrorViewController *view = [segue destinationViewController];
+        view.errorMessage = errorMessage;
     }
 }
 
@@ -113,7 +126,6 @@ NSDate *currentISOCountryCodeDate;
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     [self.locationManager stopUpdatingLocation];
-    NSString *errorMessage;
     
     switch ([error code]) {
         case kCLErrorDenied:
@@ -160,6 +172,7 @@ NSDate *currentISOCountryCodeDate;
             
             NSLog(@"Geocode error: %@", [error description]);
             [TestFlight passCheckpoint:@"GEOCODE ERROR"];
+            errorMessage = NSLocalizedString(@"geocode_standard",  nil);
             
             [self performSegueWithIdentifier:@"showError" sender:self];   
             

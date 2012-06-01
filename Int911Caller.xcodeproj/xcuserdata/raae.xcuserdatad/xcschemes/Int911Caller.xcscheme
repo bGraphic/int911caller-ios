@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "130EF2FA156803EF009E9711"
-               BuildableName = "Int911Caller.app"
+               BuildableName = "EmergencyCaller.app"
                BlueprintName = "Int911Caller"
                ReferencedContainer = "container:Int911Caller.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "130EF2FA156803EF009E9711"
-            BuildableName = "Int911Caller.app"
+            BuildableName = "EmergencyCaller.app"
             BlueprintName = "Int911Caller"
             ReferencedContainer = "container:Int911Caller.xcodeproj">
          </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "130EF2FA156803EF009E9711"
-            BuildableName = "Int911Caller.app"
+            BuildableName = "EmergencyCaller.app"
             BlueprintName = "Int911Caller"
             ReferencedContainer = "container:Int911Caller.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "130EF2FA156803EF009E9711"
-            BuildableName = "Int911Caller.app"
+            BuildableName = "EmergencyCaller.app"
             BlueprintName = "Int911Caller"
             ReferencedContainer = "container:Int911Caller.xcodeproj">
          </BuildableReference>

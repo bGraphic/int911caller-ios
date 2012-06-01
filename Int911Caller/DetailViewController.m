@@ -42,7 +42,7 @@
     
     if (self.detailItem) {
         [self configureCallButtons];
-        self.title = [self.detailItem localizedCountryName];
+        self.title = NSLocalizedString(@"tab_title_local",  nil);
     }
     
 }
