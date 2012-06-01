@@ -13,7 +13,7 @@
 #import "ErrorViewController.h"
 
 #ifdef DEBUG
-const double UPDATE_INTERVAL = 5;
+const double UPDATE_INTERVAL = 10;
 #endif
 
 #ifdef ADHOC
