@@ -42,7 +42,6 @@
     
     if (self.detailItem) {
         [self configureCallButtons];
-        self.title = NSLocalizedString(@"tab_title_local",  nil);
     }
     
 }
@@ -64,7 +63,7 @@
     for (NSString *numberKey in numbers) {
         
         NSString *number = [numbers objectForKey:numberKey];
-        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@ - %@", number, numberKey];
+        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@\n%@", number, NSLocalizedString(numberKey,  nil)];
 
         CallButton *button = [self.callButtons objectAtIndex:i];
         button.emergencyNumber = number;

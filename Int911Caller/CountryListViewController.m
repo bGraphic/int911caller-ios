@@ -135,7 +135,7 @@ CLLocationManager *locationManager;
         
         DetailViewController *view = [segue destinationViewController];
         view.detailItem = countryListing;
-        self.navigationItem.title = @"Directory";
+        view.title = countryListing.localizedCountryName;
     }
 }
 

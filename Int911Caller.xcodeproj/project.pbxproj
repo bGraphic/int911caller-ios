@@ -26,8 +26,8 @@
 		132CC1471577C4A10059E90B /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1451577C4A10059E90B /* 104-index-cards.png */; };
 		132CC1481577C4A10059E90B /* 104-index-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1461577C4A10059E90B /* 104-index-cards@2x.png */; };
 		1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341247D1578F1D200373AC2 /* GUI-911_arrow.png */; };
-		134124851578F6DB00373AC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 134124841578F6DB00373AC2 /* Localizable.strings */; };
 		134124881578FCD400373AC2 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
+		13412489157906E500373AC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1341248B157906E500373AC2 /* Localizable.strings */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
@@ -69,9 +69,10 @@
 		132CC1451577C4A10059E90B /* 104-index-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards.png"; sourceTree = "<group>"; };
 		132CC1461577C4A10059E90B /* 104-index-cards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards@2x.png"; sourceTree = "<group>"; };
 		1341247D1578F1D200373AC2 /* GUI-911_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_arrow.png"; sourceTree = "<group>"; };
-		134124841578F6DB00373AC2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		134124861578FCD400373AC2 /* ErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorViewController.h; sourceTree = "<group>"; };
 		134124871578FCD400373AC2 /* ErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorViewController.m; sourceTree = "<group>"; };
+		1341248A157906E500373AC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1341248C157906EC00373AC2 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
@@ -170,7 +171,7 @@
 				130EF30B156803EF009E9711 /* main.m */,
 				130EF30D156803EF009E9711 /* Int911Caller-Prefix.pch */,
 				130EF3261568093E009E9711 /* Numbers.plist */,
-				134124841578F6DB00373AC2 /* Localizable.strings */,
+				1341248B157906E500373AC2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,6 +237,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				nb,
 			);
 			mainGroup = 130EF2F0156803EF009E9711;
 			productRefGroup = 130EF2FC156803EF009E9711 /* Products */;
@@ -268,7 +270,7 @@
 				13971C251578033B0005994A /* README.txt in Resources */,
 				13971C261578033B0005994A /* release_notes.txt in Resources */,
 				1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */,
-				134124851578F6DB00373AC2 /* Localizable.strings in Resources */,
+				13412489157906E500373AC2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +309,15 @@
 				130EF312156803EF009E9711 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1341248B157906E500373AC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1341248A157906E500373AC2 /* en */,
+				1341248C157906EC00373AC2 /* nb */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

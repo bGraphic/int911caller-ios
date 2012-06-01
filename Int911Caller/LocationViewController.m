@@ -109,10 +109,11 @@ NSDate *currentISOCountryCodeDate;
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate; 
         CountryListing *countryListing = [appDelegate.emergencyNumbers objectForKey:currentISOCountryCode];
         
-        self.title = countryListing.localizedCountryName;
+        self.navigationController.tabBarItem.title = countryListing.localizedCountryName;
         
         DetailViewController *view = [segue destinationViewController];
         view.detailItem = countryListing;
+        view.title = NSLocalizedString(@"tab_title_local",  nil);
         
     } else if ([[segue identifier] isEqualToString:@"showError"]) {
         

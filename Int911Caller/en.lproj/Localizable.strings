@@ -24,5 +24,11 @@
 "tab_title_local" = "Local number(s)";
 "tab_title_directory" = "Directory";
 
+"general" = "";
+"fire" = "fire dep.";
+"police" = "police dep.";
+"ambulance" = "ambulance";
+"rescue" = "rescue";
+
 
 

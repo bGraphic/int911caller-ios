@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Int911Caller
+
+  Created by Benedicte Raae on 01.06.12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+"location_service_off" = "Stedstjenester må være på for å kunne lokalisere deg.";
+"location_unavailable" = "Din lokasjon er utilgjengelig.";
+"location_standard" = "Din lokasjon kunne ikke bli funnet.";
+
+
+"geocode_standard" = "Tilgang til internett er nødvendig for å gjøre lokasjon om til land.";
+
+"locate_again" = "Prøv igjen";
+"search_directory" = "Søk i katalogen";
+
+"locating_message" = "Finner din lokasjon og slår opp korrekte nødnummer";
+
+"tab_bar_local" = "Lokale nummer";
+"tab_bar_directory" = "Katalog";
+
+"tab_title_local" = "Lokale nummer";
+"tab_title_directory" = "Katalog";
+
+"general" = "";
+"fire" = "brann";
+"police" = "politi";
+"ambulance" = "ambulanse";
+"rescue" = "redning";
+
+
+
