@@ -166,11 +166,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
                                 <rect key="frame" x="43" y="62.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="2"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="4" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="One" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -202,11 +202,11 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="65g-uY-UgD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="wordWrap" id="T4j-Ho-OeF" customClass="CallButton">
                                 <rect key="frame" x="43" y="142.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="4" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="Two" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -220,11 +220,11 @@
                                     <action selector="callEmergencyNumberAction:" destination="21" eventType="touchUpInside" id="uUu-Lt-BUP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="wordWrap" id="BHl-rc-piF" customClass="CallButton">
                                 <rect key="frame" x="43" y="222.5" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="4" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="Three" image="GUI-911_button.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>

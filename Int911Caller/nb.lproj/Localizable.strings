@@ -26,10 +26,10 @@
 "tab_title_directory" = "Katalog";
 
 "general" = "";
-"fire" = "brann";
-"police" = "politi";
-"ambulance" = "ambulanse";
-"rescue" = "redning";
+"fire" = "Brann";
+"police" = "Politi";
+"ambulance" = "Ambulanse";
+"rescue" = "Redning";
 
 
 

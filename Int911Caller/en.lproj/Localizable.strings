@@ -26,10 +26,10 @@
 "tab_title_directory" = "Directory";
 
 "general" = "";
-"fire" = "fire dep.";
-"police" = "police dep.";
-"ambulance" = "ambulance";
-"rescue" = "rescue";
+"fire" = "Fire dep.";
+"police" = "Police dep.";
+"ambulance" = "Ambulance";
+"rescue" = "Rescue";
 
 
 

@@ -74,7 +74,7 @@
     for (NSString *numberKey in numbers) {
         
         NSString *number = [numbers objectForKey:numberKey];
-        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@\n%@", number, NSLocalizedString(numberKey,  nil)];
+        NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@\n%@", NSLocalizedString(numberKey,  nil), number];
 
         CallButton *button = [self.callButtons objectAtIndex:i];
         button.emergencyNumber = number;
