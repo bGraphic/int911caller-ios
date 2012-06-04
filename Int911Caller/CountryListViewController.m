@@ -108,7 +108,7 @@ CLLocationManager *locationManager;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     
-    [self performSegueWithIdentifier:@"showDetail" sender:self];
+    [self performSegueWithIdentifier:@"showDetail" sender:tableView];
 }
 
 
@@ -121,16 +121,16 @@ CLLocationManager *locationManager;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        CountryListViewController *senderView = (CountryListViewController*) sender;
+        UITableView *senderView = (UITableView*) sender;
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CountryListing *countryListing = nil;
         
-        if (senderView.tableView == senderView.searchDisplayController.searchResultsTableView){
-            countryListing = [senderView.searchResults objectAtIndex:indexPath.row];
+        if (senderView == self.searchDisplayController.searchResultsTableView){
+            countryListing = [searchResults objectAtIndex:indexPath.row];
         }
         else{
-            countryListing = [senderView.emergencyNumbers objectAtIndex:indexPath.row];
+            countryListing = [emergencyNumbers objectAtIndex:indexPath.row];
         }
         
         DetailViewController *view = [segue destinationViewController];
