@@ -25,12 +25,7 @@
 
 - (NSString *)localizedCountryName {
     if(self.countryKey != nil) {
-        NSLocale *myLocale = [NSLocale currentLocale];
-        NSString *countryCode = self.countryKey;
-        NSString *localisedCountryName = [myLocale
-                                          displayNameForKey:NSLocaleCountryCode value:countryCode];
-        
-        return localisedCountryName;
+        return [CountryListing localizedCountryNameFromCountryKey:self.countryKey];
     }
     
     return nil;
@@ -38,6 +33,15 @@
 
 - (NSComparisonResult)compare:(CountryListing *)otherObject {
     return [[self localizedCountryName] compare:[otherObject localizedCountryName]];
+}
+
++ (NSString *) localizedCountryNameFromCountryKey: (NSString *) countryKey {
+    NSLocale *myLocale = [NSLocale currentLocale];
+    NSString *countryCode = countryKey;
+    NSString *localisedCountryName = [myLocale
+                                      displayNameForKey:NSLocaleCountryCode value:countryCode];
+    
+    return localisedCountryName;
 }
 
 

@@ -6,10 +6,10 @@
   Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 */
 
-"location_service_off" = "Stedstjenester må være på for å kunne lokalisere deg.";
+"location_service_off" = "For å kunne lokalisere deg trenger appen tilgang på Stedsjenester.";
 "location_unavailable" = "Din lokasjon er utilgjengelig.";
 "location_standard" = "Din lokasjon kunne ikke bli funnet.";
-"country_missing" = "Det mangler informasjon om land: %@.";
+"country_missing" = "Det mangler informasjon om landet, %@, du befinner deg i.";
 
 
 "geocode_standard" = "Tilgang til internett er nødvendig for å gjøre lokasjon om til land.";

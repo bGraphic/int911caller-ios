@@ -16,4 +16,6 @@
 
 - (CountryListing *) initWithKey:(NSString *) key andNumbers:(NSDictionary *) numbers;
 
++ (NSString *) localizedCountryNameFromCountryKey: (NSString *) countryKey;
+
 @end

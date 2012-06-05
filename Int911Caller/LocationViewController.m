@@ -107,11 +107,9 @@ CountryListing *currentCountryListing;
     
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         
-        self.navigationController.tabBarItem.title = currentCountryListing.localizedCountryName;
-        
         DetailViewController *view = [segue destinationViewController];
         view.detailItem = currentCountryListing;
-        view.title = NSLocalizedString(@"tab_title_local",  nil);
+        view.title = currentCountryListing.localizedCountryName;
         
     } else if ([[segue identifier] isEqualToString:@"showError"]) {
         
@@ -171,7 +169,7 @@ CountryListing *currentCountryListing;
             if(currentCountryListing != nil) {
                 [self performSegueWithIdentifier:@"showDetail" sender:self];
             } else {
-                errorMessage = [NSString stringWithFormat:NSLocalizedString(@"country_missing", nil), currentISOCountryCode];
+                errorMessage = [NSString stringWithFormat:NSLocalizedString(@"country_missing", nil), [CountryListing localizedCountryNameFromCountryKey:currentISOCountryCode]];
                 [TestFlight passCheckpoint:[NSString stringWithFormat:@"COUNTRY MISSING: %@", currentISOCountryCode]];
                 [self performSegueWithIdentifier:@"showError" sender:self];
             }
