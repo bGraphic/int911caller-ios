@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CA</key>
+	<dict>
+		<key>numbers</key>
+		<dict>
+			<key>general</key>
+			<string>911</string>
+		</dict>
+	</dict>
+	<key>GL</key>
+	<dict>
+		<key>note</key>
+		<string>YES</string>
+		<key>numbers</key>
+		<dict>
+			<key>general</key>
+			<string>112</string>
+		</dict>
+	</dict>
+	<key>MX</key>
+	<dict>
+		<key>numbers</key>
+		<dict>
+			<key>fire</key>
+			<string>066</string>
+			<key>medical</key>
+			<string>065</string>
+			<key>police</key>
+			<string>068</string>
+		</dict>
+	</dict>
+	<key>PM</key>
+	<dict>
+		<key>numbers</key>
+		<dict>
+			<key>police</key>
+			<string>17</string>
+			<key>medical</key>
+			<string>15</string>
+			<key>fire</key>
+			<string>18</string>
+		</dict>
+	</dict>
+	<key>US</key>
+	<dict>
+		<key>numbers</key>
+		<dict>
+			<key>general</key>
+			<string>911</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -16,7 +16,7 @@
 		130EF313156803EF009E9711 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130EF311156803EF009E9711 /* MainStoryboard.storyboard */; };
 		130EF316156803EF009E9711 /* CountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF315156803EF009E9711 /* CountryListViewController.m */; };
 		130EF319156803EF009E9711 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF318156803EF009E9711 /* DetailViewController.m */; };
-		130EF3271568093E009E9711 /* Numbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Numbers.plist */; };
+		130EF3271568093E009E9711 /* Europe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Europe.plist */; };
 		130EF32A156824ED009E9711 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
 		130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
 		132CC12715777C560059E90B /* CallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CC12615777C560059E90B /* CallButton.m */; };
@@ -35,6 +35,13 @@
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
 		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
+		139152C1157E5F63002CA51D /* Africa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C0157E5F63002CA51D /* Africa.plist */; };
+		139152C3157E5FBE002CA51D /* Asia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C2157E5FBE002CA51D /* Asia.plist */; };
+		139152C5157E5FF0002CA51D /* SouthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C4157E5FF0002CA51D /* SouthAmerica.plist */; };
+		139152C7157E5FFC002CA51D /* NorthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C6157E5FFC002CA51D /* NorthAmerica.plist */; };
+		139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C8157E6013002CA51D /* CentralAmerica.plist */; };
+		139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
+		139152CE157E7C73002CA51D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
 		13971C241578033B0005994A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C201578033B0005994A /* libTestFlight.a */; };
 		13971C251578033B0005994A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C211578033B0005994A /* README.txt */; };
 		13971C261578033B0005994A /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C221578033B0005994A /* release_notes.txt */; };
@@ -60,7 +67,7 @@
 		130EF315156803EF009E9711 /* CountryListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryListViewController.m; sourceTree = "<group>"; };
 		130EF317156803EF009E9711 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		130EF318156803EF009E9711 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		130EF3261568093E009E9711 /* Numbers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Numbers.plist; sourceTree = "<group>"; };
+		130EF3261568093E009E9711 /* Europe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Europe.plist; sourceTree = "<group>"; };
 		130EF328156824ED009E9711 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		130EF329156824ED009E9711 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		130EF32E15683462009E9711 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -83,6 +90,14 @@
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
 		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		139152C0157E5F63002CA51D /* Africa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Africa.plist; sourceTree = "<group>"; };
+		139152C2157E5FBE002CA51D /* Asia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Asia.plist; sourceTree = "<group>"; };
+		139152C4157E5FF0002CA51D /* SouthAmerica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SouthAmerica.plist; sourceTree = "<group>"; };
+		139152C6157E5FFC002CA51D /* NorthAmerica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NorthAmerica.plist; sourceTree = "<group>"; };
+		139152C8157E6013002CA51D /* CentralAmerica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CentralAmerica.plist; sourceTree = "<group>"; };
+		139152CA157E765F002CA51D /* AustraliaOceania.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AustraliaOceania.plist; sourceTree = "<group>"; };
+		139152CC157E7C73002CA51D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		139152CD157E7C73002CA51D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		13971C201578033B0005994A /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		13971C211578033B0005994A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		13971C221578033B0005994A /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -165,6 +180,8 @@
 				132CC12615777C560059E90B /* CallButton.m */,
 				134124861578FCD400373AC2 /* ErrorViewController.h */,
 				134124871578FCD400373AC2 /* ErrorViewController.m */,
+				139152CC157E7C73002CA51D /* InfoViewController.h */,
+				139152CD157E7C73002CA51D /* InfoViewController.m */,
 			);
 			path = Int911Caller;
 			sourceTree = "<group>";
@@ -176,8 +193,14 @@
 				130EF308156803EF009E9711 /* InfoPlist.strings */,
 				130EF30B156803EF009E9711 /* main.m */,
 				130EF30D156803EF009E9711 /* Int911Caller-Prefix.pch */,
-				130EF3261568093E009E9711 /* Numbers.plist */,
+				130EF3261568093E009E9711 /* Europe.plist */,
 				1341248B157906E500373AC2 /* Localizable.strings */,
+				139152C0157E5F63002CA51D /* Africa.plist */,
+				139152C2157E5FBE002CA51D /* Asia.plist */,
+				139152C4157E5FF0002CA51D /* SouthAmerica.plist */,
+				139152C6157E5FFC002CA51D /* NorthAmerica.plist */,
+				139152C8157E6013002CA51D /* CentralAmerica.plist */,
+				139152CA157E765F002CA51D /* AustraliaOceania.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,7 +288,7 @@
 			files = (
 				130EF30A156803EF009E9711 /* InfoPlist.strings in Resources */,
 				130EF313156803EF009E9711 /* MainStoryboard.storyboard in Resources */,
-				130EF3271568093E009E9711 /* Numbers.plist in Resources */,
+				130EF3271568093E009E9711 /* Europe.plist in Resources */,
 				13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */,
 				13C81CDF1572C02500D16A7A /* Icon.png in Resources */,
 				137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */,
@@ -283,6 +306,12 @@
 				1341248E15790E8900373AC2 /* GUI-911_button@2x.png in Resources */,
 				134124901579134100373AC2 /* GUI-911_button_big@2x.png in Resources */,
 				134124921579137B00373AC2 /* GUI-911_button_big.png in Resources */,
+				139152C1157E5F63002CA51D /* Africa.plist in Resources */,
+				139152C3157E5FBE002CA51D /* Asia.plist in Resources */,
+				139152C5157E5FF0002CA51D /* SouthAmerica.plist in Resources */,
+				139152C7157E5FFC002CA51D /* NorthAmerica.plist in Resources */,
+				139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */,
+				139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +330,7 @@
 				13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */,
 				132CC12715777C560059E90B /* CallButton.m in Sources */,
 				134124881578FCD400373AC2 /* ErrorViewController.m in Sources */,
+				139152CE157E7C73002CA51D /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

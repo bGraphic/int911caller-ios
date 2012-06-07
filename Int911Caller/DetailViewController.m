@@ -19,6 +19,8 @@
 @synthesize callButtonOne = _callButtonOne;
 @synthesize calButtonTwo = _calButtonTwo;
 @synthesize callButtonThree = _callButtonThree;
+@synthesize callButtonFour = _callButtonFour;
+@synthesize callButtonFive = _callButtonFive;
 @synthesize callButtons = _callButtons;
 @synthesize singleNumberButton = _singleNumberButton;
 
@@ -70,6 +72,18 @@
         return;
     }
     
+    int space = 95;
+    int initY = 84;
+    
+    if(numbers.count > 3) {
+        space = 70;
+    } 
+    
+    if(numbers.count > 4) {
+        initY = 44;
+    }
+    
+    
     int i = 0;
     for (NSString *numberKey in numbers) {
         
@@ -79,6 +93,9 @@
         CallButton *button = [self.callButtons objectAtIndex:i];
         button.emergencyNumber = number;
         button.emergencyNumberKey = numberKey;
+        button.center = CGPointMake(button.center.x, space*i + initY);
+        
+        
         [self setButtonTitle:buttonTitle button:button];
         button.hidden = false;
         
@@ -129,7 +146,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, nil];
+    self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, self.callButtonFour, self.callButtonFive, nil];
     
     [self configureView];
 }
@@ -137,6 +154,8 @@
 - (void)viewDidUnload
 {
     [self setSingleNumberButton:nil];
+    [self setCallButtonFour:nil];
+    [self setCallButtonFive:nil];
     [super viewDidUnload];
     
     [self setCallButtonOne:nil];

@@ -28,7 +28,9 @@
 "general" = "";
 "fire" = "Brann";
 "police" = "Politi";
-"ambulance" = "Ambulanse";
+"police_traffic" = "Trafikkpoliti";
+"police_tourist" = "Turistpoliti";
+"medical" = "Ambulanse";
 "rescue" = "Redning";
 
 

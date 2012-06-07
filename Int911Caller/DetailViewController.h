@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet CallButton *callButtonOne;
 @property (strong, nonatomic) IBOutlet CallButton *calButtonTwo;
 @property (strong, nonatomic) IBOutlet CallButton *callButtonThree;
+@property (strong, nonatomic) IBOutlet CallButton *callButtonFour;
+@property (strong, nonatomic) IBOutlet CallButton *callButtonFive;
+
 @property (strong, nonatomic) NSArray *callButtons;
 @property (strong, nonatomic) IBOutlet CallButton *singleNumberButton;
 
