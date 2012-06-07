@@ -33,5 +33,13 @@
 "medical" = "Ambulanse";
 "rescue" = "Redning";
 
+"e-mail_error_alert_title" = "Sending feilet";
+"e-mail_error_alert_message" = "E-posten ble ikke sent, prøv igjen senere.";
+
+"share_mail_title" = "App anbefaling: 911Caller";
+"share_mail_body" = "Ta en titt på appen: International 911Caller, du kan laste den ned fra <a href='%@'>iTunes.</a>";
+
+"support_mail_title" = "Support for appen: 911Caller";
+
 
 

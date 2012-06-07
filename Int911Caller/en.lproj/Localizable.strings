@@ -34,5 +34,13 @@
 "medical" = "Medical";
 "rescue" = "Rescue";
 
+"e-mail_error_alert_title" = "Failed";
+"e-mail_error_alert_message" = "E-mail was not sent, try again.";
+
+"share_mail_title" = "App recommendation: 911Caller";
+"share_mail_body" = "Check out the app: International 911Caller, you can download it from <a href='%@'>iTunes.</a>";
+
+"support_mail_title" = "Support for app: 911Caller";
+
 
 

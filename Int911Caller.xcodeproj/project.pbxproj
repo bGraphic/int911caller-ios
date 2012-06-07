@@ -25,6 +25,9 @@
 		132CC1441577C4490059E90B /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1421577C4490059E90B /* 74-location@2x.png */; };
 		132CC1471577C4A10059E90B /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1451577C4A10059E90B /* 104-index-cards.png */; };
 		132CC1481577C4A10059E90B /* 104-index-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1461577C4A10059E90B /* 104-index-cards@2x.png */; };
+		133C72221580CEF100AE031E /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 133C72211580CEF100AE031E /* InfoPage.plist */; };
+		133C726D1580D2E500AE031E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726C1580D2E500AE031E /* Security.framework */; };
+		133C726F1580D2EE00AE031E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726E1580D2EE00AE031E /* MessageUI.framework */; };
 		1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341247D1578F1D200373AC2 /* GUI-911_arrow.png */; };
 		134124881578FCD400373AC2 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
 		13412489157906E500373AC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1341248B157906E500373AC2 /* Localizable.strings */; };
@@ -52,7 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		130EF2FB156803EF009E9711 /* EmergencyCaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyCaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		130EF2FB156803EF009E9711 /* 911Caller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 911Caller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		130EF2FF156803EF009E9711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		130EF301156803EF009E9711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		130EF303156803EF009E9711 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,6 +81,9 @@
 		132CC1421577C4490059E90B /* 74-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location@2x.png"; sourceTree = "<group>"; };
 		132CC1451577C4A10059E90B /* 104-index-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards.png"; sourceTree = "<group>"; };
 		132CC1461577C4A10059E90B /* 104-index-cards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards@2x.png"; sourceTree = "<group>"; };
+		133C72211580CEF100AE031E /* InfoPage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoPage.plist; sourceTree = "<group>"; };
+		133C726C1580D2E500AE031E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		133C726E1580D2EE00AE031E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1341247D1578F1D200373AC2 /* GUI-911_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_arrow.png"; sourceTree = "<group>"; };
 		134124861578FCD400373AC2 /* ErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorViewController.h; sourceTree = "<group>"; };
 		134124871578FCD400373AC2 /* ErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorViewController.m; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133C726F1580D2EE00AE031E /* MessageUI.framework in Frameworks */,
+				133C726D1580D2E500AE031E /* Security.framework in Frameworks */,
 				13971C28157803880005994A /* libz.dylib in Frameworks */,
 				138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */,
 				130EF32F15683462009E9711 /* CoreLocation.framework in Frameworks */,
@@ -142,7 +150,7 @@
 		130EF2FC156803EF009E9711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				130EF2FB156803EF009E9711 /* EmergencyCaller.app */,
+				130EF2FB156803EF009E9711 /* 911Caller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +158,8 @@
 		130EF2FE156803EF009E9711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				133C726E1580D2EE00AE031E /* MessageUI.framework */,
+				133C726C1580D2E500AE031E /* Security.framework */,
 				13971C27157803880005994A /* libz.dylib */,
 				138BA097156F7C4500B10296 /* SystemConfiguration.framework */,
 				130EF32E15683462009E9711 /* CoreLocation.framework */,
@@ -201,6 +211,7 @@
 				139152C6157E5FFC002CA51D /* NorthAmerica.plist */,
 				139152C8157E6013002CA51D /* CentralAmerica.plist */,
 				139152CA157E765F002CA51D /* AustraliaOceania.plist */,
+				133C72211580CEF100AE031E /* InfoPage.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,7 +263,7 @@
 			);
 			name = Int911Caller;
 			productName = Int911Caller;
-			productReference = 130EF2FB156803EF009E9711 /* EmergencyCaller.app */;
+			productReference = 130EF2FB156803EF009E9711 /* 911Caller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -270,6 +281,7 @@
 			knownRegions = (
 				en,
 				nb,
+				de,
 			);
 			mainGroup = 130EF2F0156803EF009E9711;
 			productRefGroup = 130EF2FC156803EF009E9711 /* Products */;
@@ -312,6 +324,7 @@
 				139152C7157E5FFC002CA51D /* NorthAmerica.plist in Resources */,
 				139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */,
 				139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */,
+				133C72221580CEF100AE031E /* InfoPage.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +435,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = EmergencyCaller;
+				PRODUCT_NAME = 911Caller;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -439,7 +452,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = EmergencyCaller;
+				PRODUCT_NAME = 911Caller;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -477,7 +490,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK1.0\"",
 				);
-				PRODUCT_NAME = EmergencyCaller;
+				PRODUCT_NAME = 911Caller;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
 				WRAPPER_EXTENSION = app;
 			};

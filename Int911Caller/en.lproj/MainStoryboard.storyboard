@@ -26,6 +26,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="xoB-hk-8n9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pdw-xK-BeQ">
                                 <rect key="frame" x="68" y="203" width="185" height="37"/>
@@ -38,6 +41,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="supportAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="FdL-Kc-t0a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LEl-1J-kNC">
                                 <rect key="frame" x="68" y="63" width="185" height="37"/>
@@ -50,6 +56,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rateAppAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="2Vx-00-yBV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vap-gW-1l1">
                                 <rect key="frame" x="68" y="294" width="185" height="37"/>
@@ -62,6 +71,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="blogAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="war-af-Q7S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mRn-tC-3Fs">
                                 <rect key="frame" x="68" y="349" width="185" height="37"/>
@@ -74,13 +86,20 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="moreAppsAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="yRw-ah-tHK"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" id="ETx-f9-mrk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Info" id="Ds4-cO-79B">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KaP-tg-q8r"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KaP-tg-q8r">
+                                            <connections>
+                                                <action selector="closeInfoAction:" destination="Gau-LJ-LL4" id="MrY-Vc-ha6"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -88,6 +107,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q7w-s8-8JQ"/>
+                    <connections>
+                        <outlet property="blogButton" destination="Vap-gW-1l1" id="Gvx-fN-wfr"/>
+                        <outlet property="moreAppsButton" destination="mRn-tC-3Fs" id="7cI-wE-qzP"/>
+                        <outlet property="rateAppButton" destination="LEl-1J-kNC" id="PCz-bL-fCj"/>
+                        <outlet property="shareButton" destination="Re7-vf-uu2" id="9Ri-7b-wVo"/>
+                        <outlet property="supportButton" destination="pdw-xK-BeQ" id="Wzl-1e-L7A"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-486" y="-672"/>
@@ -484,49 +510,6 @@
         <image name="GUI-911_circle.png" width="321" height="321"/>
         <image name="GUI-911_error.png" width="321" height="320"/>
     </resources>
-    <classes>
-        <class className="CallButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
-        </class>
-        <class className="CountryListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callEmergencyNumberAction:"/>
-                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFive" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFour" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="noteTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
-            </relationships>
-        </class>
-        <class className="ErrorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ErrorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locateAgain" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="searchDirectory" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
