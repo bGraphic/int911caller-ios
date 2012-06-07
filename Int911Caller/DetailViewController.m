@@ -21,6 +21,7 @@
 @synthesize callButtonThree = _callButtonThree;
 @synthesize callButtonFour = _callButtonFour;
 @synthesize callButtonFive = _callButtonFive;
+@synthesize noteTextLabel = _noteTextLabel;
 @synthesize callButtons = _callButtons;
 @synthesize singleNumberButton = _singleNumberButton;
 
@@ -44,6 +45,8 @@
     }
     
     self.singleNumberButton.hidden = true;
+    self.noteTextLabel.text = @"";
+
     
     if (self.detailItem) {
         [self configureCallButtons];
@@ -53,21 +56,55 @@
 
 #pragma mark - Configure the buttons
 
-
 - (void)setButtonTitle:(NSString *)number button:(UIButton *)button
 {
     [button setTitle:number forState:UIControlStateNormal];
     [button setTitle:number forState:UIControlStateHighlighted];
 }
 
+- (NSString *)landlineStringFrom:(NSDictionary *)landlineDictionary 
+{
+    NSString *landlineString = [[NSString alloc] init];
+    
+    if(landlineDictionary.count == 1) {
+        return [landlineString stringByAppendingFormat:@"%@", [landlineDictionary.allValues objectAtIndex:0]];
+    } else {
+        int i = 1;
+        for(NSString *key in landlineDictionary) {
+            
+            NSString *countryString = [NSString stringWithFormat:@"%@ - %@", NSLocalizedString(key, nil), [landlineDictionary objectForKey:key]];
+            
+            if(i < landlineDictionary.count-1) {
+                countryString = [countryString stringByAppendingFormat:@", "];
+            } else if(i == landlineDictionary.count) {
+                countryString = [NSLocalizedString(@"\nor ", nil) stringByAppendingString:countryString];
+                countryString = [countryString stringByAppendingFormat:@"."];
+            }
+            
+            landlineString = [landlineString stringByAppendingString:countryString];
+            
+            i++;
+        }
+    }
+    
+    return landlineString;
+}
+
 - (void)configureCallButtons
 {
-    NSDictionary *numbers = self.detailItem.embergencyNumbers;
+    NSDictionary *emergencyNumbers = self.detailItem.embergencyNumbers;
+    NSDictionary *landlineNumbers = self.detailItem.landlineNumbers;
     
-    if(numbers.count == 1) {
-        self.singleNumberButton.emergencyNumber = [numbers objectForKey:@"general"];
+    if(landlineNumbers) {
+        NSString *landlineString = [self landlineStringFrom:landlineNumbers];
+        
+        self.noteTextLabel.text = [NSString stringWithFormat:@"When calling from a landline use:\n%@", landlineString];
+    }
+    
+    if(emergencyNumbers.count == 1) {
+        self.singleNumberButton.emergencyNumber = [emergencyNumbers.allValues objectAtIndex:0];
         self.singleNumberButton.emergencyNumberKey = @"general";
-        [self setButtonTitle:[numbers objectForKey:@"general"] button:self.singleNumberButton];
+        [self setButtonTitle:[emergencyNumbers objectForKey:@"general"] button:self.singleNumberButton];
         self.singleNumberButton.hidden = false;
         return;
     }
@@ -75,19 +112,19 @@
     int space = 95;
     int initY = 84;
     
-    if(numbers.count > 3) {
+    if(emergencyNumbers.count > 3) {
         space = 70;
     } 
     
-    if(numbers.count > 4) {
+    if(emergencyNumbers.count > 4) {
         initY = 44;
     }
     
     
     int i = 0;
-    for (NSString *numberKey in numbers) {
+    for (NSString *numberKey in emergencyNumbers) {
         
-        NSString *number = [numbers objectForKey:numberKey];
+        NSString *number = [emergencyNumbers objectForKey:numberKey];
         NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@\n%@", NSLocalizedString(numberKey,  nil), number];
 
         CallButton *button = [self.callButtons objectAtIndex:i];
@@ -156,6 +193,7 @@
     [self setSingleNumberButton:nil];
     [self setCallButtonFour:nil];
     [self setCallButtonFive:nil];
+    [self setNoteTextLabel:nil];
     [super viewDidUnload];
     
     [self setCallButtonOne:nil];

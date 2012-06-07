@@ -253,6 +253,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Note about country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" id="2CX-wT-1QN">
+                                <rect key="frame" x="20" y="293" width="280" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="wox-Sf-s8d" customClass="CallButton">
                                 <rect key="frame" x="49" y="15" width="234" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -373,6 +382,7 @@
                         <outlet property="callButtonFour" destination="ca3-A3-Ovj" id="pe7-Rb-gnX"/>
                         <outlet property="callButtonOne" destination="wox-Sf-s8d" id="x2Q-az-RqU"/>
                         <outlet property="callButtonThree" destination="inx-7U-PLO" id="Cvl-Fo-GWe"/>
+                        <outlet property="noteTextLabel" destination="2CX-wT-1QN" id="KYq-vm-yu3"/>
                         <outlet property="singleNumberButton" destination="7n5-JC-H3H" id="YmP-Nb-i3c"/>
                     </connections>
                 </viewController>
@@ -494,6 +504,7 @@
                 <relationship kind="outlet" name="callButtonFour" candidateClass="CallButton"/>
                 <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
                 <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="noteTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
             </relationships>
         </class>

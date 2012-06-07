@@ -24,8 +24,12 @@
         
         CountryListing *countryListing = [[CountryListing alloc] initWithKey:countryKey andNumbers:countryNumbers];
         
-        if(countryNumbers.count > 3) {
-            NSLog(@"%i, %@ in %@", countryNumbers.count, countryKey, worldPart);
+        NSDictionary *landlineNumbers = [[emergencyNumbersFromFile objectForKey:countryKey] objectForKey:@"landline"];
+        
+        if(landlineNumbers) {
+            countryListing.landlineNumbers = landlineNumbers;
+            
+            NSLog(@"%@ in %@ has landline (%i)", countryKey, worldPart, landlineNumbers.count);
         }
         
         [self.emergencyNumbers setObject:countryListing forKey:countryKey];
