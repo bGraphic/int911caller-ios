@@ -123,7 +123,7 @@ CLLocationManager *locationManager;
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         UITableView *senderView = (UITableView*) sender;
         
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [senderView indexPathForSelectedRow];
         CountryListing *countryListing = nil;
         
         if (senderView == self.searchDisplayController.searchResultsTableView){
