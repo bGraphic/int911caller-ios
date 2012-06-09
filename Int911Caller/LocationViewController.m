@@ -46,8 +46,9 @@ CountryListing *currentCountryListing;
 - (void) willEnterForeground:(NSNotification*)notification {
     
     if([self isTimeToReload]){
-        [self.navigationController popToRootViewControllerAnimated:FALSE];
         [self.tabBarController setSelectedViewController:self.navigationController];
+        [self.tabBarController dismissModalViewControllerAnimated:FALSE];
+        [self.navigationController popToRootViewControllerAnimated:FALSE];
     }
 }
 
@@ -65,20 +66,19 @@ CountryListing *currentCountryListing;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     self.locationManager.distanceFilter = 1000.0f;
-
-    [self.activityIndicator startAnimating];
 }
 
 - (void)viewDidUnload
 {
     self.locationManager.delegate = nil;
-    
     [self setMessage:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
     self.title = NSLocalizedString(@"tab_bar_local", nil);
     self.navigationItem.title = NSLocalizedString(@"tab_title_local", nil);
     self.message.text = NSLocalizedString(@"locating_message", nil);
@@ -86,12 +86,17 @@ CountryListing *currentCountryListing;
     errorMessage = nil;
     
     self.locationManager.delegate = self;
+    
+    [self.activityIndicator startAnimating];
     [self.locationManager startUpdatingLocation];
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
+    
     self.locationManager.delegate = nil;
+    
     [self.locationManager stopUpdatingLocation];
+    [self.activityIndicator stopAnimating];
 
 }
 

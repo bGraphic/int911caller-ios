@@ -10,14 +10,18 @@
 #import "CountryListing.h"
 #import "TestFlight.h"
 
+@interface AppDelegate ()
+- (void) loadEmergencyNumbersFor: (NSString *) continent;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize emergencyNumbers = _emergencyNumbers;
 
-- (void) loadEmergencyNumbersFor: (NSString *) worldPart {
+- (void) loadEmergencyNumbersFor: (NSString *) continent {
     
-    NSDictionary *emergencyNumbersFromFile = [[NSMutableDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: worldPart ofType:@"plist"]];
+    NSDictionary *emergencyNumbersFromFile = [[NSMutableDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource: continent ofType:@"plist"]];
     
     for(NSString *countryKey in emergencyNumbersFromFile) {
         NSDictionary *countryNumbers = [[emergencyNumbersFromFile objectForKey:countryKey] objectForKey:@"numbers"];
@@ -28,8 +32,6 @@
         
         if(landlineNumbers) {
             countryListing.landlineNumbers = landlineNumbers;
-            
-            NSLog(@"%@ in %@ has landline (%i)", countryKey, worldPart, landlineNumbers.count);
         }
         
         [self.emergencyNumbers setObject:countryListing forKey:countryKey];
