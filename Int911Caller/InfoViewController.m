@@ -108,10 +108,8 @@
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     if ([appDelegate openURL:url]) {
-        NSLog(@"%@%@",@"Opened url:", [url description]);
         return true;
     } else {
-        NSLog(@"%@%@",@"Could not open url:", [url description]);
         return false;
     }
 }

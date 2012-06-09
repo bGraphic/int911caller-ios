@@ -77,7 +77,7 @@
     
     [TestFlight takeOff:@"7e3a600d0b4a83b8560240773138f792_NDY0NzUyMDExLTEyLTA5IDE0OjM3OjUwLjgxNjY5Ng"];
     
-    #ifdef ADHOC
+    #ifndef RELEASE
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     #endif
     
