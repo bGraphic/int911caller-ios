@@ -6,18 +6,17 @@
   Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 */
 
-"location_service_off" = "For å kunne lokalisere deg trenger appen tilgang på Stedsjenester.";
+"location_service_off" = "Appen må ha tilgang til \"Stedsjenester\" for å kunne lokalisere deg.";
 "location_unavailable" = "Din lokasjon er utilgjengelig.";
 "location_standard" = "Din lokasjon ble ikke funnet.";
-"country_missing" = "Det mangler informasjon om landet, %@, du befinner deg i.";
-
+"country_missing" = "Appen mangler informasjon om landet, %@, du befinner deg i.";
 
 "geocode_standard" = "Tilgang til internett er nødvendig for å gjøre lokasjon om til land.";
 
 "locate_again" = "Prøv igjen";
 "search_directory" = "Søk i katalogen";
 
-"locating_message" = "Finner din lokasjon og slår opp korrekt nødnummer.";
+"locating_message" = "Finner din lokasjon og slår opp korrekte nødnummer.";
 
 "tab_bar_local" = "Lokale nummer";
 "tab_bar_directory" = "Katalog";

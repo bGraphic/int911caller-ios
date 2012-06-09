@@ -26,4 +26,10 @@
     [self setLocateAgain:nil];
     [super viewDidUnload];
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationIsPortrait(interfaceOrientation));
+}
+
 @end

@@ -102,7 +102,7 @@ CountryListing *currentCountryListing;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationIsPortrait(interfaceOrientation));
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

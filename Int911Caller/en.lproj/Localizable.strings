@@ -6,7 +6,7 @@
   Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 */
 
-"location_service_off" = "Location Service privileges are needed to find your location.";
+"location_service_off" = "\"Location Service\" privileges are needed to find your location.";
 "location_unavailable" = "Your location is unavailable.";
 "location_standard" = "Your location could not be found.";
 "country_missing" = "Information for your location, %@, is missing.";
@@ -29,8 +29,8 @@
 "general" = "";
 "fire" = "Fire";
 "police" = "Police";
-"police_traffic" = "Traffic police";
-"police_tourist" = "Tourist police";
+"police_traffic" = "Traffic Police";
+"police_tourist" = "Tourist Police";
 "medical" = "Medical";
 "rescue" = "Rescue";
 
@@ -38,7 +38,7 @@
 "or" = "or";
 
 "rate_app" = "Rate the app";
-"share_app" = "Tell friend";
+"share_app" = "Tell a friend";
 "support" = "E-mail support";
 "more_apps" = "View more apps by bGraphic";
 
