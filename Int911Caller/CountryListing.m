@@ -45,5 +45,32 @@
     return localisedCountryName;
 }
 
++ (NSString *)landlineStringFrom:(NSDictionary *)landlineDictionary 
+{
+    NSString *landlineString = [[NSString alloc] init];
+    
+    if(landlineDictionary.count == 1) {
+        return [landlineString stringByAppendingFormat:@"%@", [landlineDictionary.allValues objectAtIndex:0]];
+    } else {
+        int i = 1;
+        for(NSString *key in landlineDictionary) {
+            
+            NSString *countryString = [NSString stringWithFormat:@"%@ - %@", NSLocalizedString(key, nil), [landlineDictionary objectForKey:key]];
+            
+            if(i < landlineDictionary.count-1) {
+                countryString = [countryString stringByAppendingFormat:@", "];
+            } else if(i == landlineDictionary.count) {
+                countryString = [NSString stringWithFormat:@"\n%@ %@.", NSLocalizedString(@"or", nil), countryString];
+            }
+            
+            landlineString = [landlineString stringByAppendingString:countryString];
+            
+            i++;
+        }
+    }
+    
+    return landlineString;
+}
+
 
 @end

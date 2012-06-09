@@ -34,6 +34,9 @@
 "medical" = "Medical";
 "rescue" = "Rescue";
 
+"landline_note" = "When calling from a landline use:\n%@";
+"or" = "or";
+
 "rate_app" = "Rate the app";
 "share_app" = "Tell friend";
 "support" = "E-mail support";

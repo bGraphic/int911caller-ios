@@ -11,6 +11,8 @@
 
 @interface DetailViewController ()
 - (void)configureView;
+- (void)configureCallButtons;
+- (void)configureNoteText;
 @end
 
 @implementation DetailViewController
@@ -38,6 +40,8 @@
     }
 }
 
+#pragma mark - Configure the view
+
 - (void)configureView
 {
     for (UIButton *button in self.callButtons) {
@@ -49,62 +53,35 @@
 
     
     if (self.detailItem) {
+        [self configureNoteText];
         [self configureCallButtons];
     }
     
 }
 
-#pragma mark - Configure the buttons
-
-- (void)setButtonTitle:(NSString *)number button:(UIButton *)button
+- (void)configureNoteText
 {
-    [button setTitle:number forState:UIControlStateNormal];
-    [button setTitle:number forState:UIControlStateHighlighted];
-}
-
-- (NSString *)landlineStringFrom:(NSDictionary *)landlineDictionary 
-{
-    NSString *landlineString = [[NSString alloc] init];
+    NSDictionary *landlineNumbers = self.detailItem.landlineNumbers;
     
-    if(landlineDictionary.count == 1) {
-        return [landlineString stringByAppendingFormat:@"%@", [landlineDictionary.allValues objectAtIndex:0]];
-    } else {
-        int i = 1;
-        for(NSString *key in landlineDictionary) {
-            
-            NSString *countryString = [NSString stringWithFormat:@"%@ - %@", NSLocalizedString(key, nil), [landlineDictionary objectForKey:key]];
-            
-            if(i < landlineDictionary.count-1) {
-                countryString = [countryString stringByAppendingFormat:@", "];
-            } else if(i == landlineDictionary.count) {
-                countryString = [NSLocalizedString(@"\nor ", nil) stringByAppendingString:countryString];
-                countryString = [countryString stringByAppendingFormat:@"."];
-            }
-            
-            landlineString = [landlineString stringByAppendingString:countryString];
-            
-            i++;
-        }
+    if(landlineNumbers) 
+    {
+        NSString *landlineString = [CountryListing landlineStringFrom:landlineNumbers];
+        
+        self.noteTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"landline_note", nil), landlineString];
     }
-    
-    return landlineString;
 }
 
 - (void)configureCallButtons
 {
     NSDictionary *emergencyNumbers = self.detailItem.embergencyNumbers;
-    NSDictionary *landlineNumbers = self.detailItem.landlineNumbers;
+    [self configureNoteText];
     
-    if(landlineNumbers) {
-        NSString *landlineString = [self landlineStringFrom:landlineNumbers];
+    if(emergencyNumbers.count == 1) 
+    {
+        [self.singleNumberButton setTitle:[emergencyNumbers objectForKey:@"general"] forState:UIControlStateNormal];
         
-        self.noteTextLabel.text = [NSString stringWithFormat:@"When calling from a landline use:\n%@", landlineString];
-    }
-    
-    if(emergencyNumbers.count == 1) {
         self.singleNumberButton.emergencyNumber = [emergencyNumbers.allValues objectAtIndex:0];
         self.singleNumberButton.emergencyNumberKey = @"general";
-        [self setButtonTitle:[emergencyNumbers objectForKey:@"general"] button:self.singleNumberButton];
         self.singleNumberButton.hidden = false;
         return;
     }
@@ -128,12 +105,12 @@
         NSString *buttonTitle = [[NSString alloc] initWithFormat:@"%@\n%@", NSLocalizedString(numberKey,  nil), number];
 
         CallButton *button = [self.callButtons objectAtIndex:i];
+        [button setTitle:buttonTitle forState:UIControlStateNormal];
+        
         button.emergencyNumber = number;
         button.emergencyNumberKey = numberKey;
         button.center = CGPointMake(button.center.x, space*i + initY);
         
-        
-        [self setButtonTitle:buttonTitle button:button];
         button.hidden = false;
         
         i++;
@@ -194,11 +171,11 @@
     [self setCallButtonFour:nil];
     [self setCallButtonFive:nil];
     [self setNoteTextLabel:nil];
-    [super viewDidUnload];
-    
     [self setCallButtonOne:nil];
     [self setCalButtonTwo:nil];
     [self setCallButtonThree:nil];
+    
+    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

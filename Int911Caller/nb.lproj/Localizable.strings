@@ -33,6 +33,9 @@
 "medical" = "Ambulanse";
 "rescue" = "Redning";
 
+"landline_note" = "Ringer du fra fasttelefon bruk;\n%@";
+"or" = "eller";
+
 "rate_app" = "Skriv en omtale av appen";
 "share_app" = "Tips en venn";
 "support" = "Send e-post til brukerstøtte";

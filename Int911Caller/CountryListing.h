@@ -18,5 +18,6 @@
 - (CountryListing *) initWithKey:(NSString *) key andNumbers:(NSDictionary *) numbers;
 
 + (NSString *) localizedCountryNameFromCountryKey: (NSString *) countryKey;
++ (NSString *)landlineStringFrom:(NSDictionary *)landlineDictionary;
 
 @end
