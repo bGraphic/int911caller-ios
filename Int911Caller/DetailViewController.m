@@ -90,10 +90,12 @@
     int initY = 84;
     
     if(emergencyNumbers.count > 3) {
-        space = 70;
+        space = 80;
+        initY = 64;
     } 
     
     if(emergencyNumbers.count > 4) {
+        space = 70;
         initY = 44;
     }
     
