@@ -64,8 +64,8 @@
                                     <action selector="twitterAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="Xg3-9g-Nry"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="All the emergency numbers in this app are from the wikipedia article &quot;Emergency Telephone Numbers&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" id="w8w-DN-VGe">
-                                <rect key="frame" x="25" y="57" width="275" height="88"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="info text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" id="w8w-DN-VGe">
+                                <rect key="frame" x="22.5" y="57" width="275" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,7 +78,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Rate the app">
+                                <state key="normal" title="rate_app">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Tell a friend">
+                                <state key="normal" title="share_app">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -112,7 +112,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="E-mail support">
+                                <state key="normal" title="support">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,11 +129,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q7w-s8-8JQ"/>
                     <connections>
-                        <outlet property="blogButton" destination="Vap-gW-1l1" id="Gvx-fN-wfr"/>
+                        <outlet property="infoText" destination="w8w-DN-VGe" id="7ng-zz-h1T"/>
                         <outlet property="rateAppButton" destination="JJD-mG-Swv" id="DYU-Se-xrc"/>
                         <outlet property="shareButton" destination="AdS-qc-IOA" id="XAx-LN-VVO"/>
                         <outlet property="supportButton" destination="hGm-pM-SCF" id="kag-UD-hiQ"/>
-                        <outlet property="twitterButton" destination="M0Z-zg-dbf" id="JaK-4x-jJv"/>
                     </connections>
                 </viewController>
             </objects>
@@ -575,12 +574,11 @@
                 <relationship kind="action" name="shareAction:"/>
                 <relationship kind="action" name="supportAction:"/>
                 <relationship kind="action" name="twitterAction:"/>
-                <relationship kind="outlet" name="blogButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoText" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="moreAppsButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="rateAppButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="supportButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="LocationViewController" superclassName="UIViewController">

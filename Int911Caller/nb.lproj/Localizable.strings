@@ -8,7 +8,7 @@
 
 "location_service_off" = "For å kunne lokalisere deg trenger appen tilgang på Stedsjenester.";
 "location_unavailable" = "Din lokasjon er utilgjengelig.";
-"location_standard" = "Din lokasjon kunne ikke bli funnet.";
+"location_standard" = "Din lokasjon ble ikke funnet.";
 "country_missing" = "Det mangler informasjon om landet, %@, du befinner deg i.";
 
 
@@ -17,7 +17,7 @@
 "locate_again" = "Prøv igjen";
 "search_directory" = "Søk i katalogen";
 
-"locating_message" = "Finner din lokasjon og slår opp korrekt nødnummer";
+"locating_message" = "Finner din lokasjon og slår opp korrekt nødnummer.";
 
 "tab_bar_local" = "Lokale nummer";
 "tab_bar_directory" = "Katalog";
@@ -33,11 +33,18 @@
 "medical" = "Ambulanse";
 "rescue" = "Redning";
 
+"rate_app" = "Skriv en omtale av appen";
+"share_app" = "Tips en venn";
+"support" = "Send e-post til brukerstøtte";
+"more_apps" = "Se flere apps av bGraphic";
+
+"info_text" = "Nødnummerne i denne appen ble hentet fra Wikipedia-artikkelen \"Emergency Telephone Numbers\"";
+
 "e-mail_error_alert_title" = "Sending feilet";
 "e-mail_error_alert_message" = "E-posten ble ikke sent, prøv igjen senere.";
 
-"share_mail_title" = "App anbefaling: 911Caller";
-"share_mail_body" = "Ta en titt på appen: International 911Caller, du kan laste den ned fra <a href='%@'>iTunes.</a>";
+"share_mail_title" = "911Caller, en app-anbefaling";
+"share_mail_body" = "Ta en titt på appen International 911Caller. Du kan laste den ned fra <a href='%@'>iTunes.</a>";
 
 "support_mail_title" = "Support for appen: 911Caller";
 

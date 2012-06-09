@@ -15,11 +15,10 @@
 @implementation InfoViewController
 
 @synthesize infoDict = _infoDict;
+@synthesize infoText = _infoText;
 @synthesize rateAppButton = _rateAppButton;
 @synthesize shareButton = _shareButton;
 @synthesize supportButton = _supportButton;
-@synthesize twitterButton = _twitterButton;
-@synthesize blogButton = _blogButton;
 @synthesize moreAppsButton = _moreAppsButton;
 
 - (void)viewDidLoad
@@ -28,6 +27,14 @@
 	// Do any additional setup after loading the view.
 
     self.infoDict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"InfoPage" ofType:@"plist"]];
+    
+    [self.infoText setText:NSLocalizedString(@"info_text", nil)];
+    
+    [self.rateAppButton setTitle:NSLocalizedString(@"rate_app", nil) forState:UIControlStateNormal];
+    [self.shareButton setTitle:NSLocalizedString(@"share_app", nil) forState:UIControlStateNormal];
+    [self.supportButton setTitle:NSLocalizedString(@"support", nil) forState:UIControlStateNormal];
+    [self.moreAppsButton setTitle:NSLocalizedString(@"more_apps", nil) forState:UIControlStateNormal];
+    
 }
     
 - (void)viewDidUnload
@@ -35,10 +42,8 @@
     [self setRateAppButton:nil];
     [self setShareButton:nil];
     [self setSupportButton:nil];
-    [self setBlogButton:nil];
     [self setMoreAppsButton:nil];
-
-    [self setTwitterButton:nil];
+    [self setInfoText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
