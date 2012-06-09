@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *rateAppButton;
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 @property (strong, nonatomic) IBOutlet UIButton *supportButton;
+@property (strong, nonatomic) IBOutlet UIButton *twitterButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *blogButton;
 @property (strong, nonatomic) IBOutlet UIButton *moreAppsButton;
@@ -25,6 +26,7 @@
 - (IBAction)supportAction:(id)sender;
 - (IBAction)blogAction:(id)sender;
 - (IBAction)moreAppsAction:(id)sender;
+- (IBAction)twitterAction:(id)sender;
 
 - (IBAction)closeInfoAction:(id)sender;
 

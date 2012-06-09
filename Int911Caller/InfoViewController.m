@@ -9,7 +9,7 @@
 #import "InfoViewController.h"
 
 @interface InfoViewController ()
--(void)openUrl:(NSString *)urlString;
+-(BOOL)openUrl:(NSString *)urlString;
 @end
 
 @implementation InfoViewController
@@ -18,6 +18,7 @@
 @synthesize rateAppButton = _rateAppButton;
 @synthesize shareButton = _shareButton;
 @synthesize supportButton = _supportButton;
+@synthesize twitterButton = _twitterButton;
 @synthesize blogButton = _blogButton;
 @synthesize moreAppsButton = _moreAppsButton;
 
@@ -37,6 +38,7 @@
     [self setBlogButton:nil];
     [self setMoreAppsButton:nil];
 
+    [self setTwitterButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -47,14 +49,14 @@
 }
 
 - (IBAction)rateAppAction:(id)sender {
-    NSString *urlString = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", [self.infoDict objectForKey:@"app_id"]];
+    NSString *rateAppUrl = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", [self.infoDict objectForKey:@"app_id"]];
     
-    [self openUrl:urlString];
+    [self openUrl:rateAppUrl];
 }
 
 - (IBAction)shareAction:(id)sender {
-    NSString *shareLink = [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", [self.infoDict objectForKey:@"app_id"]];
-    NSString *body = [NSString stringWithFormat:NSLocalizedString(@"share_mail_body", nil), shareLink]; 
+    NSString *shareAppUrl = [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", [self.infoDict objectForKey:@"app_id"]];
+    NSString *body = [NSString stringWithFormat:NSLocalizedString(@"share_mail_body", nil), shareAppUrl]; 
     
     [self sendMailTo:nil withTitle:NSLocalizedString(@"share_mail_title", nil) andBody:body];
 }
@@ -68,22 +70,36 @@
 }
 
 - (IBAction)moreAppsAction:(id)sender {
-    NSString *urlString = [NSString stringWithFormat:@"itms-apps://itunes.com/apps/%@", [self.infoDict objectForKey:@"store_id"]];
+    NSString *moreAppsUrl
+    = [NSString stringWithFormat:@"itms-apps://itunes.com/apps/%@", [self.infoDict objectForKey:@"store_id"]];
 
-    [self openUrl:urlString];    
+    [self openUrl:moreAppsUrl];    
+}
+
+- (IBAction)twitterAction:(id)sender {
+    NSString *twitterUrl = [NSString stringWithFormat:@"twitter:///user?screen_name=%@", [self.infoDict objectForKey:@"twitter_user"]];
+    
+    if(![self openUrl:twitterUrl]) {
+        twitterUrl = [NSString stringWithFormat:@"http://twitter.com/%@", [self.infoDict objectForKey:@"twitter_user"]];
+        [self openUrl:twitterUrl];
+    }
 }
 
 - (IBAction)closeInfoAction:(id)sender {
     [self dismissModalViewControllerAnimated:TRUE];
 }
 
--(void)openUrl:(NSString *)urlString {
+-(BOOL)openUrl:(NSString *)urlString {
     UIApplication *appDelegate = [UIApplication sharedApplication];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     if ([appDelegate openURL:url]) {
         NSLog(@"%@%@",@"Opened url:", [url description]);
-    } 
+        return true;
+    } else {
+        NSLog(@"%@%@",@"Could not open url:", [url description]);
+        return false;
+    }
 }
 
 -(void)sendMailTo:(NSString *)recipient withTitle:(NSString *)title andBody:(NSString *)body  {

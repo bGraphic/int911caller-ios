@@ -49,6 +49,9 @@
 		13971C251578033B0005994A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C211578033B0005994A /* README.txt */; };
 		13971C261578033B0005994A /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C221578033B0005994A /* release_notes.txt */; };
 		13971C28157803880005994A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
+		13AD119115835DFB0096E89C /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
+		13AD119215835DFB0096E89C /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
+		13AD119315835DFB0096E89C /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD119015835DFB0096E89C /* GUI-911_twitter.png */; };
 		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
@@ -109,6 +112,9 @@
 		13971C221578033B0005994A /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		13971C231578033B0005994A /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		13971C27157803880005994A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		13AD118E15835DFB0096E89C /* GUI-911_info_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_info_button.png"; sourceTree = "<group>"; };
+		13AD118F15835DFB0096E89C /* GUI-911_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_logo.png"; sourceTree = "<group>"; };
+		13AD119015835DFB0096E89C /* GUI-911_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_twitter.png"; sourceTree = "<group>"; };
 		13C81CDC1572C01B00D16A7A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				13AD118E15835DFB0096E89C /* GUI-911_info_button.png */,
+				13AD118F15835DFB0096E89C /* GUI-911_logo.png */,
+				13AD119015835DFB0096E89C /* GUI-911_twitter.png */,
 				134124911579137B00373AC2 /* GUI-911_button_big.png */,
 				1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */,
 				1341247D1578F1D200373AC2 /* GUI-911_arrow.png */,
@@ -325,6 +334,9 @@
 				139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */,
 				139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */,
 				133C72221580CEF100AE031E /* InfoPage.plist in Resources */,
+				13AD119115835DFB0096E89C /* GUI-911_info_button.png in Resources */,
+				13AD119215835DFB0096E89C /* GUI-911_logo.png in Resources */,
+				13AD119315835DFB0096E89C /* GUI-911_twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

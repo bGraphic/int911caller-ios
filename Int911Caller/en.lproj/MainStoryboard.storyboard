@@ -15,79 +15,25 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Re7-vf-uu2">
-                                <rect key="frame" x="68" y="108" width="185" height="37"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="GUI-911_background.png" id="LLf-D7-JqE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vap-gW-1l1">
+                                <rect key="frame" x="19" y="343" width="275" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Tell a friend">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" backgroundImage="GUI-911_logo.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="shareAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="xoB-hk-8n9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pdw-xK-BeQ">
-                                <rect key="frame" x="68" y="203" width="185" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Support">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="supportAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="FdL-Kc-t0a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LEl-1J-kNC">
-                                <rect key="frame" x="68" y="63" width="185" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Rate this app">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rateAppAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="2Vx-00-yBV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vap-gW-1l1">
-                                <rect key="frame" x="68" y="294" width="185" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="bGraphic | blogg">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="blogAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="war-af-Q7S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mRn-tC-3Fs">
-                                <rect key="frame" x="68" y="349" width="185" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="bGraphic | apps">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="moreAppsAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="yRw-ah-tHK"/>
+                                    <action selector="blogAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="qaH-Mz-oGs"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" id="ETx-f9-mrk">
@@ -97,22 +43,97 @@
                                     <navigationItem title="Info" id="Ds4-cO-79B">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="KaP-tg-q8r">
                                             <connections>
-                                                <action selector="closeInfoAction:" destination="Gau-LJ-LL4" id="MrY-Vc-ha6"/>
+                                                <action selector="closeInfoAction:" destination="Gau-LJ-LL4" id="hty-uf-TZG"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M0Z-zg-dbf">
+                                <rect key="frame" x="256" y="336" width="43" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="GUI-911_twitter.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="Xg3-9g-Nry"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="All the emergency numbers in this app are from the wikipedia article &quot;Emergency Telephone Numbers&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="10" id="w8w-DN-VGe">
+                                <rect key="frame" x="25" y="57" width="275" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="JJD-mG-Swv">
+                                <rect key="frame" x="0.0" y="166" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Rate the app">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rateAppAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="7C2-24-jJ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="AdS-qc-IOA">
+                                <rect key="frame" x="0.0" y="211" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Tell a friend">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="4zx-XD-j8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hGm-pM-SCF">
+                                <rect key="frame" x="0.0" y="256" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="E-mail support">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="supportAction:" destination="Gau-LJ-LL4" eventType="touchUpInside" id="RIv-PK-txt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q7w-s8-8JQ"/>
                     <connections>
                         <outlet property="blogButton" destination="Vap-gW-1l1" id="Gvx-fN-wfr"/>
-                        <outlet property="moreAppsButton" destination="mRn-tC-3Fs" id="7cI-wE-qzP"/>
-                        <outlet property="rateAppButton" destination="LEl-1J-kNC" id="PCz-bL-fCj"/>
-                        <outlet property="shareButton" destination="Re7-vf-uu2" id="9Ri-7b-wVo"/>
-                        <outlet property="supportButton" destination="pdw-xK-BeQ" id="Wzl-1e-L7A"/>
+                        <outlet property="rateAppButton" destination="JJD-mG-Swv" id="DYU-Se-xrc"/>
+                        <outlet property="shareButton" destination="AdS-qc-IOA" id="XAx-LN-VVO"/>
+                        <outlet property="supportButton" destination="hGm-pM-SCF" id="kag-UD-hiQ"/>
+                        <outlet property="twitterButton" destination="M0Z-zg-dbf" id="JaK-4x-jJv"/>
                     </connections>
                 </viewController>
             </objects>
@@ -509,7 +530,67 @@
         <image name="GUI-911_button_big.png" width="101" height="101"/>
         <image name="GUI-911_circle.png" width="321" height="321"/>
         <image name="GUI-911_error.png" width="321" height="320"/>
+        <image name="GUI-911_logo.png" width="551" height="217"/>
+        <image name="GUI-911_twitter.png" width="87" height="74"/>
     </resources>
+    <classes>
+        <class className="CallButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
+        </class>
+        <class className="CountryListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="callEmergencyNumberAction:"/>
+                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonFive" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonFour" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
+                <relationship kind="outlet" name="noteTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
+            </relationships>
+        </class>
+        <class className="ErrorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ErrorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locateAgain" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="searchDirectory" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="blogAction:"/>
+                <relationship kind="action" name="closeInfoAction:"/>
+                <relationship kind="action" name="moreAppsAction:"/>
+                <relationship kind="action" name="rateAppAction:"/>
+                <relationship kind="action" name="shareAction:"/>
+                <relationship kind="action" name="supportAction:"/>
+                <relationship kind="action" name="twitterAction:"/>
+                <relationship kind="outlet" name="blogButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="moreAppsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rateAppButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="supportButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twitterButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="LocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
