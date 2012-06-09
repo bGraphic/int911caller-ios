@@ -7,6 +7,7 @@
 //
 
 #import "InfoViewController.h"
+#import "TestFlight.h"
 
 @interface InfoViewController ()
 -(BOOL)openUrl:(NSString *)urlString;
@@ -56,6 +57,8 @@
 - (IBAction)rateAppAction:(id)sender {
     NSString *rateAppUrl = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", [self.infoDict objectForKey:@"app_id"]];
     
+    [TestFlight passCheckpoint:@"RATE"];
+    
     [self openUrl:rateAppUrl];
 }
 
@@ -71,10 +74,14 @@
 }
 
 - (IBAction)blogAction:(id)sender {
+    [TestFlight passCheckpoint:@"BLOG"];
+    
     [self openUrl:[self.infoDict objectForKey:@"blog_link"]];
 }
 
 - (IBAction)moreAppsAction:(id)sender {
+    [TestFlight passCheckpoint:@"MORE APPS"];
+    
     NSString *moreAppsUrl
     = [NSString stringWithFormat:@"itms-apps://itunes.com/apps/%@", [self.infoDict objectForKey:@"store_id"]];
 
@@ -83,6 +90,8 @@
 
 - (IBAction)twitterAction:(id)sender {
     NSString *twitterUrl = [NSString stringWithFormat:@"twitter:///user?screen_name=%@", [self.infoDict objectForKey:@"twitter_user"]];
+    
+    [TestFlight passCheckpoint:@"TWITTER"];
     
     if(![self openUrl:twitterUrl]) {
         twitterUrl = [NSString stringWithFormat:@"http://twitter.com/%@", [self.infoDict objectForKey:@"twitter_user"]];
@@ -124,10 +133,11 @@
     	[picker setMessageBody:body isHTML:YES];
     }
 	
-
 	
 	[self presentViewController:picker animated:true completion:^{
-        NSLog(@"Mail composer has been presented.");
+        if(![recipient isEqualToString:[self.infoDict objectForKey:@"support_mail"]]) {
+            [TestFlight passCheckpoint:@"SHARED"];
+        }
     }];
     
     picker = nil;
