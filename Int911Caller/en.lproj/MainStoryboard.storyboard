@@ -166,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.76470595600000002" green="0.85098046059999999" blue="0.88235300780000003" alpha="0.5" colorSpace="deviceRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Name of country" id="ujH-02-U4e">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="search_placeholder" id="ujH-02-U4e">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.76470595598220825" green="0.85490202903747559" blue="0.88235300779342651" alpha="1" colorSpace="deviceRGB"/>
@@ -532,69 +532,12 @@
         <image name="GUI-911_logo.png" width="551" height="217"/>
         <image name="GUI-911_twitter.png" width="87" height="74"/>
     </resources>
-    <classes>
-        <class className="CallButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
-        </class>
-        <class className="CountryListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callEmergencyNumberAction:"/>
-                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFive" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFour" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="noteTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
-            </relationships>
-        </class>
-        <class className="ErrorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ErrorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locateAgain" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="searchDirectory" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="blogAction:"/>
-                <relationship kind="action" name="closeInfoAction:"/>
-                <relationship kind="action" name="moreAppsAction:"/>
-                <relationship kind="action" name="rateAppAction:"/>
-                <relationship kind="action" name="shareAction:"/>
-                <relationship kind="action" name="supportAction:"/>
-                <relationship kind="action" name="twitterAction:"/>
-                <relationship kind="outlet" name="infoText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="moreAppsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="rateAppButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="supportButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wGc-n0-e8W"/>
+        <segue reference="CH2-yq-36R"/>
     </inferredMetricsTieBreakers>
 </document>

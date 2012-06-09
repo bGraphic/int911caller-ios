@@ -24,6 +24,8 @@
 "tab_title_local" = "Lokale nummer";
 "tab_title_directory" = "Katalog";
 
+"search_placeholde" = "Navn på land";
+
 "general" = "";
 "fire" = "Brann";
 "police" = "Politi";

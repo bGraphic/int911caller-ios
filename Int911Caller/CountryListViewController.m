@@ -41,6 +41,7 @@ CLLocationManager *locationManager;
     self.emergencyNumbers = [[NSMutableArray alloc] initWithArray:numbers];
     [self.emergencyNumbers sortUsingSelector:@selector(compare:)];
     
+    self.searchBar.placeholder = NSLocalizedString(@"search_placeholder", nil);
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.emergencyNumbers count]];
     
 }

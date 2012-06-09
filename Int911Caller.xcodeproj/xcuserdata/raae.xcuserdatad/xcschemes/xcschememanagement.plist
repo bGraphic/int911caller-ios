@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Int911Caller (Ad hoc).xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>Int911Caller (Release).xcscheme</key>
+		<key>Int911Caller (dev).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>Int911Caller (prod).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>13179FC3158386B800EC73AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13E40D0A158392F100679260</key>
 		<dict>
 			<key>primary</key>
 			<true/>
