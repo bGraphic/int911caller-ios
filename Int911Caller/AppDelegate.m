@@ -75,9 +75,12 @@
     [self loadEmergencyNumbersFor:@"CentralAmerica"];
     [self loadEmergencyNumbersFor:@"AustraliaOceania"];
     
-    [TestFlight takeOff:@"7e3a600d0b4a83b8560240773138f792_NDY0NzUyMDExLTEyLTA5IDE0OjM3OjUwLjgxNjY5Ng"];
+    #ifdef RELEASE
+        [TestFlight takeOff:@"d632f498-ad90-481b-be2c-8b7914844622"];
+    #endif
     
-    #ifndef RELEASE
+    #ifdef ADHOC
+        [TestFlight takeOff:@"6b463fa6-a72e-43c5-8408-2353fae7c4f7"];
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     #endif
     

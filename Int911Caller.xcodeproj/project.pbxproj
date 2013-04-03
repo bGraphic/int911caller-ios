@@ -37,7 +37,56 @@
 		135850E115838F7D007F2131 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
 		135850E315838F81007F2131 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
 		135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
-		135BBE8E170C698300F3BE90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
+		1363FE16170C82D3003624BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30B156803EF009E9711 /* main.m */; };
+		1363FE17170C82D3003624BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30F156803EF009E9711 /* AppDelegate.m */; };
+		1363FE18170C82D3003624BE /* CountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF315156803EF009E9711 /* CountryListViewController.m */; };
+		1363FE19170C82D3003624BE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF318156803EF009E9711 /* DetailViewController.m */; };
+		1363FE1A170C82D3003624BE /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
+		1363FE1B170C82D3003624BE /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
+		1363FE1C170C82D3003624BE /* CallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CC12615777C560059E90B /* CallButton.m */; };
+		1363FE1D170C82D3003624BE /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
+		1363FE1E170C82D3003624BE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
+		1363FE20170C82D3003624BE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726E1580D2EE00AE031E /* MessageUI.framework */; };
+		1363FE21170C82D3003624BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726C1580D2E500AE031E /* Security.framework */; };
+		1363FE22170C82D3003624BE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
+		1363FE23170C82D3003624BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
+		1363FE24170C82D3003624BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
+		1363FE25170C82D3003624BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF2FF156803EF009E9711 /* UIKit.framework */; };
+		1363FE26170C82D3003624BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF301156803EF009E9711 /* Foundation.framework */; };
+		1363FE27170C82D3003624BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF303156803EF009E9711 /* CoreGraphics.framework */; };
+		1363FE29170C82D3003624BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 130EF308156803EF009E9711 /* InfoPlist.strings */; };
+		1363FE2A170C82D3003624BE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130EF311156803EF009E9711 /* MainStoryboard.storyboard */; };
+		1363FE2B170C82D3003624BE /* Europe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Europe.plist */; };
+		1363FE2C170C82D3003624BE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
+		1363FE2D170C82D3003624BE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
+		1363FE2E170C82D3003624BE /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
+		1363FE2F170C82D3003624BE /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
+		1363FE30170C82D3003624BE /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
+		1363FE31170C82D3003624BE /* GUI-911_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC129157781EC0059E90B /* GUI-911_error.png */; };
+		1363FE32170C82D3003624BE /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1411577C4490059E90B /* 74-location.png */; };
+		1363FE33170C82D3003624BE /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1421577C4490059E90B /* 74-location@2x.png */; };
+		1363FE34170C82D3003624BE /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1451577C4A10059E90B /* 104-index-cards.png */; };
+		1363FE35170C82D3003624BE /* 104-index-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1461577C4A10059E90B /* 104-index-cards@2x.png */; };
+		1363FE36170C82D3003624BE /* GUI-911_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341247D1578F1D200373AC2 /* GUI-911_arrow.png */; };
+		1363FE37170C82D3003624BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1341248B157906E500373AC2 /* Localizable.strings */; };
+		1363FE38170C82D3003624BE /* GUI-911_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248D15790E8900373AC2 /* GUI-911_button@2x.png */; };
+		1363FE39170C82D3003624BE /* GUI-911_button_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */; };
+		1363FE3A170C82D3003624BE /* GUI-911_button_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 134124911579137B00373AC2 /* GUI-911_button_big.png */; };
+		1363FE3B170C82D3003624BE /* Africa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C0157E5F63002CA51D /* Africa.plist */; };
+		1363FE3C170C82D3003624BE /* Asia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C2157E5FBE002CA51D /* Asia.plist */; };
+		1363FE3D170C82D3003624BE /* SouthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C4157E5FF0002CA51D /* SouthAmerica.plist */; };
+		1363FE3E170C82D3003624BE /* NorthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C6157E5FFC002CA51D /* NorthAmerica.plist */; };
+		1363FE3F170C82D3003624BE /* CentralAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C8157E6013002CA51D /* CentralAmerica.plist */; };
+		1363FE40170C82D3003624BE /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
+		1363FE41170C82D3003624BE /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 133C72211580CEF100AE031E /* InfoPage.plist */; };
+		1363FE42170C82D3003624BE /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
+		1363FE43170C82D3003624BE /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
+		1363FE44170C82D3003624BE /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD119015835DFB0096E89C /* GUI-911_twitter.png */; };
+		1363FE45170C82D3003624BE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
+		1363FE46170C82D3003624BE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
+		1363FE47170C82D3003624BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
+		1363FE50170C854C003624BE /* Icon-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE4F170C854C003624BE /* Icon-beta.png */; };
+		1363FE52170C854E003624BE /* Icon-beta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE51170C854E003624BE /* Icon-beta@2x.png */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
@@ -49,9 +98,6 @@
 		139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C8157E6013002CA51D /* CentralAmerica.plist */; };
 		139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
 		139152CE157E7C73002CA51D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
-		13971C241578033B0005994A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C201578033B0005994A /* libTestFlight.a */; };
-		13971C251578033B0005994A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C211578033B0005994A /* README.txt */; };
-		13971C261578033B0005994A /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C221578033B0005994A /* release_notes.txt */; };
 		13971C28157803880005994A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
 		13AD119115835DFB0096E89C /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
 		13AD119215835DFB0096E89C /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
@@ -59,56 +105,6 @@
 		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
-		13E40D0C158392F100679260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30B156803EF009E9711 /* main.m */; };
-		13E40D0D158392F100679260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF30F156803EF009E9711 /* AppDelegate.m */; };
-		13E40D0E158392F100679260 /* CountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF315156803EF009E9711 /* CountryListViewController.m */; };
-		13E40D0F158392F100679260 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF318156803EF009E9711 /* DetailViewController.m */; };
-		13E40D10158392F100679260 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130EF329156824ED009E9711 /* LocationViewController.m */; };
-		13E40D11158392F100679260 /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
-		13E40D12158392F100679260 /* CallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CC12615777C560059E90B /* CallButton.m */; };
-		13E40D13158392F100679260 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
-		13E40D14158392F100679260 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
-		13E40D16158392F100679260 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726E1580D2EE00AE031E /* MessageUI.framework */; };
-		13E40D17158392F100679260 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726C1580D2E500AE031E /* Security.framework */; };
-		13E40D18158392F100679260 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
-		13E40D19158392F100679260 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
-		13E40D1A158392F100679260 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF32E15683462009E9711 /* CoreLocation.framework */; };
-		13E40D1B158392F100679260 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF2FF156803EF009E9711 /* UIKit.framework */; };
-		13E40D1C158392F100679260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF301156803EF009E9711 /* Foundation.framework */; };
-		13E40D1D158392F100679260 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130EF303156803EF009E9711 /* CoreGraphics.framework */; };
-		13E40D1E158392F100679260 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C201578033B0005994A /* libTestFlight.a */; };
-		13E40D20158392F100679260 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 130EF308156803EF009E9711 /* InfoPlist.strings */; };
-		13E40D21158392F100679260 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130EF311156803EF009E9711 /* MainStoryboard.storyboard */; };
-		13E40D22158392F100679260 /* Europe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130EF3261568093E009E9711 /* Europe.plist */; };
-		13E40D23158392F100679260 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
-		13E40D24158392F100679260 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
-		13E40D25158392F100679260 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
-		13E40D26158392F100679260 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
-		13E40D27158392F100679260 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
-		13E40D28158392F100679260 /* GUI-911_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC129157781EC0059E90B /* GUI-911_error.png */; };
-		13E40D29158392F100679260 /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1411577C4490059E90B /* 74-location.png */; };
-		13E40D2A158392F100679260 /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1421577C4490059E90B /* 74-location@2x.png */; };
-		13E40D2B158392F100679260 /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1451577C4A10059E90B /* 104-index-cards.png */; };
-		13E40D2C158392F100679260 /* 104-index-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1461577C4A10059E90B /* 104-index-cards@2x.png */; };
-		13E40D2D158392F100679260 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C211578033B0005994A /* README.txt */; };
-		13E40D2E158392F100679260 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13971C221578033B0005994A /* release_notes.txt */; };
-		13E40D2F158392F100679260 /* GUI-911_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341247D1578F1D200373AC2 /* GUI-911_arrow.png */; };
-		13E40D30158392F100679260 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1341248B157906E500373AC2 /* Localizable.strings */; };
-		13E40D31158392F100679260 /* GUI-911_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248D15790E8900373AC2 /* GUI-911_button@2x.png */; };
-		13E40D32158392F100679260 /* GUI-911_button_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */; };
-		13E40D33158392F100679260 /* GUI-911_button_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 134124911579137B00373AC2 /* GUI-911_button_big.png */; };
-		13E40D34158392F100679260 /* Africa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C0157E5F63002CA51D /* Africa.plist */; };
-		13E40D35158392F100679260 /* Asia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C2157E5FBE002CA51D /* Asia.plist */; };
-		13E40D36158392F100679260 /* SouthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C4157E5FF0002CA51D /* SouthAmerica.plist */; };
-		13E40D37158392F100679260 /* NorthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C6157E5FFC002CA51D /* NorthAmerica.plist */; };
-		13E40D38158392F100679260 /* CentralAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C8157E6013002CA51D /* CentralAmerica.plist */; };
-		13E40D39158392F100679260 /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
-		13E40D3A158392F100679260 /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 133C72211580CEF100AE031E /* InfoPage.plist */; };
-		13E40D3B158392F100679260 /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
-		13E40D3C158392F100679260 /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
-		13E40D3D158392F100679260 /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD119015835DFB0096E89C /* GUI-911_twitter.png */; };
-		13E40D3E158392F100679260 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
-		13E40D3F158392F100679260 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +148,10 @@
 		135850E015838F7D007F2131 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		135850E215838F81007F2131 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1363FE4D170C82D3003624BE /* Int911Caller Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Int911Caller Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1363FE4E170C82D4003624BE /* Int911Caller copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Int911Caller copy-Info.plist"; path = "/Users/raae/Dropbox/bGraphic/Safety Apps/develop/Int911Caller/Int911Caller copy-Info.plist"; sourceTree = "<absolute>"; };
+		1363FE4F170C854C003624BE /* Icon-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-beta.png"; sourceTree = "<group>"; };
+		1363FE51170C854E003624BE /* Icon-beta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-beta@2x.png"; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
@@ -164,10 +164,6 @@
 		139152CA157E765F002CA51D /* AustraliaOceania.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AustraliaOceania.plist; sourceTree = "<group>"; };
 		139152CC157E7C73002CA51D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		139152CD157E7C73002CA51D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
-		13971C201578033B0005994A /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		13971C211578033B0005994A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		13971C221578033B0005994A /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
-		13971C231578033B0005994A /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		13971C27157803880005994A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		13AD118E15835DFB0096E89C /* GUI-911_info_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_info_button.png"; sourceTree = "<group>"; };
 		13AD118F15835DFB0096E89C /* GUI-911_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_logo.png"; sourceTree = "<group>"; };
@@ -176,7 +172,8 @@
 		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
 		13C81CEC1574BCF300D16A7A /* CountryListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryListing.m; sourceTree = "<group>"; };
-		13E40D44158392F100679260 /* EmergencyCaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyCaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEAEF518FBE047F99184FA0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		FCC1510DF6604AD0B8B20D95 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,23 +189,21 @@
 				130EF300156803EF009E9711 /* UIKit.framework in Frameworks */,
 				130EF302156803EF009E9711 /* Foundation.framework in Frameworks */,
 				130EF304156803EF009E9711 /* CoreGraphics.framework in Frameworks */,
-				13971C241578033B0005994A /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13E40D15158392F100679260 /* Frameworks */ = {
+		1363FE1F170C82D3003624BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E40D16158392F100679260 /* MessageUI.framework in Frameworks */,
-				13E40D17158392F100679260 /* Security.framework in Frameworks */,
-				13E40D18158392F100679260 /* libz.dylib in Frameworks */,
-				13E40D19158392F100679260 /* SystemConfiguration.framework in Frameworks */,
-				13E40D1A158392F100679260 /* CoreLocation.framework in Frameworks */,
-				13E40D1B158392F100679260 /* UIKit.framework in Frameworks */,
-				13E40D1C158392F100679260 /* Foundation.framework in Frameworks */,
-				13E40D1D158392F100679260 /* CoreGraphics.framework in Frameworks */,
-				13E40D1E158392F100679260 /* libTestFlight.a in Frameworks */,
+				1363FE20170C82D3003624BE /* MessageUI.framework in Frameworks */,
+				1363FE21170C82D3003624BE /* Security.framework in Frameworks */,
+				1363FE22170C82D3003624BE /* libz.dylib in Frameworks */,
+				1363FE23170C82D3003624BE /* SystemConfiguration.framework in Frameworks */,
+				1363FE24170C82D3003624BE /* CoreLocation.framework in Frameworks */,
+				1363FE25170C82D3003624BE /* UIKit.framework in Frameworks */,
+				1363FE26170C82D3003624BE /* Foundation.framework in Frameworks */,
+				1363FE27170C82D3003624BE /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +213,8 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
+				1363FE51170C854E003624BE /* Icon-beta@2x.png */,
+				1363FE4F170C854C003624BE /* Icon-beta.png */,
 				135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */,
 				135850E215838F81007F2131 /* Default.png */,
 				135850E015838F7D007F2131 /* Default@2x.png */,
@@ -226,7 +223,8 @@
 				13C81CDC1572C01B00D16A7A /* Icon@2x.png */,
 				130EF305156803EF009E9711 /* Int911Caller */,
 				130EF2FC156803EF009E9711 /* Products */,
-				13971C1F1578033B0005994A /* TestFlightSDK1.0 */,
+				AEAEF518FBE047F99184FA0D /* Pods.xcconfig */,
+				1363FE4E170C82D4003624BE /* Int911Caller copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				130EF2FB156803EF009E9711 /* Int911Caller.app */,
-				13E40D44158392F100679260 /* EmergencyCaller.app */,
+				1363FE4D170C82D3003624BE /* Int911Caller Beta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +248,7 @@
 				130EF2FF156803EF009E9711 /* UIKit.framework */,
 				130EF301156803EF009E9711 /* Foundation.framework */,
 				130EF303156803EF009E9711 /* CoreGraphics.framework */,
+				FCC1510DF6604AD0B8B20D95 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,17 +299,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13971C1F1578033B0005994A /* TestFlightSDK1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				13971C201578033B0005994A /* libTestFlight.a */,
-				13971C211578033B0005994A /* README.txt */,
-				13971C221578033B0005994A /* release_notes.txt */,
-				13971C231578033B0005994A /* TestFlight.h */,
-			);
-			path = TestFlightSDK1.0;
-			sourceTree = "<group>";
-		};
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +331,7 @@
 				130EF2F7156803EF009E9711 /* Sources */,
 				130EF2F8156803EF009E9711 /* Frameworks */,
 				130EF2F9156803EF009E9711 /* Resources */,
+				E3394787D1364C1EBF9593BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,21 +342,22 @@
 			productReference = 130EF2FB156803EF009E9711 /* Int911Caller.app */;
 			productType = "com.apple.product-type.application";
 		};
-		13E40D0A158392F100679260 /* Int911Caller (beta) */ = {
+		1363FE14170C82D3003624BE /* Int911Caller - beta */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13E40D40158392F100679260 /* Build configuration list for PBXNativeTarget "Int911Caller (beta)" */;
+			buildConfigurationList = 1363FE49170C82D3003624BE /* Build configuration list for PBXNativeTarget "Int911Caller - beta" */;
 			buildPhases = (
-				13E40D0B158392F100679260 /* Sources */,
-				13E40D15158392F100679260 /* Frameworks */,
-				13E40D1F158392F100679260 /* Resources */,
+				1363FE15170C82D3003624BE /* Sources */,
+				1363FE1F170C82D3003624BE /* Frameworks */,
+				1363FE28170C82D3003624BE /* Resources */,
+				1363FE48170C82D3003624BE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Int911Caller (beta)";
+			name = "Int911Caller - beta";
 			productName = Int911Caller;
-			productReference = 13E40D44158392F100679260 /* EmergencyCaller.app */;
+			productReference = 1363FE4D170C82D3003624BE /* Int911Caller Beta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -376,7 +366,7 @@
 		130EF2F2156803EF009E9711 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 130EF2F5156803EF009E9711 /* Build configuration list for PBXProject "Int911Caller" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -393,7 +383,7 @@
 			projectRoot = "";
 			targets = (
 				130EF2FA156803EF009E9711 /* Int911Caller */,
-				13E40D0A158392F100679260 /* Int911Caller (beta) */,
+				1363FE14170C82D3003624BE /* Int911Caller - beta */,
 			);
 		};
 /* End PBXProject section */
@@ -416,8 +406,6 @@
 				132CC1441577C4490059E90B /* 74-location@2x.png in Resources */,
 				132CC1471577C4A10059E90B /* 104-index-cards.png in Resources */,
 				132CC1481577C4A10059E90B /* 104-index-cards@2x.png in Resources */,
-				13971C251578033B0005994A /* README.txt in Resources */,
-				13971C261578033B0005994A /* release_notes.txt in Resources */,
 				1341247E1578F1D200373AC2 /* GUI-911_arrow.png in Resources */,
 				13412489157906E500373AC2 /* Localizable.strings in Resources */,
 				1341248E15790E8900373AC2 /* GUI-911_button@2x.png in Resources */,
@@ -439,47 +427,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13E40D1F158392F100679260 /* Resources */ = {
+		1363FE28170C82D3003624BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E40D20158392F100679260 /* InfoPlist.strings in Resources */,
-				13E40D21158392F100679260 /* MainStoryboard.storyboard in Resources */,
-				13E40D22158392F100679260 /* Europe.plist in Resources */,
-				13E40D23158392F100679260 /* Icon@2x.png in Resources */,
-				13E40D24158392F100679260 /* Icon.png in Resources */,
-				13E40D25158392F100679260 /* GUI-911_circle.png in Resources */,
-				13E40D26158392F100679260 /* GUI-911_background.png in Resources */,
-				13E40D27158392F100679260 /* GUI-911_button.png in Resources */,
-				13E40D28158392F100679260 /* GUI-911_error.png in Resources */,
-				13E40D29158392F100679260 /* 74-location.png in Resources */,
-				13E40D2A158392F100679260 /* 74-location@2x.png in Resources */,
-				13E40D2B158392F100679260 /* 104-index-cards.png in Resources */,
-				13E40D2C158392F100679260 /* 104-index-cards@2x.png in Resources */,
-				13E40D2D158392F100679260 /* README.txt in Resources */,
-				13E40D2E158392F100679260 /* release_notes.txt in Resources */,
-				13E40D2F158392F100679260 /* GUI-911_arrow.png in Resources */,
-				13E40D30158392F100679260 /* Localizable.strings in Resources */,
-				13E40D31158392F100679260 /* GUI-911_button@2x.png in Resources */,
-				13E40D32158392F100679260 /* GUI-911_button_big@2x.png in Resources */,
-				13E40D33158392F100679260 /* GUI-911_button_big.png in Resources */,
-				13E40D34158392F100679260 /* Africa.plist in Resources */,
-				13E40D35158392F100679260 /* Asia.plist in Resources */,
-				13E40D36158392F100679260 /* SouthAmerica.plist in Resources */,
-				13E40D37158392F100679260 /* NorthAmerica.plist in Resources */,
-				13E40D38158392F100679260 /* CentralAmerica.plist in Resources */,
-				13E40D39158392F100679260 /* AustraliaOceania.plist in Resources */,
-				13E40D3A158392F100679260 /* InfoPage.plist in Resources */,
-				13E40D3B158392F100679260 /* GUI-911_info_button.png in Resources */,
-				13E40D3C158392F100679260 /* GUI-911_logo.png in Resources */,
-				13E40D3D158392F100679260 /* GUI-911_twitter.png in Resources */,
-				13E40D3E158392F100679260 /* Default@2x.png in Resources */,
-				13E40D3F158392F100679260 /* Default.png in Resources */,
-				135BBE8E170C698300F3BE90 /* Default-568h@2x.png in Resources */,
+				1363FE29170C82D3003624BE /* InfoPlist.strings in Resources */,
+				1363FE2A170C82D3003624BE /* MainStoryboard.storyboard in Resources */,
+				1363FE2B170C82D3003624BE /* Europe.plist in Resources */,
+				1363FE2C170C82D3003624BE /* Icon@2x.png in Resources */,
+				1363FE2D170C82D3003624BE /* Icon.png in Resources */,
+				1363FE2E170C82D3003624BE /* GUI-911_circle.png in Resources */,
+				1363FE2F170C82D3003624BE /* GUI-911_background.png in Resources */,
+				1363FE30170C82D3003624BE /* GUI-911_button.png in Resources */,
+				1363FE31170C82D3003624BE /* GUI-911_error.png in Resources */,
+				1363FE32170C82D3003624BE /* 74-location.png in Resources */,
+				1363FE33170C82D3003624BE /* 74-location@2x.png in Resources */,
+				1363FE34170C82D3003624BE /* 104-index-cards.png in Resources */,
+				1363FE35170C82D3003624BE /* 104-index-cards@2x.png in Resources */,
+				1363FE36170C82D3003624BE /* GUI-911_arrow.png in Resources */,
+				1363FE37170C82D3003624BE /* Localizable.strings in Resources */,
+				1363FE38170C82D3003624BE /* GUI-911_button@2x.png in Resources */,
+				1363FE39170C82D3003624BE /* GUI-911_button_big@2x.png in Resources */,
+				1363FE3A170C82D3003624BE /* GUI-911_button_big.png in Resources */,
+				1363FE3B170C82D3003624BE /* Africa.plist in Resources */,
+				1363FE3C170C82D3003624BE /* Asia.plist in Resources */,
+				1363FE3D170C82D3003624BE /* SouthAmerica.plist in Resources */,
+				1363FE3E170C82D3003624BE /* NorthAmerica.plist in Resources */,
+				1363FE3F170C82D3003624BE /* CentralAmerica.plist in Resources */,
+				1363FE40170C82D3003624BE /* AustraliaOceania.plist in Resources */,
+				1363FE41170C82D3003624BE /* InfoPage.plist in Resources */,
+				1363FE42170C82D3003624BE /* GUI-911_info_button.png in Resources */,
+				1363FE43170C82D3003624BE /* GUI-911_logo.png in Resources */,
+				1363FE44170C82D3003624BE /* GUI-911_twitter.png in Resources */,
+				1363FE45170C82D3003624BE /* Default@2x.png in Resources */,
+				1363FE46170C82D3003624BE /* Default.png in Resources */,
+				1363FE47170C82D3003624BE /* Default-568h@2x.png in Resources */,
+				1363FE50170C854C003624BE /* Icon-beta.png in Resources */,
+				1363FE52170C854E003624BE /* Icon-beta@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1363FE48170C82D3003624BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		E3394787D1364C1EBF9593BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		130EF2F7156803EF009E9711 /* Sources */ = {
@@ -498,19 +517,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13E40D0B158392F100679260 /* Sources */ = {
+		1363FE15170C82D3003624BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E40D0C158392F100679260 /* main.m in Sources */,
-				13E40D0D158392F100679260 /* AppDelegate.m in Sources */,
-				13E40D0E158392F100679260 /* CountryListViewController.m in Sources */,
-				13E40D0F158392F100679260 /* DetailViewController.m in Sources */,
-				13E40D10158392F100679260 /* LocationViewController.m in Sources */,
-				13E40D11158392F100679260 /* CountryListing.m in Sources */,
-				13E40D12158392F100679260 /* CallButton.m in Sources */,
-				13E40D13158392F100679260 /* ErrorViewController.m in Sources */,
-				13E40D14158392F100679260 /* InfoViewController.m in Sources */,
+				1363FE16170C82D3003624BE /* main.m in Sources */,
+				1363FE17170C82D3003624BE /* AppDelegate.m in Sources */,
+				1363FE18170C82D3003624BE /* CountryListViewController.m in Sources */,
+				1363FE19170C82D3003624BE /* DetailViewController.m in Sources */,
+				1363FE1A170C82D3003624BE /* LocationViewController.m in Sources */,
+				1363FE1B170C82D3003624BE /* CountryListing.m in Sources */,
+				1363FE1C170C82D3003624BE /* CallButton.m in Sources */,
+				1363FE1D170C82D3003624BE /* ErrorViewController.m in Sources */,
+				1363FE1E170C82D3003624BE /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +570,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -576,6 +599,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -592,6 +619,7 @@
 		};
 		130EF31D156803EF009E9711 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -599,10 +627,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Int911Caller;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
 				WRAPPER_EXTENSION = app;
@@ -611,6 +636,7 @@
 		};
 		130EF31E156803EF009E9711 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: bGraphic AS";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -618,15 +644,63 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Int911Caller;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EB59F486-A4A6-4834-9EDB-23EDACFC050A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		1363FE4A170C82D3003624BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "Int911Caller copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "Int911Caller Beta";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1363FE4B170C82D3003624BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: bGraphic AS";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				INFOPLIST_FILE = "Int911Caller copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "Int911Caller Beta";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EB59F486-A4A6-4834-9EDB-23EDACFC050A";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1363FE4C170C82D3003624BE /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=1";
+				INFOPLIST_FILE = "Int911Caller copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "Int911Caller Beta";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9DCE4166-5D44-4FFB-B4BB-1D7A671AAA9C";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
 		};
 		13C81CF21574D57900D16A7A /* AdHoc */ = {
 			isa = XCBuildConfiguration;
@@ -634,6 +708,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -650,71 +728,16 @@
 		};
 		13C81CF31574D57900D16A7A /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
-				PRODUCT_NAME = Int911Caller;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
-				WRAPPER_EXTENSION = app;
-			};
-			name = AdHoc;
-		};
-		13E40D41158392F100679260 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
-				INFOPLIST_FILE = "Int911CallerTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
-				PRODUCT_NAME = EmergencyCaller;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		13E40D42158392F100679260 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				INFOPLIST_FILE = "Int911CallerTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
-				PRODUCT_NAME = EmergencyCaller;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		13E40D43158392F100679260 /* AdHoc */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAEF518FBE047F99184FA0D /* Pods.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Benedicte Raae";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Int911Caller/Int911Caller-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=1";
-				INFOPLIST_FILE = "Int911CallerTest-Info.plist";
+				INFOPLIST_FILE = "Int911Caller/Int911Caller-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1.0\"",
-				);
-				PRODUCT_NAME = EmergencyCaller;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = Int911Caller;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4F084E3D-9AE5-4718-A61A-7D271716025F";
 				WRAPPER_EXTENSION = app;
 			};
@@ -743,12 +766,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13E40D40158392F100679260 /* Build configuration list for PBXNativeTarget "Int911Caller (beta)" */ = {
+		1363FE49170C82D3003624BE /* Build configuration list for PBXNativeTarget "Int911Caller - beta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13E40D41158392F100679260 /* Debug */,
-				13E40D42158392F100679260 /* Release */,
-				13E40D43158392F100679260 /* AdHoc */,
+				1363FE4A170C82D3003624BE /* Debug */,
+				1363FE4B170C82D3003624BE /* Release */,
+				1363FE4C170C82D3003624BE /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
