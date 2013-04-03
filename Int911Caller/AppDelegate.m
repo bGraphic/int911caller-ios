@@ -80,8 +80,8 @@
     #endif
     
     #ifdef ADHOC
-        [TestFlight takeOff:@"6b463fa6-a72e-43c5-8408-2353fae7c4f7"];
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+        [TestFlight takeOff:@"6b463fa6-a72e-43c5-8408-2353fae7c4f7"];
     #endif
     
     // Override point for customization after application launch.
