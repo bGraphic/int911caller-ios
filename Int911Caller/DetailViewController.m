@@ -27,6 +27,36 @@
 @synthesize callButtons = _callButtons;
 @synthesize singleNumberButton = _singleNumberButton;
 
+#pragma mark lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, self.callButtonFour, self.callButtonFive, nil];
+    
+    [self configureView];
+}
+
+- (void)viewDidUnload
+{
+    [self setSingleNumberButton:nil];
+    [self setCallButtonFour:nil];
+    [self setCallButtonFive:nil];
+    [self setNoteTextLabel:nil];
+    [self setCallButtonOne:nil];
+    [self setCalButtonTwo:nil];
+    [self setCallButtonThree:nil];
+    
+    [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationIsPortrait(interfaceOrientation));
+}
+
 
 #pragma mark - Managing the detail item
 
@@ -86,17 +116,17 @@
         return;
     }
     
-    int space = 95;
-    int initY = 84;
+    int space = 95.f;
+    int initY = 159.f;
     
     if(emergencyNumbers.count > 3) {
-        space = 80;
-        initY = 64;
+        space = 80.f;
+        initY = 139.f;
     } 
     
     if(emergencyNumbers.count > 4) {
-        space = 70;
-        initY = 44;
+        space = 70.f;
+        initY = 119.f;
     }
     
     
@@ -111,7 +141,11 @@
         
         button.emergencyNumber = number;
         button.emergencyNumberKey = numberKey;
-        button.center = CGPointMake(button.center.x, space*i + initY);
+        
+        CGRect frame = button.frame;
+        frame.origin.y = space*i + initY;
+        
+        button.frame = frame;
         
         button.hidden = false;
         
@@ -153,36 +187,6 @@
     #else
     [self showAlertFor:selectedButton.emergencyNumber];      
     #endif
-}
-
-#pragma mark lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, self.callButtonFour, self.callButtonFive, nil];
-    
-    [self configureView];
-}
-
-- (void)viewDidUnload
-{
-    [self setSingleNumberButton:nil];
-    [self setCallButtonFour:nil];
-    [self setCallButtonFive:nil];
-    [self setNoteTextLabel:nil];
-    [self setCallButtonOne:nil];
-    [self setCalButtonTwo:nil];
-    [self setCallButtonThree:nil];
-    
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationIsPortrait(interfaceOrientation));
 }
 
 @end

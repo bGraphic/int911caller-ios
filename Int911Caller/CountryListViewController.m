@@ -27,14 +27,6 @@ CLLocationManager *locationManager;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    UIImage *backgroundImage = [UIImage imageNamed:@"GUI-911_background.png"];
-    UIColor *backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
-                    
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-    backgroundView.backgroundColor = backgroundColor;
-    
-    [self.tableView setBackgroundView:backgroundView];
-    
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     NSArray *numbers = [[delegate emergencyNumbers] allValues];
     

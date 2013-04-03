@@ -36,6 +36,8 @@
 		134124921579137B00373AC2 /* GUI-911_button_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 134124911579137B00373AC2 /* GUI-911_button_big.png */; };
 		135850E115838F7D007F2131 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
 		135850E315838F81007F2131 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
+		135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
+		135BBE8E170C698300F3BE90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
 		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
@@ -149,6 +151,7 @@
 		134124911579137B00373AC2 /* GUI-911_button_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button_big.png"; sourceTree = "<group>"; };
 		135850E015838F7D007F2131 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		135850E215838F81007F2131 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
 		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
@@ -174,7 +177,6 @@
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
 		13C81CEC1574BCF300D16A7A /* CountryListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryListing.m; sourceTree = "<group>"; };
 		13E40D44158392F100679260 /* EmergencyCaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyCaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13E40D46158392F100679260 /* Int911CallerTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Int911CallerTest-Info.plist"; path = "/Users/raae/bGraphic/APPS/Int911Caller/src/Int911CallerTest-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
+				135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */,
 				135850E215838F81007F2131 /* Default.png */,
 				135850E015838F7D007F2131 /* Default@2x.png */,
 				130EF2FE156803EF009E9711 /* Frameworks */,
@@ -280,7 +283,6 @@
 		130EF306156803EF009E9711 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				13E40D46158392F100679260 /* Int911CallerTest-Info.plist */,
 				130EF307156803EF009E9711 /* Int911Caller-Info.plist */,
 				130EF308156803EF009E9711 /* InfoPlist.strings */,
 				130EF30B156803EF009E9711 /* main.m */,
@@ -433,6 +435,7 @@
 				13AD119315835DFB0096E89C /* GUI-911_twitter.png in Resources */,
 				135850E115838F7D007F2131 /* Default@2x.png in Resources */,
 				135850E315838F81007F2131 /* Default.png in Resources */,
+				135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +475,7 @@
 				13E40D3D158392F100679260 /* GUI-911_twitter.png in Resources */,
 				13E40D3E158392F100679260 /* Default@2x.png in Resources */,
 				13E40D3F158392F100679260 /* Default.png in Resources */,
+				135BBE8E170C698300F3BE90 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
