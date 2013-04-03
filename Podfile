@@ -1,0 +1,1 @@
+pod 'TestFlightSDK', '~> 1.2.4'
