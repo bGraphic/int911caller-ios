@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "TestFlight.h"
 #import "ErrorViewController.h"
+#import "BGCommonGraphics.h"
 
 #ifdef DEBUG
 const double UPDATE_INTERVAL = 10;
@@ -66,6 +67,8 @@ CountryListing *currentCountryListing;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     self.locationManager.distanceFilter = 1000.0f;
+    
+    [BGCommonGraphics addBackgroundToView:self.view];
 }
 
 - (void)viewDidUnload

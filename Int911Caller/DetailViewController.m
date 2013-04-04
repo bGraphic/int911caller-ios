@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"  
 #import "TestFlight.h"
+#import "BGCommonGraphics.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -35,6 +36,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.callButtons = [[NSArray alloc] initWithObjects:self.callButtonOne, self.calButtonTwo, self.callButtonThree, self.callButtonFour, self.callButtonFive, nil];
+    
+    [BGCommonGraphics addBackgroundToView:self.view];
     
     [self configureView];
 }

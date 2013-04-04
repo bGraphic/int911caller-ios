@@ -7,6 +7,7 @@
 //
 
 #import "ErrorViewController.h"
+#import "BGCommonGraphics.h"
 
 @implementation ErrorViewController
 @synthesize message;
@@ -18,6 +19,11 @@
     self.locateAgain.text = NSLocalizedString(@"locate_again",  nil);
     self.searchDirectory.text = NSLocalizedString(@"search_directory",  nil);
     self.message.text = errorMessage;
+    
+    UIView *backgroundView = [BGCommonGraphics backgroundView];
+    backgroundView.frame = self.view.bounds;
+    
+    [BGCommonGraphics addBackgroundToView:self.view];
 }
 
 - (void)viewDidUnload {
