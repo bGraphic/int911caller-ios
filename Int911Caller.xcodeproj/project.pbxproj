@@ -55,7 +55,6 @@
 		1363FE1B170C82D3003624BE /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
 		1363FE1C170C82D3003624BE /* CallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 132CC12615777C560059E90B /* CallButton.m */; };
 		1363FE1D170C82D3003624BE /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134124871578FCD400373AC2 /* ErrorViewController.m */; };
-		1363FE1E170C82D3003624BE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
 		1363FE20170C82D3003624BE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726E1580D2EE00AE031E /* MessageUI.framework */; };
 		1363FE21170C82D3003624BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133C726C1580D2E500AE031E /* Security.framework */; };
 		1363FE22170C82D3003624BE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
@@ -70,7 +69,6 @@
 		1363FE2C170C82D3003624BE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		1363FE2D170C82D3003624BE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		1363FE2E170C82D3003624BE /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
-		1363FE2F170C82D3003624BE /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		1363FE30170C82D3003624BE /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
 		1363FE31170C82D3003624BE /* GUI-911_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC129157781EC0059E90B /* GUI-911_error.png */; };
 		1363FE32170C82D3003624BE /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 132CC1411577C4490059E90B /* 74-location.png */; };
@@ -90,15 +88,12 @@
 		1363FE40170C82D3003624BE /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
 		1363FE41170C82D3003624BE /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 133C72211580CEF100AE031E /* InfoPage.plist */; };
 		1363FE42170C82D3003624BE /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
-		1363FE43170C82D3003624BE /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
-		1363FE44170C82D3003624BE /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD119015835DFB0096E89C /* GUI-911_twitter.png */; };
 		1363FE45170C82D3003624BE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
 		1363FE46170C82D3003624BE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
 		1363FE47170C82D3003624BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
 		1363FE50170C854C003624BE /* Icon-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE4F170C854C003624BE /* Icon-beta.png */; };
 		1363FE52170C854E003624BE /* Icon-beta@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE51170C854E003624BE /* Icon-beta@2x.png */; };
 		137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20541574E57B0068E4E8 /* GUI-911_circle.png */; };
-		137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E20591574E6910068E4E8 /* GUI-911_background.png */; };
 		137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 137E205A1574E6910068E4E8 /* GUI-911_button.png */; };
 		138BA098156F7C4500B10296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138BA097156F7C4500B10296 /* SystemConfiguration.framework */; };
 		139152C1157E5F63002CA51D /* Africa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C0157E5F63002CA51D /* Africa.plist */; };
@@ -107,11 +102,8 @@
 		139152C7157E5FFC002CA51D /* NorthAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C6157E5FFC002CA51D /* NorthAmerica.plist */; };
 		139152C9157E6013002CA51D /* CentralAmerica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152C8157E6013002CA51D /* CentralAmerica.plist */; };
 		139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */ = {isa = PBXBuildFile; fileRef = 139152CA157E765F002CA51D /* AustraliaOceania.plist */; };
-		139152CE157E7C73002CA51D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139152CD157E7C73002CA51D /* InfoViewController.m */; };
 		13971C28157803880005994A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13971C27157803880005994A /* libz.dylib */; };
 		13AD119115835DFB0096E89C /* GUI-911_info_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118E15835DFB0096E89C /* GUI-911_info_button.png */; };
-		13AD119215835DFB0096E89C /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD118F15835DFB0096E89C /* GUI-911_logo.png */; };
-		13AD119315835DFB0096E89C /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AD119015835DFB0096E89C /* GUI-911_twitter.png */; };
 		13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDC1572C01B00D16A7A /* Icon@2x.png */; };
 		13C81CDF1572C02500D16A7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C81CDE1572C02500D16A7A /* Icon.png */; };
 		13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C81CEC1574BCF300D16A7A /* CountryListing.m */; };
@@ -169,7 +161,6 @@
 		1363FE4F170C854C003624BE /* Icon-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-beta.png"; sourceTree = "<group>"; };
 		1363FE51170C854E003624BE /* Icon-beta@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-beta@2x.png"; sourceTree = "<group>"; };
 		137E20541574E57B0068E4E8 /* GUI-911_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_circle.png"; sourceTree = "<group>"; };
-		137E20591574E6910068E4E8 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
 		137E205A1574E6910068E4E8 /* GUI-911_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button.png"; sourceTree = "<group>"; };
 		138BA097156F7C4500B10296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		139152C0157E5F63002CA51D /* Africa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Africa.plist; sourceTree = "<group>"; };
@@ -178,12 +169,8 @@
 		139152C6157E5FFC002CA51D /* NorthAmerica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NorthAmerica.plist; sourceTree = "<group>"; };
 		139152C8157E6013002CA51D /* CentralAmerica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CentralAmerica.plist; sourceTree = "<group>"; };
 		139152CA157E765F002CA51D /* AustraliaOceania.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AustraliaOceania.plist; sourceTree = "<group>"; };
-		139152CC157E7C73002CA51D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		139152CD157E7C73002CA51D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		13971C27157803880005994A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		13AD118E15835DFB0096E89C /* GUI-911_info_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_info_button.png"; sourceTree = "<group>"; };
-		13AD118F15835DFB0096E89C /* GUI-911_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_logo.png"; sourceTree = "<group>"; };
-		13AD119015835DFB0096E89C /* GUI-911_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_twitter.png"; sourceTree = "<group>"; };
 		13C81CDC1572C01B00D16A7A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		13C81CDE1572C02500D16A7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13C81CEB1574BCF300D16A7A /* CountryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListing.h; sourceTree = "<group>"; };
@@ -289,8 +276,6 @@
 				132CC12615777C560059E90B /* CallButton.m */,
 				134124861578FCD400373AC2 /* ErrorViewController.h */,
 				134124871578FCD400373AC2 /* ErrorViewController.m */,
-				139152CC157E7C73002CA51D /* InfoViewController.h */,
-				139152CD157E7C73002CA51D /* InfoViewController.m */,
 			);
 			path = Int911Caller;
 			sourceTree = "<group>";
@@ -334,8 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				13AD118E15835DFB0096E89C /* GUI-911_info_button.png */,
-				13AD118F15835DFB0096E89C /* GUI-911_logo.png */,
-				13AD119015835DFB0096E89C /* GUI-911_twitter.png */,
 				134124911579137B00373AC2 /* GUI-911_button_big.png */,
 				1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */,
 				1341247D1578F1D200373AC2 /* GUI-911_arrow.png */,
@@ -345,7 +328,6 @@
 				132CC1411577C4490059E90B /* 74-location.png */,
 				132CC1421577C4490059E90B /* 74-location@2x.png */,
 				132CC129157781EC0059E90B /* GUI-911_error.png */,
-				137E20591574E6910068E4E8 /* GUI-911_background.png */,
 				137E205A1574E6910068E4E8 /* GUI-911_button.png */,
 				137E20541574E57B0068E4E8 /* GUI-911_circle.png */,
 			);
@@ -430,7 +412,6 @@
 				13C81CDD1572C01B00D16A7A /* Icon@2x.png in Resources */,
 				13C81CDF1572C02500D16A7A /* Icon.png in Resources */,
 				137E20571574E57B0068E4E8 /* GUI-911_circle.png in Resources */,
-				137E205B1574E6910068E4E8 /* GUI-911_background.png in Resources */,
 				137E205C1574E6910068E4E8 /* GUI-911_button.png in Resources */,
 				132CC12A157781EC0059E90B /* GUI-911_error.png in Resources */,
 				132CC1431577C4490059E90B /* 74-location.png in Resources */,
@@ -450,8 +431,6 @@
 				139152CB157E765F002CA51D /* AustraliaOceania.plist in Resources */,
 				133C72221580CEF100AE031E /* InfoPage.plist in Resources */,
 				13AD119115835DFB0096E89C /* GUI-911_info_button.png in Resources */,
-				13AD119215835DFB0096E89C /* GUI-911_logo.png in Resources */,
-				13AD119315835DFB0096E89C /* GUI-911_twitter.png in Resources */,
 				135850E115838F7D007F2131 /* Default@2x.png in Resources */,
 				135850E315838F81007F2131 /* Default.png in Resources */,
 				135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */,
@@ -472,7 +451,6 @@
 				1363FE2C170C82D3003624BE /* Icon@2x.png in Resources */,
 				1363FE2D170C82D3003624BE /* Icon.png in Resources */,
 				1363FE2E170C82D3003624BE /* GUI-911_circle.png in Resources */,
-				1363FE2F170C82D3003624BE /* GUI-911_background.png in Resources */,
 				1363FE30170C82D3003624BE /* GUI-911_button.png in Resources */,
 				1363FE31170C82D3003624BE /* GUI-911_error.png in Resources */,
 				1363FE32170C82D3003624BE /* 74-location.png in Resources */,
@@ -492,8 +470,6 @@
 				1363FE40170C82D3003624BE /* AustraliaOceania.plist in Resources */,
 				1363FE41170C82D3003624BE /* InfoPage.plist in Resources */,
 				1363FE42170C82D3003624BE /* GUI-911_info_button.png in Resources */,
-				1363FE43170C82D3003624BE /* GUI-911_logo.png in Resources */,
-				1363FE44170C82D3003624BE /* GUI-911_twitter.png in Resources */,
 				1363FE45170C82D3003624BE /* Default@2x.png in Resources */,
 				1363FE46170C82D3003624BE /* Default.png in Resources */,
 				1363FE47170C82D3003624BE /* Default-568h@2x.png in Resources */,
@@ -552,7 +528,6 @@
 				13C81CED1574BCF300D16A7A /* CountryListing.m in Sources */,
 				132CC12715777C560059E90B /* CallButton.m in Sources */,
 				134124881578FCD400373AC2 /* ErrorViewController.m in Sources */,
-				139152CE157E7C73002CA51D /* InfoViewController.m in Sources */,
 				134EA986170D935700F4D166 /* BGInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +544,6 @@
 				1363FE1B170C82D3003624BE /* CountryListing.m in Sources */,
 				1363FE1C170C82D3003624BE /* CallButton.m in Sources */,
 				1363FE1D170C82D3003624BE /* ErrorViewController.m in Sources */,
-				1363FE1E170C82D3003624BE /* InfoViewController.m in Sources */,
 				134EA987170D935700F4D166 /* BGInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
