@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CountryListing.h"
+#import "BGInfoViewController.h"
 #import "TestFlight.h"
 
 @interface AppDelegate ()
@@ -60,7 +61,11 @@
 }
 
 - (void)infoButtonAction {
-    [self.window.rootViewController performSegueWithIdentifier:@"showInfo" sender:self];
+    NSDictionary *infoDict = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"InfoPage" ofType:@"plist"]];
+    
+    BGInfoViewController *infoViewController = [BGInfoViewController infoViewWithDict:infoDict];
+    
+    [self.window.rootViewController presentViewController:infoViewController animated:YES completion:nil];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

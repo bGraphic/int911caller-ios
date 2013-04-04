@@ -34,6 +34,16 @@
 		1341248E15790E8900373AC2 /* GUI-911_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248D15790E8900373AC2 /* GUI-911_button@2x.png */; };
 		134124901579134100373AC2 /* GUI-911_button_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */; };
 		134124921579137B00373AC2 /* GUI-911_button_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 134124911579137B00373AC2 /* GUI-911_button_big.png */; };
+		134EA986170D935700F4D166 /* BGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134EA981170D935700F4D166 /* BGInfoViewController.m */; };
+		134EA987170D935700F4D166 /* BGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134EA981170D935700F4D166 /* BGInfoViewController.m */; };
+		134EA988170D935700F4D166 /* BGInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134EA982170D935700F4D166 /* BGInfoViewController.xib */; };
+		134EA989170D935700F4D166 /* BGInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134EA982170D935700F4D166 /* BGInfoViewController.xib */; };
+		134EA98A170D935700F4D166 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA983170D935700F4D166 /* GUI-911_background.png */; };
+		134EA98B170D935700F4D166 /* GUI-911_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA983170D935700F4D166 /* GUI-911_background.png */; };
+		134EA98C170D935700F4D166 /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA984170D935700F4D166 /* GUI-911_logo.png */; };
+		134EA98D170D935700F4D166 /* GUI-911_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA984170D935700F4D166 /* GUI-911_logo.png */; };
+		134EA98E170D935700F4D166 /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA985170D935700F4D166 /* GUI-911_twitter.png */; };
+		134EA98F170D935700F4D166 /* GUI-911_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EA985170D935700F4D166 /* GUI-911_twitter.png */; };
 		135850E115838F7D007F2131 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E015838F7D007F2131 /* Default@2x.png */; };
 		135850E315838F81007F2131 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 135850E215838F81007F2131 /* Default.png */; };
 		135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */; };
@@ -146,6 +156,12 @@
 		1341248D15790E8900373AC2 /* GUI-911_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button@2x.png"; sourceTree = "<group>"; };
 		1341248F1579134100373AC2 /* GUI-911_button_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button_big@2x.png"; sourceTree = "<group>"; };
 		134124911579137B00373AC2 /* GUI-911_button_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_button_big.png"; sourceTree = "<group>"; };
+		134EA980170D935700F4D166 /* BGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGInfoViewController.h; sourceTree = "<group>"; };
+		134EA981170D935700F4D166 /* BGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGInfoViewController.m; sourceTree = "<group>"; };
+		134EA982170D935700F4D166 /* BGInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGInfoViewController.xib; sourceTree = "<group>"; };
+		134EA983170D935700F4D166 /* GUI-911_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_background.png"; sourceTree = "<group>"; };
+		134EA984170D935700F4D166 /* GUI-911_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_logo.png"; sourceTree = "<group>"; };
+		134EA985170D935700F4D166 /* GUI-911_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-911_twitter.png"; sourceTree = "<group>"; };
 		135850E015838F7D007F2131 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		135850E215838F81007F2131 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -213,6 +229,7 @@
 		130EF2F0156803EF009E9711 = {
 			isa = PBXGroup;
 			children = (
+				134EA97F170D935700F4D166 /* bGraphicInfoPage */,
 				1363FE51170C854E003624BE /* Icon-beta@2x.png */,
 				1363FE4F170C854C003624BE /* Icon-beta.png */,
 				135BBE8C170C68C500F3BE90 /* Default-568h@2x.png */,
@@ -297,6 +314,20 @@
 				133C72211580CEF100AE031E /* InfoPage.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		134EA97F170D935700F4D166 /* bGraphicInfoPage */ = {
+			isa = PBXGroup;
+			children = (
+				134EA980170D935700F4D166 /* BGInfoViewController.h */,
+				134EA981170D935700F4D166 /* BGInfoViewController.m */,
+				134EA982170D935700F4D166 /* BGInfoViewController.xib */,
+				134EA983170D935700F4D166 /* GUI-911_background.png */,
+				134EA984170D935700F4D166 /* GUI-911_logo.png */,
+				134EA985170D935700F4D166 /* GUI-911_twitter.png */,
+			);
+			name = bGraphicInfoPage;
+			path = ../bGraphicInfoPage/bGraphicInfoPage;
 			sourceTree = "<group>";
 		};
 		13C81CCE1572BFA400D16A7A /* gfx */ = {
@@ -424,6 +455,10 @@
 				135850E115838F7D007F2131 /* Default@2x.png in Resources */,
 				135850E315838F81007F2131 /* Default.png in Resources */,
 				135BBE8D170C68C500F3BE90 /* Default-568h@2x.png in Resources */,
+				134EA988170D935700F4D166 /* BGInfoViewController.xib in Resources */,
+				134EA98A170D935700F4D166 /* GUI-911_background.png in Resources */,
+				134EA98C170D935700F4D166 /* GUI-911_logo.png in Resources */,
+				134EA98E170D935700F4D166 /* GUI-911_twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +499,10 @@
 				1363FE47170C82D3003624BE /* Default-568h@2x.png in Resources */,
 				1363FE50170C854C003624BE /* Icon-beta.png in Resources */,
 				1363FE52170C854E003624BE /* Icon-beta@2x.png in Resources */,
+				134EA989170D935700F4D166 /* BGInfoViewController.xib in Resources */,
+				134EA98B170D935700F4D166 /* GUI-911_background.png in Resources */,
+				134EA98D170D935700F4D166 /* GUI-911_logo.png in Resources */,
+				134EA98F170D935700F4D166 /* GUI-911_twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +553,7 @@
 				132CC12715777C560059E90B /* CallButton.m in Sources */,
 				134124881578FCD400373AC2 /* ErrorViewController.m in Sources */,
 				139152CE157E7C73002CA51D /* InfoViewController.m in Sources */,
+				134EA986170D935700F4D166 /* BGInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +570,7 @@
 				1363FE1C170C82D3003624BE /* CallButton.m in Sources */,
 				1363FE1D170C82D3003624BE /* ErrorViewController.m in Sources */,
 				1363FE1E170C82D3003624BE /* InfoViewController.m in Sources */,
+				134EA987170D935700F4D166 /* BGInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
