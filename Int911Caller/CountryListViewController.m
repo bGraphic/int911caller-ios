@@ -151,6 +151,13 @@ CLLocationManager *locationManager;
 	}
 }
 
+#pragma mark - Table View Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.f;
+}
+
 
 #pragma mark UISearchDisplayController Delegate Methods
 

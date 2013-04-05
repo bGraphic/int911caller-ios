@@ -368,45 +368,6 @@
         <image name="GUI-911_circle.png" width="321" height="321"/>
         <image name="GUI-911_error.png" width="321" height="320"/>
     </resources>
-    <classes>
-        <class className="BGSearchBar" superclassName="UISearchBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BGSearchBar.h"/>
-        </class>
-        <class className="CallButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CallButton.h"/>
-        </class>
-        <class className="CountryListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountryListViewController.h"/>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callEmergencyNumberAction:"/>
-                <relationship kind="outlet" name="calButtonTwo" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFive" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonFour" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonOne" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="callButtonThree" candidateClass="CallButton"/>
-                <relationship kind="outlet" name="noteTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="singleNumberButton" candidateClass="CallButton"/>
-            </relationships>
-        </class>
-        <class className="ErrorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ErrorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locateAgain" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="searchDirectory" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="message" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

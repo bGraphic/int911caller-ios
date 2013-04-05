@@ -6,7 +6,7 @@
   Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 */
 
-"location_service_off" = "Appen må ha tilgang til \"Stedsjenester\" for å kunne lokalisere deg.";
+"location_service_off" = "Gi appen tilgang til din posisjon under \"Stedsjenester\".";
 "location_unavailable" = "Din lokasjon er utilgjengelig.";
 "location_standard" = "Din lokasjon ble ikke funnet.";
 "country_missing" = "Appen mangler informasjon om landet, %@, du befinner deg i.";

@@ -18,13 +18,10 @@
 	<dict>
 		<key>numbers</key>
 		<dict>
-			<key>numbers</key>
-			<dict>
-				<key>police</key>
-				<string>17</string>
-				<key>fire</key>
-				<string>18</string>
-			</dict>
+            <key>police</key>
+            <string>17</string>
+            <key>fire</key>
+            <string>18</string>
 		</dict>
 	</dict>
 	<key>DJ</key>
