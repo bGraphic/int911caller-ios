@@ -2,15 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>store_id</key>
-	<string></string>
-	<key>blog_link</key>
-	<string>http://bgraphic.no/blog/?utm_source=app&amp;amp;utm_medium=infopage&amp;amp;utm_campaign=911Caller</string>
+	<key>web_link</key>
+	<string>http://bgraphic.no/?utm_source=app&amp;amp;utm_medium=infopage&amp;amp;utm_campaign=911Caller</string>
 	<key>app_id</key>
 	<string>534920808</string>
-	<key>support_mail</key>
-	<string>support@bgraphic.no</string>
-	<key>twitter_user</key>
-	<string>bgraphic_apps</string>
 </dict>
 </plist>
