@@ -13,7 +13,4 @@
 @property (strong, nonatomic) NSMutableArray *emergencyNumbers;
 @property (strong, nonatomic) NSMutableArray *searchResults;
 
-@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (strong, nonatomic) IBOutlet UISearchDisplayController *searchDisplayController;
-
 @end

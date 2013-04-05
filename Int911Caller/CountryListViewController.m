@@ -11,14 +11,10 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "CountryListing.h"
+#import "BGSearchBar.h"
 
 
 @implementation CountryListViewController
-
-@synthesize emergencyNumbers;
-@synthesize searchBar;
-@synthesize searchDisplayController;
-@synthesize searchResults;
 
 CLLocationManager *locationManager;
 
@@ -33,7 +29,11 @@ CLLocationManager *locationManager;
     self.emergencyNumbers = [[NSMutableArray alloc] initWithArray:numbers];
     [self.emergencyNumbers sortUsingSelector:@selector(compare:)];
     
-    self.searchBar.placeholder = NSLocalizedString(@"search_placeholder", nil);
+    BGSearchBar *searchBarBG = (BGSearchBar *) self.searchDisplayController.searchBar;
+    searchBarBG.borderColor = self.tableView.separatorColor;
+    searchBarBG.placeholder = NSLocalizedString(@"search_placeholder", nil);
+    
+    
     self.searchResults = [NSMutableArray arrayWithCapacity:[self.emergencyNumbers count]];
     
 }
@@ -46,8 +46,6 @@ CLLocationManager *locationManager;
 
 - (void)viewDidUnload
 {
-    [self setSearchBar:nil];
-    [self setSearchDisplayController:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -120,10 +118,10 @@ CLLocationManager *locationManager;
         CountryListing *countryListing = nil;
         
         if (senderView == self.searchDisplayController.searchResultsTableView){
-            countryListing = [searchResults objectAtIndex:indexPath.row];
+            countryListing = [self.searchResults objectAtIndex:indexPath.row];
         }
         else{
-            countryListing = [emergencyNumbers objectAtIndex:indexPath.row];
+            countryListing = [self.emergencyNumbers objectAtIndex:indexPath.row];
         }
         
         DetailViewController *view = [segue destinationViewController];
@@ -132,7 +130,6 @@ CLLocationManager *locationManager;
     }
 }
 
-#pragma mark -
 #pragma mark Content Filtering
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
@@ -155,7 +152,6 @@ CLLocationManager *locationManager;
 }
 
 
-#pragma mark -
 #pragma mark UISearchDisplayController Delegate Methods
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -169,6 +165,18 @@ CLLocationManager *locationManager;
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
+    searchBar.borderView.hidden = YES;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
+    searchBar.borderView.hidden = NO;
 }
 
 @end
